@@ -19,9 +19,9 @@ header{
     color: azure;
 }
 
-.logo{
-    text-align: center;
-    mix-blend-mode: multiply;
+.logo {
+    display: block;
+    margin: 0 auto;
 }
 
 h1{

@@ -19,12 +19,11 @@ header{
 
 }
 
-.logo{
-    mix-blend-mode: multiply;
-    width: 220;
-    height: auto;
-    
+.logo {
+    display: block;
+    margin: 0 auto;
 }
+
 
 main{
     height: auto;
