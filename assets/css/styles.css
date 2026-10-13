@@ -1,4 +1,3 @@
-/* 1. RESET BÁSICO */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,18 +5,18 @@
 }
 
 :root {
-    /* COLORES EXTRAÍDOS DE TU NUEVO LOGO */
-    --primary-color: #00E5FF;       /* Cian eléctrico de la derecha de "NEXUS" */
-    --primary-hover: #00B4D8;       /* Un tono apenas más oscuro para los botones */
-    --accent-purple: #6930C3;       /* Violeta/Azul de la izquierda de la "N" */
+    
+    --primary-color: #00E5FF;       
+    --primary-hover: #00B4D8;       
+    --accent-purple: #6930C3;       
     --accent-purple-hover: #5390D9;
 
-    --bg-dark: #0A0A0A;             /* Fondo casi negro para alto contraste */
-    --bg-card: #161618;             /* Fondo para las tarjetas de los juegos (un poco más gris) */
+    --bg-dark: #0A0A0A;             
+    --bg-card: #161618;             
     
-    --text-light: #F8F9FA;          /* Texto principal */
-    --text-muted: #A0A0A0;          /* Texto secundario (más gris) */
-    --accent-green: #00E676;        /* Para los precios y 'Gratis' */
+    --text-light: #F8F9FA;          
+    --text-muted: #A0A0A0;          
+    --accent-green: #00E676;        
     
     --font-main: 'Poppins', sans-serif;
 }
@@ -36,7 +35,6 @@ hr {
     display: none;
 }
 
-/* 2. CABECERA (Adaptado con tus gradientes) */
 .main-header {
     padding: 30px 30px 50px 30px; 
     background: linear-gradient(135deg, #48536e, #132652, #4d5872);
@@ -45,27 +43,27 @@ hr {
 
 .header-container {
     display: flex;
-    justify-content: space-between; /* Distribuye los 3 bloques a los extremos y centro */
-    align-items: center;            /* Centra todo verticalmente en una sola línea */
-    width: 95%;                     /* Ocupa casi todo el ancho de la pantalla */
+    justify-content: space-between; 
+    align-items: center;            
+    width: 95%;                     
     max-width: 1400px;
     margin: 0 auto;
     padding: 0.8rem 0;
-    gap: 1rem;                      /* Espacio seguro entre bloques */
+    gap: 1rem;                      
 }
 
 .logo {
     max-width: 150px;
     height: auto;
     display: block;
-    flex-shrink: 0;                 /* Evita que el logo se encoja o baje de línea */
+    flex-shrink: 0;                 
 }
-/* 3. BARRA DE NAVEGACIÓN (Adaptado de tu menú en tablas a Flexbox) */
+
 .navbar {
     display: flex;
     align-items: center;
-    gap: 1.2rem;                    /* Espacio entre los enlaces del menú */
-    flex-wrap: nowrap;              /* PROHÍBE que los elementos bajen a otra línea */
+    gap: 1.2rem;                    
+    flex-wrap: nowrap;              
 }
 
 .navbar a, .dropbtn {
@@ -85,7 +83,6 @@ hr {
     transform: scale(1.15);
 }
 
-/* 4. SUBMENÚS DESPLEGABLES (Adaptado de tu <details> a .dropdown) */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -132,10 +129,9 @@ hr {
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    flex-shrink: 0;                 /* Evita que los botones se rompan de línea */
+    flex-shrink: 0;                
 }
 
-/* 5. CONTENIDO PRINCIPAL (Hero y Títulos) */
 .main-content {
     padding: 20px;
     background: linear-gradient(135deg, #48536e, #132652, #4d5872);
@@ -170,7 +166,6 @@ hr {
     margin-bottom: 25px;
 }
 
-/* 6. GRILLA Y TARJETAS DE JUEGOS (Adaptado de tu <article>) */
 .games-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -226,7 +221,6 @@ hr {
     margin-bottom: 15px;
 }
 
-/* 7. BOTONES (Adaptado de tu enlace morado) */
 .btn {
     display: inline-block;
     padding: 10px 15px;
@@ -273,7 +267,6 @@ hr {
     padding-top: 15px;
 }
 
-/* 9. RESPONSIVO PARA MÓVILES (Reemplazando tu media query de tablas) */
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;

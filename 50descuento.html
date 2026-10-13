@@ -1,174 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juegos con 50% de descuento</title>
+    <title>Nexus Games | Tienda de Videojuegos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-    <header>
-        <img src="assets/img/logo.jpg" class="logo" alt="logo" width="350" height="150">
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="login.html">Iniciar Sesion</a>
-            <a href="registrarse.html">Registrarse</a>
-        </nav>
+
+    <header class="main-header">
+        <div class="header-container">
+            <img src="assets/img/logo.jpg" alt="Logo Nexus Games" class="logo">
+
+            <nav class="navbar">
+                <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa-solid fa-gamepad"></i> Juegos <i
+                            class="fa-solid fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="proximamente.html">Próximamente</a>
+                        <a href="novedades.html">Novedades</a>
+                        <a href="noticias.html">Noticias</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa-solid fa-layer-group"></i> Categorías <i
+                            class="fa-solid fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="shooter.html">Shooters</a>
+                        <a href="aventura.html">Aventura</a>
+                        <a href="deportes.html">Deportes</a>
+                        <a href="rgp.html">RPG</a>
+                        <a href="supervivencia.html">Supervivencia</a>
+                        <a href="moba.html">Moba</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa-solid fa-fire"></i> Ofertas <i
+                            class="fa-solid fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="50descuento.html">50% Descuento</a>
+                        <a href="30descuento.html">30% Descuento</a>
+                        <a href="20descuento.html">20% Descuento</a>
+                        <a href="gratis.html">Gratis</a>
+                    </div>
+                </div>
+
+                <a href="#contacto"><i class="fa-solid fa-headset"></i> Soporte</a>
+            </nav>
+
+            <div class="user-actions">
+                <a href="login.html" class="btn btn-secondary"><i class="fa-solid fa-right-to-bracket"></i> Iniciar
+                    Sesión</a>
+                <a href="registrarse.html" class="btn btn-primary"><i class="fa-solid fa-user-plus"></i> Registrarse</a>
+            </div>
+        </div>
     </header>
 
-    <hr>
-
-    <main>
-        <h1>Juegos con 50% de descuento</h1>
-        <p>Descubre nuestra selección de juegos con 50% de descuento. No pierdas esta oportunidad de adquirir tus juegos
+    <section class="hero">
+        <h1 class="hero-title">Juegos con 50% de descuento</h1>
+        <p class="hero-subtitle">Descubre nuestra selección de juegos con 50% de descuento. No pierdas esta oportunidad
+            de adquirir tus juegos
             favoritos a precios increíbles.</p>
+    </section>
 
-        <hr>
+    <main class="main-content">
 
-        <section class="juegos50descuento"></section>
-        <table width="100%" cellpadding="10" cellspacing="0">
-            <tr align="center" valign="top">
-                <td>
-                    <article>
-                        <h3>Red Dead Redemption 2</h3>
-                        <img src="assets/img/red_Dead.jpg" alt="Red Dead Redemption 2" width="400" height="500">
-                        <p>Red Dead Redemption 2 es un videojuego de acción y aventura en mundo abierto desarrollado por
-                            Rockstar Games.</p>
-                        <a href="detalleRDR2.html">Ver más...</a>
-                        <p>Precio Original: S/ 120.00</p>
-                        <p>Precio con 50% de descuento: S/ 60.00</p>
-                        <p>Ahorro: S/ 60.00</p>
-                        <p>Aprovecha esta super oferta!</p>
-                    </article>
-                </td>
+        <section id="juegos" class="section-container">
 
-                <td>
-                    <article>
-                        <h3>The Witcher 3: Wild Hunt</h3>
-                        <img src="assets/img/W3W.jpg" alt="The Witcher 3: Wild Hunt" width="400" height="500">
-                        <p>The Witcher 3: Wild Hunt es un videojuego de rol de acción en mundo abierto desarrollado por
-                            CD
-                            Projekt Red. Los jugadores asumen el papel de Geralt de Rivia, un cazador de monstruos, en
-                            una historia épica llena de decisiones morales y exploración.</p>
-                        <a href="detalleWitcher.html">Ver más...</a>
-                        <p>Precio Original: S/ 100.00</p>
-                        <p>Precio con 50% de descuento: S/ 50.00</p>
-                        <p>Ahorro: S/ 50.00</p>
-                        <p>Aprovecha esta super oferta!</p>
-                    </article>
-                </td>
+            <div class="games-grid">
+                <article class="game-card">
+                    <img src="assets/img/red_Dead.jpg" alt="Red Dead Redemption 2" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>Red Dead Redemption 2</h3>
+                            <p class="price-discount"><del>S/ 120.00</del> <strong>S/ 60.00</strong></p>
+                            <div class="game-footer">
+                                <a href="detalleRDR2.html" class="btn btn-primary">Ver Oferta</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-                <td>
-                    <article>
-                        <h3>Doom Eternal</h3>
-                        <img src="assets/img/doom.jpg" alt="Doom Eternal" width="400" height="500">
-                        <p>Doom Eternal es un videojuego de disparos en primera persona desarrollado por id Software.
-                        </p>
-                        <a href="detalleDoom-Eternal.html">Ver más...</a>
-                        <p>Precio Original: S/ 85.90</p>
-                        <p>Precio con 50% de descuento: S/ 42.95</p>
-                        <p>Ahorro: S/ 42.95</p>
-                        <p>Aprovecha esta super oferta!</p>
-                    </article>
-                </td>
-            </tr>
+                <article class="game-card">
+                    <img src="assets/img/W3W.jpg" alt="The Witcher 3: Wild Hunt" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>The Witcher 3: Wild Hunt</h3>
+                            <p class="price-discount"><del>S/ 100.00</del> <strong>S/ 50.00</strong></p>
+                            <div class="game-footer">
+                                <a href="detalleWitcher.html" class="btn btn-primary">Ver Oferta</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-            <tr align="center" valign="top">
-                <td>
-                    <article>
-                        <h3>The Forest</h3>
-                        <img src="assets/img/TF.webp" alt="The Forest" width="400" height="500">
-                        <p>The Forest es un videojuego de supervivencia y terror desarrollado por Endnight Games. Los
-                            jugadores deben sobrevivir en un bosque lleno de caníbales mutantes, recolectando recursos,
-                            construyendo refugios y enfrentando peligros mientras buscan a su hijo desaparecido.</p>
-                        <a href="detalleTheForest.html">Ver más...</a>
-                        <p>Precio Original: S/ 120.00</p>
-                        <p>Precio con 50% de descuento: S/ 60.00</p>
-                        <p>Ahorro: S/ 60.00</p>
-                        <p>Aprovecha esta super oferta!</p>
-                    </article>
-                </td>
+                <article class="game-card">
+                    <img src="assets/img/doom.jpg" alt="Doom Eternal" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>Doom Eternal</h3>
+                            <p class="price-discount"><del>S/ 85.90</del> <strong>S/ 42.95</strong></p>
+                            <div class="game-footer">
+                                <a href="detalleDoom-Eternal.html" class="btn btn-primary">Ver Oferta</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-                <td>
-                    <article>
-                        <h3>Subnautica</h3>
-                        <img src="assets/img/subnautica.jpg" alt="Subnautica" width="400" height="500">
-                        <p>Subnautica es un videojuego de supervivencia y exploración submarina desarrollado por Unknown
-                            Worlds Entertainment. Los jugadores deben sobrevivir en un planeta oceánico alienígena,
-                            recolectando recursos, construyendo bases submarinas y enfrentando criaturas marinas
-                            mientras
-                            exploran los misterios del mundo acuático.</p>
-                        <a href="detalleSubnautica.html">Ver más...</a>
-                        <p>Precio Original: S/ 72.00</p>
-                        <p>Precio con 50% de descuento: S/ 36.00</p>
-                        <p>Ahorro: S/ 36.00</p>
-                        <p>Aprovecha esta super oferta!</p>
-                    </article>
-                </td>
+                <article class="game-card">
+                    <img src="assets/img/TF.webp" alt="The Forest" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>The Forest</h3>
+                            <p class="price-discount"><del>S/ 120.00</del> <strong>S/ 60.00</strong></p>
+                            <div class="game-footer">
+                                <a href="detalleTheForest.html" class="btn btn-primary">Ver Oferta</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-                <td>
-                    <article>
-                        <h3>F1 23</h3>
-                        <img src="assets/img/f1.webp" alt="F1 23" width="400" height="500">
-                        <p>F1 23 es un videojuego de carreras desarrollado por Codemasters. Es la última entrega de la
-                            serie F1, que permite a los jugadores experimentar carreras de fórmula 1 realistas con
-                            gráficos avanzados y mecánicas de juego mejoradas.</p>
-                        <a href="detalleF123.html">Ver más...</a>
-                        <p>Precio Original: S/ 70.00</p>
-                        <p>Precio con 50% de descuento: S/ 35.00</p>
-                        <p>Ahorro: S/ 35.00</p>
-                        <p>Aprovecha esta super oferta!</p>
-                    </article>
-                </td>
-            </tr>
-        </table>
+                <article class="game-card">
+                    <img src="assets/img/subnautica.jpg" alt="Subnautica" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>Subnautica</h3>
+                            <p class="price-discount"><del>S/ 72.00</del> <strong>S/ 36.00</strong></p>
+                            <div class="game-footer">
+                                <a href="detalleSubnautica.html" class="btn btn-primary">Ver Oferta</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/f1.webp" alt="F1 23" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>F1 23</h3>
+                            <p class="price-discount"><del>S/ 70.00</del> <strong>S/ 35.00</strong></p>
+                            <div class="game-footer">
+                                <a href="detalleF123.html" class="btn btn-primary">Ver Oferta</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
     </main>
 
     <hr>
 
-    <footer class="Final">
-        <table width="100%" align="left" cellpadding="15">
-            <tr align="left" valign="top">
-                <td>
-                    <strong>Contacto</strong>
-                    <p>Telefono: +51 987654321</p>
-                    <p>Correo: <a href="mailto:nexusgamestore@gmail.com">nexusgamestore@gmail.com</a></p>
-                    <p>Direccion: Av. Universitaria 1801, Lima</p>
-                </td>
+    <footer id="contacto" class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Soporte & Contacto</h4>
+                <p><i class="fa-solid fa-phone"></i> +51 987 654 321</p>
+                <p><i class="fa-solid fa-envelope"></i> soporte@nexusgames.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Av. Universitaria 1801, Lima</p>
+            </div>
+            <div class="footer-col">
+                <h4>Consolas</h4>
+                <p><i class="fa-solid fa-gamepad"></i> PC</p>
+                <p><i class="fa-brands fa-playstation"></i> PlayStation</p>
+                <p><i class="fa-brands fa-xbox"></i> Xbox</p>
+                <p><i class="fa-brands fa-nintendo-switch"></i> Nintendo</p>
+                <p><i class="fa-brands fa-apple"></i> Móvil</p>
+            </div>
 
-                <td>
-                    <strong>Consolas</strong>
-                    <p><a href="juegosPC.html">PC</a></p>
-                    <p><a href="juegosXbox.html">Xbox One</a></p>
-                    <p><a href="juegosPlayStation.html">PlayStation 5</a></p>
-                    <p><a href="juegosMobile.html">Movil</a></p>
-                    <p><a href="juegosNintendo.html">Nintendo</a></p>
-                </td>
+            <div class="footer-col">
+                <h4>Redes Sociales</h4>
+                <p><i class="fa-brands fa-facebook"></i> <a href="https://facebook.com/nexusgames"
+                        target="_blank">Facebook</a></p>
+                <p><i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/nexusgames"
+                        target="_blank">Twitter</a></p>
+                <p><i class="fa-brands fa-instagram"></i> <a href="https://instagram.com/nexusgames"
+                        target="_blank">Instagram</a></p>
+                <p><i class="fa-brands fa-reddit"></i> <a href="https://reddit.com/r/nexusgames"
+                        target="_blank">Reddit</a></p>
+            </div>
 
-                <td>
-                    <strong>Redes Sociales</strong>
-                    <p><a href="https://www.facebook.com/">Facebook</a></p>
-                    <p><a href="https://www.instagram.com/">Instagram</a></p>
-                    <p><a href="https://twitter.com/">Twitter</a></p>
-                    <p><a href="https://www.reddit.com/">Reddit</a></p>
-                </td>
-
-                <td>
-                    <strong>Metodos de Pago</strong>
-                    <p>Visa</p>
-                    <p>Mastercard</p>
-                    <p>Paypal</p>
-                </td>
-            </tr>
-        </table>
-
-        <br clear="all">
-
-        <hr>
-        <p>Copyright &copy; 2026 UTP - Todos los derechos reservados</p>
+            <div class="footer-col">
+                <h4>Metodos de Pago</h4>
+                <p><i class="fa-solid fa-credit-card"></i> Tarjetas de Crédito/Débito</p>
+                <p><i class="fa-solid fa-wallet"></i> Efectivo en Sucursales</p>
+                <p><i class="fa-solid fa-qrcode"></i> Pagos Móviles</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2026 UTP - Todos los derechos reservados</p>
+        </div>
     </footer>
-
 </body>
 
 </html>
