@@ -1,0 +1,292 @@
+/* 1. RESET BÁSICO */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* COLORES EXTRAÍDOS DE TU NUEVO LOGO */
+    --primary-color: #00E5FF;       /* Cian eléctrico de la derecha de "NEXUS" */
+    --primary-hover: #00B4D8;       /* Un tono apenas más oscuro para los botones */
+    --accent-purple: #6930C3;       /* Violeta/Azul de la izquierda de la "N" */
+    --accent-purple-hover: #5390D9;
+
+    --bg-dark: #0A0A0A;             /* Fondo casi negro para alto contraste */
+    --bg-card: #161618;             /* Fondo para las tarjetas de los juegos (un poco más gris) */
+    
+    --text-light: #F8F9FA;          /* Texto principal */
+    --text-muted: #A0A0A0;          /* Texto secundario (más gris) */
+    --accent-green: #00E676;        /* Para los precios y 'Gratis' */
+    
+    --font-main: 'Poppins', sans-serif;
+}
+
+body {
+    background: #132652; 
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    color: #62e6a7;
+}
+
+hr {
+    display: none;
+}
+
+/* 2. CABECERA (Adaptado con tus gradientes) */
+.main-header {
+    padding: 30px 30px 50px 30px; 
+    background: linear-gradient(135deg, #48536e, #132652, #4d5872);
+    color: azure;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye los 3 bloques a los extremos y centro */
+    align-items: center;            /* Centra todo verticalmente en una sola línea */
+    width: 95%;                     /* Ocupa casi todo el ancho de la pantalla */
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0.8rem 0;
+    gap: 1rem;                      /* Espacio seguro entre bloques */
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    flex-shrink: 0;                 /* Evita que el logo se encoja o baje de línea */
+}
+/* 3. BARRA DE NAVEGACIÓN (Adaptado de tu menú en tablas a Flexbox) */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;                    /* Espacio entre los enlaces del menú */
+    flex-wrap: nowrap;              /* PROHÍBE que los elementos bajen a otra línea */
+}
+
+.navbar a, .dropbtn {
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 1.05em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    text-decoration: none;
+    background: none;
+    border: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.navbar a:hover, .dropbtn:hover {
+    transform: scale(1.15);
+}
+
+/* 4. SUBMENÚS DESPLEGABLES (Adaptado de tu <details> a .dropdown) */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0b0f19;   
+    border: 1px solid #1e272e;
+    border-radius: 4px;
+    padding: 8px 0;
+    margin-top: 15px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.7);
+    z-index: 1000;                
+    min-width: 170px;
+}
+
+.dropdown-content a {
+    color: #ffffff !important; 
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    font-size: 0.95em;
+    font-weight: 500;
+    text-align: center;
+    text-transform: none;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #1e272e;
+    transform: scale(1.08);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-shrink: 0;                 /* Evita que los botones se rompan de línea */
+}
+
+/* 5. CONTENIDO PRINCIPAL (Hero y Títulos) */
+.main-content {
+    padding: 20px;
+    background: linear-gradient(135deg, #48536e, #132652, #4d5872);
+    min-height: 100vh;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-title {
+    font-size: 50px;
+    color: #e4e7de;
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    color: bisque;
+    font-size: 1.2rem;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.section-title {
+    color: #e4dede;
+    text-align: left;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+/* 6. GRILLA Y TARJETAS DE JUEGOS (Adaptado de tu <article>) */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.game-card {
+    background-color: #202a3b;
+    border: 1px solid #35445d;
+    font-size: 17px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px #0008;
+}
+
+.game-img {
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.game-info h3 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.game-info p {
+    color: bisque;
+    line-height: 1.6;
+}
+
+.game-footer {
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+.game-price {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #62e6a7;
+    margin-bottom: 15px;
+}
+
+/* 7. BOTONES (Adaptado de tu enlace morado) */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #6236a7;
+    border-radius: 8px;
+    color: #101522;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+.btn:hover {
+    background-color: rgb(103, 79, 160);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #6236a7;
+    color: white;
+}
+
+/* 8. PIE DE PÁGINA */
+.main-footer {
+    padding: 40px 25px;
+    background: linear-gradient(135deg, #48536e, #132652, #4d5872);
+    color: #d0d7e2;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #35445d;
+    padding-top: 15px;
+}
+
+/* 9. RESPONSIVO PARA MÓVILES (Reemplazando tu media query de tablas) */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .user-actions {
+        margin-top: 10px;
+    }
+    .hero-title {
+        font-size: 35px;
+    }
+}
