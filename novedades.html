@@ -1,162 +1,245 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novedades</title>
+    <title>Nexus Games | Tienda de Videojuegos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body>
-    
-    <header>
-        <img src="assets/img/logo.jpg" class="logo" alt="logo" width="350" height="150">
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="login.html">Iniciar Sesion</a>
-            <a href="registrarse.html">Registrarse</a>
-        </nav>
-        <br>
-        <hr>
+
+    <header class="main-header">
+        <div class="header-container">
+
+            <img src="assets/img/logo.jpg" alt="Logo Nexus Games" class="logo">
+
+            <nav class="navbar">
+
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i> Inicio
+                </a>
+
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <i class="fa-solid fa-gamepad"></i> Juegos
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+
+                    <div class="dropdown-content">
+                        <a href="proximamente.html">Próximamente</a>
+                        <a href="novedades.html">Novedades</a>
+                        <a href="noticias.html">Noticias</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <i class="fa-solid fa-layer-group"></i> Categorías
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+
+                    <div class="dropdown-content">
+                        <a href="shooter.html">Shooters</a>
+                        <a href="aventura.html">Aventura</a>
+                        <a href="deportes.html">Deportes</a>
+                        <a href="rgp.html">RPG</a>
+                        <a href="supervivencia.html">Supervivencia</a>
+                        <a href="moba.html">Moba</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <i class="fa-solid fa-fire"></i> Ofertas
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+
+                    <div class="dropdown-content">
+                        <a href="50descuento.html">50% Descuento</a>
+                        <a href="30descuento.html">30% Descuento</a>
+                        <a href="20descuento.html">20% Descuento</a>
+                        <a href="gratis.html">Gratis</a>
+                    </div>
+                </div>
+
+                <a href="#contacto">
+                    <i class="fa-solid fa-headset"></i> Soporte
+                </a>
+
+            </nav>
+
+            <div class="user-actions">
+                <a href="login.html" class="btn btn-secondary">
+                    <i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión
+                </a>
+
+                <a href="registrarse.html" class="btn btn-primary">
+                    <i class="fa-solid fa-user-plus"></i> Registrarse
+                </a>
+            </div>
+
+        </div>
     </header>
 
-    <main>
-        <section>
+    <section class="hero">
+        <h1 class="hero-title">Novedades</h1>
+    </section>
 
-        <h2>Novedades</h2>
+    <main class="main-content">
 
-        <table width="100%" cellpading="10" cellpacing="0">
-            <tr align="center" valign="top">
-                <td>
-                    <article>
-            <h3>Silent Hill: Townfall</h3>
-                <img src="assets/img/sile.jpg" alt="Silent Hill: Townfall" width="300" height="400">
-            </a>
-            
-            <p>Nueva entrega de la saga de terror psicológico, en primera persona, con una atmósfera oscura y opresiva. Disponible en PS5, Xbox Series y PC.</p>
-            <p> Disponible ya</p>
-                
-        </article>
-        </td> 
-        <td>
-        
-        </td>
-        <td>
-            <article>
-                <h3>The Blood of Dawnwalker</h3>
-                
-                    <img src="assets/img/The_Blood_of_Dawnwalker_cover_art.jpg" alt="The Blood of Dawnwalker" width="300" height="400">
-                </a>
-                
-                <p>RPG de acción con temática vampírica y ambientación gótica, con combate cuerpo a cuerpo visceral. Nuevo título de fantasía oscura.</p>
-                <p>Disponible Ya</p>
+        <section class="section-container">
+            <h2><i class="fa-solid fa-newspaper"></i>Novedades Destacadas</h2>
 
-            </article>
-        </td>
-                  
-            </tr>
-        </table>
+            <br>
 
-        <hr>
+            <div class="games-grid">
+                <article class="game-card news-card">
+                    <img src="assets/img/sile.jpg" alt="Silent Hill Townfall" class="game-img">
+                    <div class="game-info">
+                        <p class="news-category">Terror</p>
+                        <h3>Silent Hill: Townfall</h3>
+                        <p class="news-description">
+                            Una nueva entrega de terror psicológico
+                            que promete misterio, exploración
+                            y momentos de tensión.
+                        </p>
+                        <br>
+                        <span class="game-price">Disponible Ya</span>
+                    </div>
+                </article>
 
+                <article class="game-card news-card">
+                    <img src="assets/img/The_Blood_of_Dawnwalker_cover_art.jpg" alt="The Blood of Dawnwalker"
+                        class="game-img">
+                    <div class="game-info">
+                        <p class="news-category">Terror</p>
+                        <h3>The Blood of Dawnwalker</h3>
+                        <p>RPG de acción con temática vampírica y ambientación gótica, con combate cuerpo a cuerpo
+                            visceral. Nuevo título de fantasía oscura.</p>
+                        <br>
+                        <span class="game-price">Disponible Ya</span>
+                    </div>
+                </article>
+
+            </div>
         </section>
 
-        <section>
-            <h2> Actualizaciones y Parches</h2>
+        <section class="section-container">
 
-            <table width="100%" cellpading="10" cellpacing="0">
-                <tr align="center" valign="top">
-                    <td>
-                        <article>
-                            <h3>Parche 2.3 - GTA V</h3>
-                            <p>Nuevos vehículos, corrección de errores y mejoras de rendimiento.</p>
-                            <p>Actualizado: hace 3 días</p>
-                        </article>
-                    </td>
-                    <td>
-                        <article>
-                            <h3>Balanceo - COD</h3>
-                            <p>Ajustes de armas y mapas en el modo multijugador.</p>
-                            <p>Actualizado: hace 1 semana</p>
-                            
-                        </article>
-                    </td>
-                    <td>
-                        <article>
-                            <h3>Nueva temporada - FC27</h3>
-                            <p>Se añadieron nuevos equipos y modo torneo online.</p>
-                            <p>Actualizado: hace 2 semanas</p>
-                        </article>
-                    </td>
-                </tr>
-            </table>
+            <h2><i class="fa-solid fa-wrench"></i> Actualizaciones y parches <i class="fa-solid fa-bug"></i></h2>
 
-            <hr>
-            
+            <br>
+
+            <div class="games-grid">
+                <article class="game-card news-card">
+                    <div class="game-info">
+                        <h3>Parche 2.3 - GTA V</h3>
+                        <p class="news-description">
+                            Nuevos vehículos, corrección de errores y mejoras de rendimiento.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="game-card news-card">
+                    <div class="game-info">
+                        <h3>Balanceo - COD</h3>
+                        <p class="news-description">
+                            Ajustes de armas y mapas en el modo multijugador.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="game-card news-card">
+                    <div class="game-info">
+                        <h3>Nueva temporada - FC27</h3>
+                        <p class="news-description">
+                            Se añadieron nuevos equipos y modo torneo online.
+                        </p>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <section>
+        <section class="section-container">
+
             <h2>Mejoras de la Plataforma</h2>
-            <table width="100%" cellpading="10" cellpacing="0">
-                <tr align="center" valign="top">
-                    <td>
-                        <article>
-                            <h4>Nuevo método de pago</h4>
-                            <p>Ahora puedes pagar con Yape y Plin directamente desde la tienda.</p>
-                        </article>
-                    </td>
-                    <td>
-                        <article>
-                            <h4>Nueva sección de Ofertas</h4>
-                            <p>Agregamos filtros por porcentaje de descuento para encontrar promociones más rápido.</p>
-                        </article>
-                    </td>
-                </tr>
-            </table>
-            <hr>
+
+            <br>
+
+            <div class="games-grid">
+                <article class="game-card news-card">
+
+                    <div class="game-info">
+                        <h3>Nuevos métodos de pago</h3>
+                        <p class="news-description">
+                            Ahora puedes pagar con Yape y Plin directamente desde la tienda.
+                        </p>
+                    </div>
+
+                </article>
+
+                <article class="game-card news-card">
+                    <div class="game-info">
+                        <h3>Nueva sección de Ofertas</h3>
+                        <p class="news-description">
+                            Agregamos filtros por porcentaje de descuento para encontrar promociones más rápido.
+                        </p>
+                    </div>
+                </article>
+            </div>
         </section>
 
     </main>
 
-    <footer>
-        <table width="100%" cellpading="10" cellpacing="0">
-            <tr align="center" valign="top">
-                <td>
-                    <strong>Contacto</strong>
-                    <p>Telefono: +51 987654321</p>
-                    <p>Correo: <a href="mailto:nexusgamestore@gmail.com"> nexusgamestore@gmail.com</a><p>
-                    <p>Direccion: Av. Universitaria 1801, Lima</p>
-                </td>
+    <hr>
 
-                <td>
-                    <strong>Consolas</strong>
-                    <p><a href="juegosPC.html">PC</a></p>
-                    <p><a href="juegosXbox.html">Xbox One</a></p>
-                    <p><a href="juegosPlayStation.html">PlayStation 5</a></p>
-                    <p><a href="juegosMobile.html">Movil</a></p>
-                    <p><a href="juegosNintendo.html">Nintendo</a></p>
-                </td>
+    <footer id="contacto" class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Soporte & Contacto</h4>
+                <p><i class="fa-solid fa-phone"></i> +51 987 654 321</p>
+                <p><i class="fa-solid fa-envelope"></i> soporte@nexusgames.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Av. Universitaria 1801, Lima</p>
+            </div>
+            <div class="footer-col">
+                <h4>Consolas</h4>
+                <p><i class="fa-solid fa-gamepad"></i> PC</p>
+                <p><i class="fa-brands fa-playstation"></i> PlayStation</p>
+                <p><i class="fa-brands fa-xbox"></i> Xbox</p>
+                <p><i class="fa-brands fa-nintendo-switch"></i> Nintendo</p>
+                <p><i class="fa-brands fa-apple"></i> Móvil</p>
+            </div>
 
-                <td>
-                    <strong>Redes Sociales</strong>
-                    <p><a href="https://www.facebook.com/">Facebook</a></p>
-                    <p><a href="https://www.instagram.com/">Instagram</a></p>
-                    <p><a href="https://twitter.com/">Twitter</a></p>
-                    <p><a href="https://www.reddit.com/">Reddit</a></p>
-                </td>
+            <div class="footer-col">
+                <h4>Redes Sociales</h4>
+                <p><i class="fa-brands fa-facebook"></i> <a href="https://facebook.com/nexusgames"
+                        target="_blank">Facebook</a></p>
+                <p><i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/nexusgames"
+                        target="_blank">Twitter</a></p>
+                <p><i class="fa-brands fa-instagram"></i> <a href="https://instagram.com/nexusgames"
+                        target="_blank">Instagram</a></p>
+                <p><i class="fa-brands fa-reddit"></i> <a href="https://reddit.com/r/nexusgames"
+                        target="_blank">Reddit</a></p>
+            </div>
 
-                <td>
-                    <strong>Metodos de Pago</strong>
-                    <p>Visa</p>
-                    <p>Mastercard</p>
-                    <p>Paypal</p>
-                </td>
-                
-            </tr>
-        </table>
- 
-        <br clear="all">
- 
-        <hr>
-        <p>Copyright &copy; 2026 UTP - Todos los derechos reservados</p>
+            <div class="footer-col">
+                <h4>Metodos de Pago</h4>
+                <p><i class="fa-solid fa-credit-card"></i> Tarjetas de Crédito/Débito</p>
+                <p><i class="fa-solid fa-wallet"></i> Efectivo en Sucursales</p>
+                <p><i class="fa-solid fa-qrcode"></i> Pagos Móviles</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2026 UTP - Todos los derechos reservados</p>
+        </div>
     </footer>
+
 </body>
+
 </html>

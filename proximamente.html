@@ -1,144 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Próximamente</title>
+    <title>Nexus Games | Tienda de Videojuegos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-    <header>
-        <img src="assets/img/logo.jpg" class="logo" alt="logo" width="350" height="150">
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="login.html">Iniciar Sesion</a>
-            <a href="registrarse.html">Registrarse</a>
-        </nav>
+
+    <header class="main-header">
+        <div class="header-container">
+            <img src="assets/img/logo.jpg" alt="Logo Nexus Games" class="logo">
+
+            <nav class="navbar">
+                <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa-solid fa-gamepad"></i> Juegos <i
+                            class="fa-solid fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="proximamente.html">Próximamente</a>
+                        <a href="novedades.html">Novedades</a>
+                        <a href="noticias.html">Noticias</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa-solid fa-layer-group"></i> Categorías <i
+                            class="fa-solid fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="shooter.html">Shooters</a>
+                        <a href="aventura.html">Aventura</a>
+                        <a href="deportes.html">Deportes</a>
+                        <a href="rgp.html">RPG</a>
+                        <a href="supervivencia.html">Supervivencia</a>
+                        <a href="moba.html">Moba</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa-solid fa-fire"></i> Ofertas <i
+                            class="fa-solid fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="50descuento.html">50% Descuento</a>
+                        <a href="30descuento.html">30% Descuento</a>
+                        <a href="20descuento.html">20% Descuento</a>
+                        <a href="gratis.html">Gratis</a>
+                    </div>
+                </div>
+
+                <a href="#contacto"><i class="fa-solid fa-headset"></i> Soporte</a>
+            </nav>
+
+            <div class="user-actions">
+                <a href="login.html" class="btn btn-secondary"><i class="fa-solid fa-right-to-bracket"></i> Iniciar
+                    Sesión</a>
+                <a href="registrarse.html" class="btn btn-primary"><i class="fa-solid fa-user-plus"></i> Registrarse</a>
+            </div>
+        </div>
     </header>
 
-    <hr>
+    <section class="hero">
+        <h1 class="hero-title">Proximamente</h1>
+        <p class="hero-subtitle">Juegos que tendran lanzamiento próximamente. ¡Mantente atento!</p>
+    </section>
 
-    <main>
-        <h1>Proximamente</h1>
-        <p>Juegos que tendran lanzamiento próximamente. ¡Mantente atento!</p>
-        <hr>
+    <main class="main-content">
 
-        <section class="juegosProximamente"></section>
-        <table width="100%" cellpadding="10" cellspacing="0">
-            <tr align="center" valign="top">
-                <td>
-                    <article>
-                        <h3>Marvel's Wolverine</h3>
-                        <img src="assets/img/marvelw.webp" alt="Marvel's Wolverine" width="400" height="500">
-                        <p>Marvel's Wolverine es un videojuego de acción que tiene al mutante con garras de adamantium
-                            como protagonista, invitándonos a conocer una toma original y oscura de Logan (interpretado
-                            por Liam McIntyre), donde el héroe debe excavar en un pasado secreto mientras se enfrenta a
-                            un implacable ataque de enemigos.</p>
-                        <a href="detalleWolverine.html">Ver más...</a>
-                        <p>Proximamente!</p>
-                    </article>
-                </td>
+        <section id="juegos" class="section-container">
 
-                <td>
-                    <article>
-                        <h3>GTA VI</h3>
-                        <img src="assets/img/gta6.webp" alt="GTA VI" width="400" height="500">
-                        <p>GTA VI es el próximo juego de la serie Grand Theft Auto, que promete ofrecer una experiencia
-                            de juego aún más inmersiva y detallada que sus predecesores.</p>
-                        <a href="detalleGTA6.html">Ver más...</a>
-                        <p>Proximamente!</p>
-                    </article>
-                </td>
+            <div class="games-grid">
+                <article class="game-card">
+                    <img src="assets/img/marvelw.webp" alt="Marvel's Wolverine" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>Marvel's Wolverine</h3>
+                            <p class="release-date">Fecha de Lanzamiento: 2026</p>
+                            <div class="game-footer">
+                                <a href="detalleWolverine.html" class="btn btn-primary">Mas Informacion</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-                <td>
-                    <article>
-                        <h3>Phantom Blade Zero</h3>
-                        <img src="assets/img/phantom.webp" alt="Phantom Blade Zero" width="400" height="500">
-                        <p>Phantom Blade Zero es un juego de acción y aventura que combina elementos de combate rápido y exploración en un mundo futurista lleno de desafíos y enemigos formidables.</p>
-                        <a href="detallePhantomBladeZero.html">Ver más...</a>
-                        <p>Proximamente!</p>
-                    </article>
-                </td>
-            </tr>
+                <article class="game-card">
+                    <img src="assets/img/gta6.webp" alt="GTA VI" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>GTA VI</h3>
+                            <p class="release-date">Fecha de Lanzamiento: 2026</p>
+                            <div class="game-footer">
+                                <a href="detalleGTA6.html" class="btn btn-primary">Mas Informacion</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-            <tr align="center" valign="top">
-                <td>
-                    <article>
-                        <h3>God of War: Laufey</h3>
-                        <img src="assets/img/gow lau.webp" alt="God of War: Laufey" width="400" height="500">
-                        <p>God of War: Laufey es el próximo juego de la serie God of War, que promete ofrecer una experiencia de juego aún más inmersiva y detallada que sus predecesores.</p>
-                        <a href="detalleGodOfWarLaufey.html">Ver más...</a>
-                        <p>Proximamente!</p>
-                    </article>
-                </td>
+                <article class="game-card">
+                    <img src="assets/img/phantom.webp" alt="Phantom Blade Zero" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>Phantom Blade Zero</h3>
+                            <p class="release-date">Fecha de Lanzamiento: 2026</p>
+                            <div class="game-footer">
+                                <a href="detallePhantomBladeZero.html" class="btn btn-primary">Mas Informacion</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-                <td>
-                    <article>
-                        <h3>Final Fantasy Resonance</h3>
-                        <img src="assets/img/FFR.webp" alt="Final Fantasy Resonance " width="400" height="500">
-                        <p>Final Fantasy Resonance es un juego de rol que promete ofrecer una experiencia de juego aún más inmersiva y detallada que sus predecesores.</p>
-                        <a href="detalleFinalFantasyResonance.html">Ver más...</a>
-                        <p>Proximamente!</p>
-                    </article>
-                </td>
+                <article class="game-card">
+                    <img src="assets/img/gow lau.webp" alt="God of War: Laufey" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>God of War: Laufey</h3>
+                            <p class="release-date">Fecha de Lanzamiento: 2027</p>
+                            <div class="game-footer">
+                                <a href="detalleGodOfWarLaufey.html" class="btn btn-primary">Mas Informacion</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-                <td>
-                    <article>
-                        <h3>Valheim</h3>
-                        <img src="assets/img/valheim.webp" alt="Valheim" width="400" height="500">
-                        <p>Valheim es un juego de supervivencia y construcción en un mundo mitológico, donde los jugadores deben trabajar juntos para sobrevivir y construir su propio imperio.</p>
-                        <a href="detalleValheim.html">Ver más...</a>
-                        <p>Proximamente!</p>
-                    </article>
-                </td>
+                <article class="game-card">
+                    <img src="assets/img/FFR.webp" alt="Final Fantasy Resonance" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>Final Fantasy Resonance</h3>
+                            <p class="release-date">Fecha de Lanzamiento: 2026</p>
+                            <div class="game-footer">
+                                <a href="detalleFinalFantasyResonance.html" class="btn btn-primary">Mas Informacion</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-            </tr>
-        </table>
+                <article class="game-card">
+                    <img src="assets/img/valheim.webp" alt="Valheim" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>Valheim</h3>
+                            <p class="release-date">Fecha de Lanzamiento: 2026</p>
+                            <div class="game-footer">
+                                <a href="detalleValheim.html" class="btn btn-primary">Mas Informacion</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
     </main>
 
     <hr>
 
-    <footer class="Final">
-        <table width="100%" align="left" cellpadding="15">
-            <tr align="left" valign="top">
-                <td>
-                    <strong>Contacto</strong>
-                    <p>Telefono: +51 987654321</p>
-                    <p>Correo: <a href="mailto:nexusgamestore@gmail.com">nexusgamestore@gmail.com</a></p>
-                    <p>Direccion: Av. Universitaria 1801, Lima</p>
-                </td>
+    <footer id="contacto" class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Soporte & Contacto</h4>
+                <p><i class="fa-solid fa-phone"></i> +51 987 654 321</p>
+                <p><i class="fa-solid fa-envelope"></i> soporte@nexusgames.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Av. Universitaria 1801, Lima</p>
+            </div>
+            <div class="footer-col">
+                <h4>Consolas</h4>
+                <p><i class="fa-solid fa-gamepad"></i> PC</p>
+                <p><i class="fa-brands fa-playstation"></i> PlayStation</p>
+                <p><i class="fa-brands fa-xbox"></i> Xbox</p>
+                <p><i class="fa-brands fa-nintendo-switch"></i> Nintendo</p>
+                <p><i class="fa-brands fa-apple"></i> Móvil</p>
+            </div>
 
-                <td>
-                    <strong>Consolas</strong>
-                    <p><a href="juegosPC.html">PC</a></p>
-                    <p><a href="juegosXbox.html">Xbox One</a></p>
-                    <p><a href="juegosPlayStation.html">PlayStation 5</a></p>
-                    <p><a href="juegosMobile.html">Movil</a></p>
-                    <p><a href="juegosNintendo.html">Nintendo</a></p>
-                </td>
+            <div class="footer-col">
+                <h4>Redes Sociales</h4>
+                <p><i class="fa-brands fa-facebook"></i> <a href="https://facebook.com/nexusgames"
+                        target="_blank">Facebook</a></p>
+                <p><i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/nexusgames"
+                        target="_blank">Twitter</a></p>
+                <p><i class="fa-brands fa-instagram"></i> <a href="https://instagram.com/nexusgames"
+                        target="_blank">Instagram</a></p>
+                <p><i class="fa-brands fa-reddit"></i> <a href="https://reddit.com/r/nexusgames"
+                        target="_blank">Reddit</a></p>
+            </div>
 
-                <td>
-                    <strong>Redes Sociales</strong>
-                    <p><a href="https://www.facebook.com/">Facebook</a></p>
-                    <p><a href="https://www.instagram.com/">Instagram</a></p>
-                    <p><a href="https://twitter.com/">Twitter</a></p>
-                    <p><a href="https://www.reddit.com/">Reddit</a></p>
-                </td>
-
-                <td>
-                    <strong>Metodos de Pago</strong>
-                    <p>Visa</p>
-                    <p>Mastercard</p>
-                    <p>Paypal</p>
-                </td>
-            </tr>
-        </table>
-
-        <br clear="all">
-
-        <hr>
-        <p>Copyright &copy; 2026 UTP - Todos los derechos reservados</p>
+            <div class="footer-col">
+                <h4>Metodos de Pago</h4>
+                <p><i class="fa-solid fa-credit-card"></i> Tarjetas de Crédito/Débito</p>
+                <p><i class="fa-solid fa-wallet"></i> Efectivo en Sucursales</p>
+                <p><i class="fa-solid fa-qrcode"></i> Pagos Móviles</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2026 UTP - Todos los derechos reservados</p>
+        </div>
     </footer>
 </body>
 
