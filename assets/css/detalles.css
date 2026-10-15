@@ -1,0 +1,173 @@
+/* Colores y ajustes generales */
+:root {
+    color-scheme: dark;
+    --fondo: #172d5b;
+    --superficie: #202b3e;
+    --cabecera: #3d4c6c;
+    --texto: #f2f3f8;
+    --morado: #7138bd;
+    --acento: #7660ff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid rgb(255 255 255 / 15%);
+}
+
+/* Encabezado y navegación */
+header {
+    min-height: 150px;
+    padding: 24px 5%;
+    background: var(--cabecera);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.logo {
+    display: block;
+    max-width: 230px;
+    height: auto;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+a {
+    color: var(--texto);
+    text-decoration: none;
+}
+
+nav a,
+main > a {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 1px solid var(--morado);
+    border-radius: 9px;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+nav a:hover,
+main > a:hover {
+    background: var(--morado);
+    transform: translateY(-2px);
+}
+
+/* Contenido */
+main {
+    width: min(100% - 40px, 1100px);
+    margin: 40px auto;
+}
+
+h1 {
+    margin: 0 0 28px;
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+h2 {
+    margin-top: 32px;
+    color: #d8d4ff;
+}
+
+p,
+li {
+    font-size: 1.05rem;
+}
+
+ul {
+    padding-left: 24px;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    margin: 16px auto 28px;
+    border: 0;
+    border-radius: 12px;
+}
+
+/* Pie de página */
+.Final {
+    padding: 28px 5% 12px;
+    background: var(--superficie);
+}
+
+.Final table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.Final td {
+    width: 25%;
+    padding: 12px;
+    vertical-align: top;
+}
+
+.Final strong {
+    color: #d8d4ff;
+    font-size: 1.1rem;
+}
+
+.Final p {
+    margin: 8px 0;
+}
+
+.Final a:hover {
+    color: #b9a4ff;
+}
+
+.Final > p {
+    text-align: center;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    main {
+        width: min(100% - 28px, 1100px);
+        margin: 28px auto;
+    }
+
+    .Final table,
+    .Final tbody,
+    .Final tr,
+    .Final td {
+        display: block;
+        width: 100%;
+    }
+
+    .Final td {
+        padding: 12px 0;
+    }
+}
