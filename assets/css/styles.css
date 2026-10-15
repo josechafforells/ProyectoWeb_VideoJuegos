@@ -4,23 +4,6 @@
     padding: 0;
 }
 
-:root {
-    
-    --primary-color: #00E5FF;       
-    --primary-hover: #00B4D8;       
-    --accent-purple: #6930C3;       
-    --accent-purple-hover: #5390D9;
-
-    --bg-dark: #0A0A0A;             
-    --bg-card: #161618;             
-    
-    --text-light: #F8F9FA;          
-    --text-muted: #A0A0A0;          
-    --accent-green: #00E676;        
-    
-    --font-main: 'Poppins', sans-serif;
-}
-
 body {
     background: #132652; 
     color: white;
