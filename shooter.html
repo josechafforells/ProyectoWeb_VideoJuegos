@@ -1,156 +1,243 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shooter</title>
+    <title>Nexus Games | Tienda de Videojuegos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-    <header>
-        <img src="assets/img/logo.jpg" class="logo" alt="logo" width="350" height="150">
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="login.html">Iniciar Sesion</a>
-            <a href="registrarse.html">Registrarse</a>
-        </nav>
+
+    <header class="main-header">
+        <div class="header-container">
+            <img src="assets/img/logo.jpg" alt="Logo Nexus Games" class="logo">
+
+            <nav class="navbar">
+                <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa-solid fa-gamepad"></i> Juegos <i
+                            class="fa-solid fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="proximamente.html">Próximamente</a>
+                        <a href="novedades.html">Novedades</a>
+                        <a href="noticias.html">Noticias</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa-solid fa-layer-group"></i> Categorías <i
+                            class="fa-solid fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="shooter.html">Shooters</a>
+                        <a href="aventura.html">Aventura</a>
+                        <a href="deportes.html">Deportes</a>
+                        <a href="rgp.html">RPG</a>
+                        <a href="supervivencia.html">Supervivencia</a>
+                        <a href="moba.html">Moba</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa-solid fa-fire"></i> Ofertas <i
+                            class="fa-solid fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="50descuento.html">50% Descuento</a>
+                        <a href="30descuento.html">30% Descuento</a>
+                        <a href="20descuento.html">20% Descuento</a>
+                        <a href="gratis.html">Gratis</a>
+                    </div>
+                </div>
+
+                <a href="#contacto"><i class="fa-solid fa-headset"></i> Soporte</a>
+            </nav>
+
+            <div class="user-actions">
+                <a href="login.html" class="btn btn-secondary"><i class="fa-solid fa-right-to-bracket"></i> Iniciar
+                    Sesión</a>
+                <a href="registrarse.html" class="btn btn-primary"><i class="fa-solid fa-user-plus"></i> Registrarse</a>
+            </div>
+        </div>
     </header>
 
-    <hr>
-
-    <main>
-        <h1>Shooter</h1>
-        <p>Son videojuegos de acción enfocados principalmente en el combate con armas, destacando los títulos de
+    <section class="hero">
+        <h1 class="hero-title">Shooter</h1>
+        <p class="hero-subtitle">Son videojuegos de acción enfocados principalmente en el combate con armas, destacando
+            los títulos de
             disparos en primera persona y de acción bélica de ritmo rápido. Ponen a prueba los reflejos, la puntería y
             la estrategia del jugador en el campo de batalla.</p>
+    </section>
 
-        <hr>
+    <main class="main-content">
 
-        <section class="juegosShooter"></section>
-        <table width="100%" cellpadding="10" cellspacing="0">
-            <tr align="center" valign="top">
-                <td>
-                    <article>
-                        <h3>Call of Duty: Black Ops 3</h3>
-                        <img src="assets/img/CoD_Black_Ops_cover.webp" alt="Call of Duty: Black Ops" width="400"
-                            height="500">
-                        <p>Call of Duty: Black Ops es un videojuego de disparos en primera persona ambientado en la
-                            Guerra Fría.</p>
-                        <a href="detalleCOD-Black-Ops.html">Ver más...</a>
-                        <p>Precio PC: S/ 250.00</p>
-                        <p>Precio PlayStation: S/ 200.00</p>
-                        <p>Precio Xbox: S/ 220.00</p>
-                    </article>
-                </td>
+        <section id="juegos" class="section-container">
 
-                <td>
-                    <article>
-                        <h3>Battlefield</h3>
-                        <img src="assets/img/g2.jpg" alt="Battlefield" width=400 height="500">
-                        <p>Battlefield trata de ponerte en las botas de un soldado en medio del caos, la destrucción
-                            y la
-                            estrategia del
-                            frente de batalla</p>
-                        <a href="detalleBattlefield.html">Ver más...</a>
-                        <p>Precio PC: S/ 100.90</p>
-                        <p>Precio PlayStation: S/ 120.00</p>
-                        <p>Precio Xbox: S/ 130.00</p>
-                    </article>
-                </td>
+            <div class="games-grid">
+                <article class="game-card">
+                    <img src="assets/img/CoD_Black_Ops_cover.webp" alt="Call of Duty: Black Ops 3" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>Call of Duty: Black Ops 3</h3>
+                            <p>Call of Duty: Black Ops es un videojuego de disparos en primera persona ambientado en la
+                                Guerra Fría.</p>
+                            <br>
+                                <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>:
+                                250.00</p>
+                            <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>:
+                                200.00</p>
+                            <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-xbox"></i>:
+                                220.00</p>
+                            <div class="game-footer">
+                                <a href="detalleCOD-Black-Ops.html" class="btn btn-primary">Ver mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-                <td>
-                    <article>
-                        <h3>Valorant</h3>
-                        <img src="assets/img/valo.jpg" alt="Valorant" width="400" height="500">
-                        <p>Valorant es un videojuego de disparos tácticos en primera persona desarrollado por Riot
-                            Games.</p>
-                        <a href="detalleValorant.html">Ver más...</a>
-                        <p>Precio: Gratis</p>
-                    </article>
-                </td>
-            </tr>
+                <article class="game-card">
+                    <img src="assets/img/g2.jpg" alt="Battlefield" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>Battlefield</h3>
+                            <p>Battlefield trata de ponerte en las botas de un soldado en medio del caos, la destrucción
+                                y la
+                                estrategia del
+                                frente de batalla</p>
+                            <br>
+                            <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>:
+                                100.90</p>
+                            <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>:
+                                120.00</p>
+                            <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-xbox"></i>:
+                                130.00</p>
+                            <div class="game-footer">
+                                <a href="detalleBattlefield.html" class="btn btn-primary">Ver mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-            <tr align="center" valign="top">
-                <td>
-                    <article>
-                        <h3>Counter-Strike 2</h3>
-                        <img src="assets/img/cs.jpg" alt="Counter-Strike 2" width="400" height="500">
-                        <p>Counter-Strike 2 es el siguiente capítulo de la serie Counter-Strike, desarrollado por Valve Corporation.</p>
-                        <a href="detalleCounter-Strike-2.html">Ver más...</a>
-                        <p>Precio: Gratis</p>
-                    </article>
-                </td>
+                <article class="game-card">
+                    <img src="assets/img/valo.jpg" alt="Valorant" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>Valorant</h3>
+                            <p>Valorant es un videojuego de disparos tácticos en primera persona desarrollado por Riot
+                                Games.</p>
+                            <br>
+                            <p>Gratis</p>
+                            <div class="game-footer">
+                                <a href="detalleValorant.html" class="btn btn-primary">Ver mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-                <td>
-                    <article>
-                        <h3>Overwatch 2</h3>
-                        <img src="assets/img/over.jpg" alt="Overwatch 2" width="400" height="500">
-                        <p>Overwatch 2 es la secuela de Overwatch, desarrollado por Blizzard Entertainment.</p>
-                        <a href="detalleOverwatch-2.html">Ver más...</a>
-                        <p>Precio: Gratis</p>
-                    </article>
-                </td>
+                <article class="game-card">
+                    <img src="assets/img/cs.jpg" alt="Counter-Strike 2" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>Counter-Strike 2</h3>
+                            <p>Counter-Strike 2 es un videojuego de disparos en primera persona desarrollado por Valve.
+                            </p>
+                            <br>
+                            <p>Gratis</p>
+                            <div class="game-footer">
+                                <a href="detalleCounter-Strike-2.html" class="btn btn-primary">Ver mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-                <td>
-                    <article>
-                        <h3>Doom Eternal</h3>
-                        <img src="assets/img/doom.jpg" alt="Doom Eternal" width="400" height="500">
-                        <p>Doom Eternal es un videojuego de disparos en primera persona desarrollado por id Software.</p>
-                        <a href="detalleDoom-Eternal.html">Ver más...</a>
-                        <p>Precio PC: S/ 85.99</p>
-                        <p>Precio PlayStation: S/ 90.00</p>
-                        <p>Precio Xbox: S/ 95.00</p>
-                        <p>Precio Nintendo Switch: S/ 100.00</p>
-                    </article>
-                </td>
-            </tr>
-        </table>
+                <article class="game-card">
+                    <img src="assets/img/over.jpg" alt="Overwatch 2" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>Overwatch 2</h3>
+                            <p>Overwatch 2 es un videojuego de disparos en primera persona desarrollado por Blizzard
+                                Entertainment.</p>
+                            <br>
+                            <p>Gratis</p>
+                            <div class="game-footer">
+                                <a href="detalleOverwatch-2.html" class="btn btn-primary">Ver mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/doom.jpg" alt="Doom Eternal" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>Doom Eternal</h3>
+                            <p>Doom Eternal es un videojuego de disparos en primera persona desarrollado por id Software.</p>
+                            <br>
+                            <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>:
+                                85.99</p>
+                            <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>:
+                                90.00</p>
+                            <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-xbox"></i>:
+                                95.00</p>
+                            <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-nintendo-switch"></i>:
+                                100.00</p>
+                            <div class="game-footer">
+                                <a href="detalleDoom-Eternal.html" class="btn btn-primary">Ver mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
 
     </main>
 
     <hr>
 
-    <footer class="Final">
-        <table width="100%" align="left" cellpadding="15">
-            <tr align="left" valign="top">
-                <td>
-                    <strong>Contacto</strong>
-                    <p>Telefono: +51 987654321</p>
-                    <p>Correo: <a href="mailto:nexusgamestore@gmail.com">nexusgamestore@gmail.com</a></p>
-                    <p>Direccion: Av. Universitaria 1801, Lima</p>
-                </td>
+    <footer id="contacto" class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Soporte & Contacto</h4>
+                <p><i class="fa-solid fa-phone"></i> +51 987 654 321</p>
+                <p><i class="fa-solid fa-envelope"></i> soporte@nexusgames.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Av. Universitaria 1801, Lima</p>
+            </div>
+            <div class="footer-col">
+                <h4>Consolas</h4>
+                <p><i class="fa-solid fa-gamepad"></i> PC</p>
+                <p><i class="fa-brands fa-playstation"></i> PlayStation</p>
+                <p><i class="fa-brands fa-xbox"></i> Xbox</p>
+                <p><i class="fa-brands fa-nintendo-switch"></i> Nintendo</p>
+                <p><i class="fa-brands fa-apple"></i> Móvil</p>
+            </div>
 
-                <td>
-                    <strong>Consolas</strong>
-                    <p><a href="juegosPC.html">PC</a></p>
-                    <p><a href="juegosXbox.html">Xbox One</a></p>
-                    <p><a href="juegosPlayStation.html">PlayStation 5</a></p>
-                    <p><a href="juegosMobile.html">Movil</a></p>
-                    <p><a href="juegosNintendo.html">Nintendo</a></p>
-                </td>
+            <div class="footer-col">
+                <h4>Redes Sociales</h4>
+                <p><i class="fa-brands fa-facebook"></i> <a href="https://facebook.com/nexusgames"
+                        target="_blank">Facebook</a></p>
+                <p><i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/nexusgames"
+                        target="_blank">Twitter</a></p>
+                <p><i class="fa-brands fa-instagram"></i> <a href="https://instagram.com/nexusgames"
+                        target="_blank">Instagram</a></p>
+                <p><i class="fa-brands fa-reddit"></i> <a href="https://reddit.com/r/nexusgames"
+                        target="_blank">Reddit</a></p>
+            </div>
 
-                <td>
-                    <strong>Redes Sociales</strong>
-                    <p><a href="https://www.facebook.com/">Facebook</a></p>
-                    <p><a href="https://www.instagram.com/">Instagram</a></p>
-                    <p><a href="https://twitter.com/">Twitter</a></p>
-                    <p><a href="https://www.reddit.com/">Reddit</a></p>
-                </td>
-
-                <td>
-                    <strong>Metodos de Pago</strong>
-                    <p>Visa</p>
-                    <p>Mastercard</p>
-                    <p>Paypal</p>
-                </td>
-            </tr>
-        </table>
-
-        <br clear="all">
-
-        <hr>
-        <p>Copyright &copy; 2026 UTP - Todos los derechos reservados</p>
+            <div class="footer-col">
+                <h4>Metodos de Pago</h4>
+                <p><i class="fa-solid fa-credit-card"></i> Tarjetas de Crédito/Débito</p>
+                <p><i class="fa-solid fa-wallet"></i> Efectivo en Sucursales</p>
+                <p><i class="fa-solid fa-qrcode"></i> Pagos Móviles</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2026 UTP - Todos los derechos reservados</p>
+        </div>
     </footer>
 </body>
 

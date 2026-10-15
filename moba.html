@@ -1,154 +1,218 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moba</title>
+    <title>Nexus Games | Tienda de Videojuegos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-    <header>
-        <img src="assets/img/logo.jpg" class="logo" alt="logo" width="350" height="150">
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="login.html">Iniciar Sesion</a>
-            <a href="registrarse.html">Registrarse</a>
-        </nav>
+
+    <header class="main-header">
+        <div class="header-container">
+            <img src="assets/img/logo.jpg" alt="Logo Nexus Games" class="logo">
+
+            <nav class="navbar">
+                <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa-solid fa-gamepad"></i> Juegos <i
+                            class="fa-solid fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="proximamente.html">Próximamente</a>
+                        <a href="novedades.html">Novedades</a>
+                        <a href="noticias.html">Noticias</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa-solid fa-layer-group"></i> Categorías <i
+                            class="fa-solid fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="shooter.html">Shooters</a>
+                        <a href="aventura.html">Aventura</a>
+                        <a href="deportes.html">Deportes</a>
+                        <a href="rgp.html">RPG</a>
+                        <a href="supervivencia.html">Supervivencia</a>
+                        <a href="moba.html">Moba</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa-solid fa-fire"></i> Ofertas <i
+                            class="fa-solid fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="50descuento.html">50% Descuento</a>
+                        <a href="30descuento.html">30% Descuento</a>
+                        <a href="20descuento.html">20% Descuento</a>
+                        <a href="gratis.html">Gratis</a>
+                    </div>
+                </div>
+
+                <a href="#contacto"><i class="fa-solid fa-headset"></i> Soporte</a>
+            </nav>
+
+            <div class="user-actions">
+                <a href="login.html" class="btn btn-secondary"><i class="fa-solid fa-right-to-bracket"></i> Iniciar
+                    Sesión</a>
+                <a href="registrarse.html" class="btn btn-primary"><i class="fa-solid fa-user-plus"></i> Registrarse</a>
+            </div>
+        </div>
     </header>
 
-    <hr>
-
-    <main>
-        <h1>Moba</h1>
+    <section class="hero">
+        <h1 class="hero-title">Moba</h1>
         <p>Títulos de pura estrategia y acción multijugador donde dos equipos se enfrentan en un mapa cerrado con el
             objetivo final de destruir la base rival. Cada jugador elige y controla un personaje único con habilidades
             específicas, haciendo que el trabajo en equipo sea indispensable para ganar.</p>
-        <hr>
+    </section>
 
-        <section class="juegosMoba"></section>
-        <table width="100%" cellpadding="10" cellspacing="0">
-            <tr align="center" valign="top">
-                <td>
-                    <article>
-                        <h3>League of Legends</h3>
-                        <img src="assets/img/lol.jpg" alt="League of Legends" width="400" height="500">
-                        <p>League of Legends es un videojuego de estrategia en tiempo real y multijugador en línea
-                            desarrollado por Riot Games. Los jugadores forman equipos y compiten para destruir la base
-                            del equipo contrario.</p>
-                        <a href="detalleLOL.html">Ver más...</a>
-                        <p>Precio: Gratis</p>
-                    </article>
-                </td>
+    <main class="main-content">
 
-                <td>
-                    <article>
-                        <h3>Dota 2</h3>
-                        <img src="assets/img/dota.jpg" alt="Dota 2" width="400" height="500">
-                        <p>Dota 2 es un videojuego de estrategia en tiempo real y multijugador en línea desarrollado por
-                            Valve Corporation. Los jugadores controlan héroes con habilidades únicas y trabajan en
-                            equipo
-                            para destruir la base enemiga.</p>
-                        <a href="detalleDota2.html">Ver más...</a>
-                        <p>Precio: Gratis</p>
-                    </article>
-                </td>
+        <section id="juegos" class="section-container">
 
-                <td>
-                    <article>
-                        <h3>Smite</h3>
-                        <img src="assets/img/smite.jpg" alt="Smite" width="400" height="500">
-                        <p>Smite es un videojuego de acción y estrategia en tercera persona desarrollado por Hi-Rez
-                            Studios. Los jugadores asumen el papel de dioses mitológicos y luchan en batallas de equipo
-                            para destruir la base enemiga.</p>
-                        <a href="detalleSmite.html">Ver más...</a>
-                        <p>Precio: Gratis</p>
-                    </article>
-                </td>
-            </tr>
+            <div class="games-grid">
+                <article class="game-card">
+                    <img src="assets/img/lol.jpg" alt="League of Legends" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>League of Legends</h3>
+                            <p>League of Legends es un videojuego de género MOBA desarrollado por Riot Games.</p>
+                            <br>
+                            <p>Gratis</p>
+                            <div class="game-footer">
+                                <a href="detalleLOL.html" class="btn btn-primary">Ver mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-            <tr align="center" valign="top">
-                <td>
-                    <article>
-                        <h3>Pokemon Unite</h3>
-                        <img src="assets/img/pokemon.webp" alt="Pokemon Unite" width="400" height="500">
-                        <p>Pokémon Unite es un videojuego de estrategia en tiempo real y multijugador en línea
-                            desarrollado por Nintendo y The Pokémon Company. Los jugadores controlan Pokémon con
-                            habilidades únicas y trabajan en equipo para destruir la base enemiga.</p>
-                        <a href="detallePokemon.html">Ver más...</a>
-                        <p>Precio: Gratis</p>
-                    </article>
-                </td>
+                <article class="game-card">
+                    <img src="assets/img/dota.jpg" alt="Dota 2" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>Dota 2</h3>
+                            <p>Dota 2 es un videojuego de género MOBA desarrollado por Valve Corporation.</p>
+                            <br>
+                            <p>Gratis</p>
+                            <div class="game-footer">
+                                <a href="detalleDota2.html" class="btn btn-primary">Ver mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-                <td>
-                    <article>
-                        <h3>Heroes of the Storm</h3>
-                        <img src="assets/img/hero.webp" alt="Heroes of the Storm" width="400" height="500">
-                        <p>Heroes of the Storm es un videojuego de estrategia en tiempo real y multijugador en línea
-                            desarrollado por Blizzard Entertainment. Los jugadores controlan héroes de diferentes
-                            franquicias de Blizzard y trabajan en equipo para destruir la base enemiga.</p>
-                        <a href="detalleHotS.html">Ver más...</a>
-                        <p>Precio: Gratis</p>
-                    </article>
-                </td>
+                <article class="game-card">
+                    <img src="assets/img/smite.jpg" alt="Smite" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>Smite</h3>
+                            <p>Smite es un videojuego de género MOBA desarrollado por Hi-Rez Studios.</p>
+                            <br>
+                            <p>Gratis</p>
+                            <div class="game-footer">
+                                <a href="detalleSmite.html" class="btn btn-primary">Ver mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-                <td>
-                    <article>
-                        <h3>Mobile Legends: Bang Bang</h3>
-                        <img src="assets/img/mobil.jpg" alt="Mobile Legends: Bang Bang" width="400" height="500">
-                        <p>Mobile Legends: Bang Bang es un videojuego de estrategia en tiempo real y multijugador en
-                            línea desarrollado por Moonton. Los jugadores controlan campeones con habilidades únicas y
-                            trabajan en equipo para destruir la base enemiga.</p>
-                        <a href="detalleMobileLegends.html">Ver más...</a>
-                        <p>Precio: Gratis</p>
-                    </article>
-                </td>
-            </tr>
-        </table>
+                <article class="game-card">
+                    <img src="assets/img/pokemon.webp" alt="Pokemon" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>Pokemon</h3>
+                            <p>Pokemon es un videojuego de rol desarrollado por Nintendo.</p>
+                            <br>
+                            <p>Gratis</p>
+                            <div class="game-footer">
+                                <a href="detallePokemon.html" class="btn btn-primary">Ver mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/hero.webp" alt="Heroes of the Storm" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>Heroes of the Storm</h3>
+                            <p>Heroes of the Storm es un videojuego de género MOBA desarrollado por Blizzard Entertainment.</p>
+                            <br>
+                            <p>Gratis</p>
+                            <div class="game-footer">
+                                <a href="detalleHotS.html" class="btn btn-primary">Ver mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/mobil.jpg" alt="Mobile Legends: Bang Bang" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>Mobile Legends: Bang Bang</h3>
+                            <p>Mobile Legends: Bang Bang es un videojuego de género MOBA desarrollado por Moonton.</p>
+                            <br>
+                            <p>Gratis</p>
+                            <div class="game-footer">
+                                <a href="detalleMobileLegends.html" class="btn btn-primary">Ver mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
     </main>
 
     <hr>
 
-    <footer class="Final">
-        <table width="100%" align="left" cellpadding="15">
-            <tr align="left" valign="top">
-                <td>
-                    <strong>Contacto</strong>
-                    <p>Telefono: +51 987654321</p>
-                    <p>Correo: <a href="mailto:nexusgamestore@gmail.com">nexusgamestore@gmail.com</a></p>
-                    <p>Direccion: Av. Universitaria 1801, Lima</p>
-                </td>
+    <footer id="contacto" class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Soporte & Contacto</h4>
+                <p><i class="fa-solid fa-phone"></i> +51 987 654 321</p>
+                <p><i class="fa-solid fa-envelope"></i> soporte@nexusgames.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Av. Universitaria 1801, Lima</p>
+            </div>
+            <div class="footer-col">
+                <h4>Consolas</h4>
+                <p><i class="fa-solid fa-gamepad"></i> PC</p>
+                <p><i class="fa-brands fa-playstation"></i> PlayStation</p>
+                <p><i class="fa-brands fa-xbox"></i> Xbox</p>
+                <p><i class="fa-brands fa-nintendo-switch"></i> Nintendo</p>
+                <p><i class="fa-brands fa-apple"></i> Móvil</p>
+            </div>
 
-                <td>
-                    <strong>Consolas</strong>
-                    <p><a href="juegosPC.html">PC</a></p>
-                    <p><a href="juegosXbox.html">Xbox One</a></p>
-                    <p><a href="juegosPlayStation.html">PlayStation 5</a></p>
-                    <p><a href="juegosMobile.html">Movil</a></p>
-                    <p><a href="juegosNintendo.html">Nintendo</a></p>
-                </td>
+            <div class="footer-col">
+                <h4>Redes Sociales</h4>
+                <p><i class="fa-brands fa-facebook"></i> <a href="https://facebook.com/nexusgames"
+                        target="_blank">Facebook</a></p>
+                <p><i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/nexusgames"
+                        target="_blank">Twitter</a></p>
+                <p><i class="fa-brands fa-instagram"></i> <a href="https://instagram.com/nexusgames"
+                        target="_blank">Instagram</a></p>
+                <p><i class="fa-brands fa-reddit"></i> <a href="https://reddit.com/r/nexusgames"
+                        target="_blank">Reddit</a></p>
+            </div>
 
-                <td>
-                    <strong>Redes Sociales</strong>
-                    <p><a href="https://www.facebook.com/">Facebook</a></p>
-                    <p><a href="https://www.instagram.com/">Instagram</a></p>
-                    <p><a href="https://twitter.com/">Twitter</a></p>
-                    <p><a href="https://www.reddit.com/">Reddit</a></p>
-                </td>
-
-                <td>
-                    <strong>Metodos de Pago</strong>
-                    <p>Visa</p>
-                    <p>Mastercard</p>
-                    <p>Paypal</p>
-                </td>
-            </tr>
-        </table>
-
-        <br clear="all">
-
-        <hr>
-        <p>Copyright &copy; 2026 UTP - Todos los derechos reservados</p>
+            <div class="footer-col">
+                <h4>Metodos de Pago</h4>
+                <p><i class="fa-solid fa-credit-card"></i> Tarjetas de Crédito/Débito</p>
+                <p><i class="fa-solid fa-wallet"></i> Efectivo en Sucursales</p>
+                <p><i class="fa-solid fa-qrcode"></i> Pagos Móviles</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2026 UTP - Todos los derechos reservados</p>
+        </div>
     </footer>
 </body>
 

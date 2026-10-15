@@ -1,161 +1,249 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aventuras</title>
+    <title>Nexus Games | Tienda de Videojuegos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-    <header>
-        <img src="assets/img/logo.jpg" class="logo" alt="logo" width="350" height="150">
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="login.html">Iniciar Sesion</a>
-            <a href="registrarse.html">Registrarse</a>
-        </nav>
+
+    <header class="main-header">
+        <div class="header-container">
+            <img src="assets/img/logo.jpg" alt="Logo Nexus Games" class="logo">
+
+            <nav class="navbar">
+                <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa-solid fa-gamepad"></i> Juegos <i
+                            class="fa-solid fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="proximamente.html">Próximamente</a>
+                        <a href="novedades.html">Novedades</a>
+                        <a href="noticias.html">Noticias</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa-solid fa-layer-group"></i> Categorías <i
+                            class="fa-solid fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="shooter.html">Shooters</a>
+                        <a href="aventura.html">Aventura</a>
+                        <a href="deportes.html">Deportes</a>
+                        <a href="rgp.html">RPG</a>
+                        <a href="supervivencia.html">Supervivencia</a>
+                        <a href="moba.html">Moba</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa-solid fa-fire"></i> Ofertas <i
+                            class="fa-solid fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="50descuento.html">50% Descuento</a>
+                        <a href="30descuento.html">30% Descuento</a>
+                        <a href="20descuento.html">20% Descuento</a>
+                        <a href="gratis.html">Gratis</a>
+                    </div>
+                </div>
+
+                <a href="#contacto"><i class="fa-solid fa-headset"></i> Soporte</a>
+            </nav>
+
+            <div class="user-actions">
+                <a href="login.html" class="btn btn-secondary"><i class="fa-solid fa-right-to-bracket"></i> Iniciar
+                    Sesión</a>
+                <a href="registrarse.html" class="btn btn-primary"><i class="fa-solid fa-user-plus"></i> Registrarse</a>
+            </div>
+        </div>
     </header>
 
-    <hr>
-
-    <main>
-        <h1>Juegos de Aventura</h1>
+    <section class="hero">
+        <h1 class="hero-title">Juegos de Aventura</h1>
         <p>Experiencias centradas en la exploración, la narrativa y la resolución de obstáculos. Muchos de estos títulos
             ofrecen escenarios de acción y aventura en un mundo abierto, donde asumes el rol de un protagonista para
             descubrir secretos y avanzar en la trama.</p>
+    </section>
 
-        <hr>
-        <section class="juegosAventura"></section>
-        <table width="100%" cellpadding="10" cellspacing="0">
-            <tr align="center" valign="top">
-                <td>
-                    <article>
-                        <h3>GTA V</h3>
-                        <img src="assets/img/g6.jpg" alt="GTA V" width="400" height="500">
-                        <p>Grand Theft Auto V es un videojuego de acción y aventura en mundo abierto desarrollado
-                            por
-                            Rockstar
-                            North.</p>
-                        <a href="detalleGTAV.html">Ver más...</a>
-                        <p>Precio PC: S/ 110.00</p>
-                        <p>Precio PlayStation: S/ 95.00</p>
-                        <p>Precio Xbox: S/ 100.00</p>
-                    </article>
-                </td>
+    <main class="main-content">
 
-                <td>
-                    <article>
-                        <h3>Horizon Zero Dawn</h3>
-                        <img src="assets/img/Horizon_portada.webp" alt="Horizon Zero Dawn" width="400" height="500">
-                        <p>Horizon Zero Dawn es un videojuego de acción y aventura en mundo abierto desarrollado por
-                            Guerrilla Games.</p>
-                        <a href="detalleHorizon.html">Ver más...</a>
-                        <p>Precio PC: S/ 150.00</p>
-                        <p>Precio PlayStation: S/ 189.00</p>
-                    </article>
-                </td>
+        <section id="juegos" class="section-container">
 
-                <td>
-                    <article>
-                        <h3>The Legend of Zelda: Breath of the Wild</h3>
-                        <img src="assets/img/Zelda.jpg" alt="The Legend of Zelda: Breath of the Wild" width="400"
-                            height="500">
-                        <p>The Legend of Zelda: Breath of the Wild es un videojuego de acción y aventura en mundo
-                            abierto desarrollado por Nintendo.</p>
-                        <a href="detalleZelda.html">Ver más...</a>
-                        <p>Precio Nintendo Switch: S/ 180.00</p>
-                    </article>
-                </td>
-            </tr>
+            <div class="games-grid">
+                <article class="game-card">
+                    <img src="assets/img/g6.jpg" alt="GTA V" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>GTA V</h3>
+                            <p>Grand Theft Auto V es un videojuego de acción y aventura en mundo abierto desarrollado
+                                por
+                                Rockstar
+                                North.</p>
+                            <br>
+                            <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>:
+                                110.00</p>
+                            <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>:
+                                95.00</p>
+                            <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-xbox"></i>:
+                                100.00</p>
+                            <div class="game-footer">
+                                <a href="detalleGTAV.html" class="btn btn-primary">Ver mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-            <tr align="center" valign="top">
+                <article class="game-card">
+                    <img src="assets/img/Horizon_portada.webp" alt="Horizon Zero Dawn" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>Horizon Zero Dawn</h3>
+                            <p>Horizon Zero Dawn es un videojuego de acción y aventura en mundo abierto desarrollado por
+                                Guerrilla Games.</p>
+                            <br>
+                            <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>:
+                                150.00</p>
+                            <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>:
+                                189.00</p>
+                            <div class="game-footer">
+                                <a href="detalleHorizon.html" class="btn btn-primary">Ver mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-                <td>
-                    <article>
-                        <h3>Red Dead Redemption 2</h3>
-                        <img src="assets/img/red_Dead.jpg" alt="Red Dead Redemption 2" width="400" height="500">
-                        <p>Red Dead Redemption 2 es un videojuego de acción y aventura en mundo abierto desarrollado por
-                            Rockstar Games.</p>
-                        <a href="detalleRDR2.html">Ver más...</a>
-                        <p>Precio PC: S/ 120.00</p>
-                        <p>Precio PlayStation: S/ 150.00</p>
-                        <p>Precio Xbox: S/ 140.00</p>
-                    </article>
-                </td>
+                <article class="game-card">
+                    <img src="assets/img/Zelda.jpg" alt="The Legend of Zelda: Breath of the Wild" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>The Legend of Zelda: Breath of the Wild</h3>
+                            <p>The Legend of Zelda: Breath of the Wild es un videojuego de acción y aventura en mundo
+                                abierto desarrollado por Nintendo.</p>
+                            <br>
+                            <p><i class="fa-solid fa-money-check-dollar"></i> <i
+                                    class="fa-brands fa-nintendo-switch"></i>:
+                                180.00</p>
+                            <div class="game-footer">
+                                <a href="detalleZelda.html" class="btn btn-primary">Ver mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-                <td>
-                    <article>
-                        <h3>Uncharted 4: A Thief's End</h3>
-                        <img src="assets/img/uncharted.jpg" alt="Uncharted 4: A Thief's End" width="400" height="500">
-                        <p>Uncharted 4: A Thief's End es un videojuego de acción y aventura en mundo abierto
-                            desarrollado por Naughty Dog.</p>
-                        <a href="detalleUncharted.html">Ver más...</a>
-                        <p>Precio PC: S/ 150.00</p>
-                        <p>Precio PlayStation: S/ 80.00</p>
-                    </article>
-                </td>
+                <article class="game-card">
+                    <img src="assets/img/red_Dead.jpg" alt="Red Dead Redemption 2" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>Red Dead Redemption 2</h3>
+                            <p>Red Dead Redemption 2 es un videojuego de acción y aventura en mundo abierto desarrollado
+                                por Rockstar Games.</p>
+                            <br>
+                            <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>:
+                                120.00</p>
+                            <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>:
+                                150.00</p>
+                            <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-xbox"></i>:
+                                140.00</p>
+                            <div class="game-footer">
+                                <a href="detalleRDR2.html" class="btn btn-primary">Ver mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-                <td>
-                    <article>
-                        <h3>God of War Ragnarok</h3>
-                        <img src="assets/img/GOW.jpg" alt="God of War Ragnarök" width="400" height="500">
-                        <p>God of War Ragnarök es un videojuego de acción y aventura en mundo abierto desarrollado por
-                            Santa Monica Studio.</p>
-                        <a href="detalleGOW.html">Ver más...</a>
-                        <p>Precio PC: S/ 200.00</p>
-                        <p>Precio PlayStation: S/ 189.00</p>
-                    </article>
-                </td>
+                <article class="game-card">
+                    <img src="assets/img/uncharted.jpg" alt="Uncharted 4: A Thief's End" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>Uncharted 4: A Thief's End</h3>
+                            <p>Uncharted 4: A Thief's End es un videojuego de acción y aventura desarrollado por Naughty
+                                Dog.
+                            </p>
+                            <br>
+                            <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>:
+                                150.00</p>
+                            <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>:
+                                80.00</p>
+                            <div class="game-footer">
+                                <a href="detalleUncharted.html" class="btn btn-primary">Ver mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-            </tr>
-        </table>
+                <article class="game-card">
+                    <img src="assets/img/GOW.jpg" alt="God of War Ragnarok" class="game-img">
+                    <div class="game-info">
+                        <div class="game-info">
+                            <h3>God of War Ragnarok</h3>
+                            <p>God of War Ragnarok es un videojuego de acción y aventura desarrollado por SIE Santa
+                                Monica Studio.</p>
+                            <br>
+                            <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>:
+                                200.00</p>
+                            <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>:
+                                189.00</p>
+                            <div class="game-footer">
+                                <a href="detalleGOW.html" class="btn btn-primary">Ver mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
     </main>
 
     <hr>
 
-    <footer class="Final">
-        <table width="100%" align="left" cellpadding="15">
-            <tr align="left" valign="top">
-                <td>
-                    <strong>Contacto</strong>
-                    <p>Telefono: +51 987654321</p>
-                    <p>Correo: <a href="mailto:nexusgamestore@gmail.com">nexusgamestore@gmail.com</a></p>
-                    <p>Direccion: Av. Universitaria 1801, Lima</p>
-                </td>
+    <footer id="contacto" class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Soporte & Contacto</h4>
+                <p><i class="fa-solid fa-phone"></i> +51 987 654 321</p>
+                <p><i class="fa-solid fa-envelope"></i> soporte@nexusgames.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Av. Universitaria 1801, Lima</p>
+            </div>
+            <div class="footer-col">
+                <h4>Consolas</h4>
+                <p><i class="fa-solid fa-gamepad"></i> PC</p>
+                <p><i class="fa-brands fa-playstation"></i> PlayStation</p>
+                <p><i class="fa-brands fa-xbox"></i> Xbox</p>
+                <p><i class="fa-brands fa-nintendo-switch"></i> Nintendo</p>
+                <p><i class="fa-brands fa-apple"></i> Móvil</p>
+            </div>
 
-                <td>
-                    <strong>Consolas</strong>
-                    <p><a href="juegosPC.html">PC</a></p>
-                    <p><a href="juegosXbox.html">Xbox One</a></p>
-                    <p><a href="juegosPlayStation.html">PlayStation 5</a></p>
-                    <p><a href="juegosMobile.html">Movil</a></p>
-                    <p><a href="juegosNintendo.html">Nintendo</a></p>
-                </td>
+            <div class="footer-col">
+                <h4>Redes Sociales</h4>
+                <p><i class="fa-brands fa-facebook"></i> <a href="https://facebook.com/nexusgames"
+                        target="_blank">Facebook</a></p>
+                <p><i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/nexusgames"
+                        target="_blank">Twitter</a></p>
+                <p><i class="fa-brands fa-instagram"></i> <a href="https://instagram.com/nexusgames"
+                        target="_blank">Instagram</a></p>
+                <p><i class="fa-brands fa-reddit"></i> <a href="https://reddit.com/r/nexusgames"
+                        target="_blank">Reddit</a></p>
+            </div>
 
-                <td>
-                    <strong>Redes Sociales</strong>
-                    <p><a href="https://www.facebook.com/">Facebook</a></p>
-                    <p><a href="https://www.instagram.com/">Instagram</a></p>
-                    <p><a href="https://twitter.com/">Twitter</a></p>
-                    <p><a href="https://www.reddit.com/">Reddit</a></p>
-                </td>
-
-                <td>
-                    <strong>Metodos de Pago</strong>
-                    <p>Visa</p>
-                    <p>Mastercard</p>
-                    <p>Paypal</p>
-                </td>
-            </tr>
-        </table>
-
-        <br clear="all">
-
-        <hr>
-        <p>Copyright &copy; 2026 UTP - Todos los derechos reservados</p>
+            <div class="footer-col">
+                <h4>Metodos de Pago</h4>
+                <p><i class="fa-solid fa-credit-card"></i> Tarjetas de Crédito/Débito</p>
+                <p><i class="fa-solid fa-wallet"></i> Efectivo en Sucursales</p>
+                <p><i class="fa-solid fa-qrcode"></i> Pagos Móviles</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2026 UTP - Todos los derechos reservados</p>
+        </div>
     </footer>
-
 </body>
 
 </html>
