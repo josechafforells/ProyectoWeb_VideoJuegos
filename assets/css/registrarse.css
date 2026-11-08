@@ -1,100 +1,373 @@
-*{
+
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background: linear-gradient(135deg, #48536e, #132652, #4d5872);
     color: white;
     font-family: Arial, sans-serif;
-    margin: 0;
+    min-height: 100vh;
 }
 
-header{
+
+
+
+header {
     text-align: center;
-    padding: 30px;
-    
-
+    padding: 30px 20px;
 }
 
-.logo{
+.logo {
     mix-blend-mode: multiply;
-    width: 220;
+    width: 220px;
+    max-width: 100%;
     height: auto;
-    
 }
 
-main{
-    height: auto;
-    margin: 40px, auto;
-    padding: 60px 40px;
-    border-radius: 12px;
+
+
+main {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    
 }
 
-h1{
+h1 {
     font-size: 40px;
+    margin-bottom: 25px;
 }
 
-label{
-  display: block;
-  margin-bottom: 6px;
+
+
+.register-box {
+    background-color: #132652;
+
+    width: 90%;
+    max-width: 450px;
+
+    padding: 60px 40px;
+    margin: 40px auto;
+
+    border-radius: 20px;
+
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    transition: transform 0.3s ease;
 }
 
-input{
-  width: 320px;
-  padding: 10px;
-  border: 1px solid #526078;
-  border-radius: 5px;
+.register-box:hover {
+    transform: translateY(-3px);
 }
 
-button{
-  width: 150px;
-  padding: 10px;
-  background-color: #47c487;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
+
+
+.register-box form {
+    width: 100%;
 }
 
-button:hover{
-  background-color: rgb(143, 207, 118);
+label {
+    display: block;
+    margin-bottom: 6px;
+    text-align: left;
 }
 
-main a{
-  color: #62e6a7;
-  text-decoration: none;
+input {
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+
+    padding: 12px;
+
+    border: 1px solid #526078;
+    border-radius: 5px;
+
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+button {
+    width: 100%;
+    max-width: 150px;
+
+    padding: 12px;
+
+    background-color: #47c487;
+
+    border: none;
+    border-radius: 6px;
+
+    font-weight: bold;
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(143, 207, 118);
+}
+
+
+
+main a {
+    color: #62e6a7;
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+footer {
+    width: 100%;
+    padding: 30px;
+    color: #d0d7e2;
+}
+
+footer a {
+    color: #62e6a7;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+footer td {
+    vertical-align: top;
+    padding: 15px;
+    overflow-wrap: anywhere;
+}
+
+footer strong {
+    display: block;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+footer > p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    header {
+        padding: 20px;
+    }
+
+    .logo {
+        width: 180px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .register-box {
+        padding: 40px 30px;
+        margin: 25px auto;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    footer td {
+        padding: 10px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 480px) {
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+
+
+    header {
+        padding: 15px;
+    }
+
+    .logo {
+        width: 150px;
+        max-width: 100%;
+        height: auto;
+    }
+
+
+
+    main {
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+
+
+    .register-box {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 30px 15px;
+        margin: 15px auto;
+
+        border-radius: 15px;
+
+        gap: 15px;
+    }
+
+    .register-box:hover {
+        transform: none;
+    }
+
+
   
-}
 
-footer{
-  padding: 30px;
-  color: #d0d7e2;
-}
+    .register-box form {
+        width: 100%;
+    }
 
-footer a{
-  color:#62e6a7;
-  text-decoration: none;
-}
+    label {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
 
-.register-box{
-  background-color: #132652;
-  max-width: 450px;
-  padding: 60px 40px;
-  margin: 40px auto;
-  width: 90%;
-  border-radius: 20px;
-  box-shadow: 0px 8px 24px rgb(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+    input {
+        width: 100%;
+        min-width: 0;
 
-.login-box:hover{
-  transform: translateY(-3px);
+        padding: 12px;
+
+        font-size: 16px;
+    }
+
+
+    /* BOTON */
+
+    button {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 12px;
+
+        font-size: 15px;
+    }
+
+
+
+    main a {
+        font-size: 14px;
+    }
+
+
+
+    footer {
+        width: 100%;
+        padding: 20px 15px;
+        text-align: center;
+    }
+
+    footer table {
+        width: 100%;
+        display: block;
+        table-layout: auto;
+        text-align: center;
+    }
+
+    footer tbody {
+        display: block;
+        width: 100%;
+    }
+
+    footer tr {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    footer td {
+        display: block;
+        width: 100%;
+
+        padding: 15px 0;
+
+        text-align: center;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    footer strong {
+        font-size: 16px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    footer p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 8px 0;
+        text-align: center;
+
+        overflow-wrap: anywhere;
+    }
+
+    footer a {
+        overflow-wrap: anywhere;
+        text-align: center;
+    }
+
+    footer hr {
+        margin: 15px 0;
+    }
+
+    footer > p {
+        text-align: center;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
 }

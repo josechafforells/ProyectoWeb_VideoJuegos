@@ -1,17 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<<device-width>>, initial-scale=1.0">
-    <title>Iniciar Sesión</title>
+
+    <!-- RESPONSIVE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Iniciar Sesión - Nexus Games</title>
+
     <link rel="stylesheet" href="assets/css/login.css">
 </head>
 
 <body>
 
     <header>
-        <img src="assets/img/logo.jpg" class="logo" alt="logo" width="350" height="150">
+        <img src="assets/img/logo.jpg" class="logo" alt="Logo de Nexus Games">
     </header>
 
     <hr>
@@ -20,53 +25,82 @@
 
         <div class="login-box">
 
-        <h1>Iniciar Sesion</h1>
-        <form method="post">
-            <label>Correo Electronico</label>
-            <input type="email" name="correo" placeholder="Correo Electrónico">
+            <h1>Iniciar Sesión</h1>
 
-            <br><br>
+            <form method="post">
 
-            <label>Contraseña</label>
-            <input type="password" name="contraseña" placeholder="Contraseña">
+                <label for="correo">Correo Electrónico</label>
 
-            <br><br>
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    placeholder="Correo Electrónico"
+                    required
+                >
 
-            <button type="submit">Iniciar Sesion</button>
+                <br><br>
 
-        </form>
+                <label for="contraseña">Contraseña</label>
 
-        <br>
+                <input
+                    type="password"
+                    id="contraseña"
+                    name="contraseña"
+                    placeholder="Contraseña"
+                    required
+                >
 
-        <a href="index.html">Volver</a>
+                <br><br>
+
+                <button type="submit">Iniciar Sesión</button>
+
+            </form>
+
+            <br>
+
+            <a href="index.html">Volver</a>
+
+        </div>
 
     </main>
-
-    </div>
 
     <hr>
 
     <footer class="Final">
+
         <table width="100%" align="left" cellpadding="15">
+
             <tr align="left" valign="top">
+
                 <td>
                     <strong>Contacto</strong>
-                    <p>Telefono: +51 987654321</p>
-                    <p>Correo: <a href="mailto:nexusgamestore@gmail.com">nexusgamestore@gmail.com</a></p>
-                    <p>Direccion: Av. Universitaria 1801, Lima</p>
+
+                    <p>Teléfono: +51 987654321</p>
+
+                    <p>
+                        Correo:
+                        <a href="mailto:nexusgamestore@gmail.com">
+                            nexusgamestore@gmail.com
+                        </a>
+                    </p>
+
+                    <p>Dirección: Av. Universitaria 1801, Lima</p>
                 </td>
 
                 <td>
                     <strong>Consolas</strong>
+
                     <p><a href="juegosPC.html">PC</a></p>
                     <p><a href="juegosXbox.html">Xbox One</a></p>
                     <p><a href="juegosPlayStation.html">PlayStation 5</a></p>
-                    <p><a href="juegosMobile.html">Movil</a></p>
+                    <p><a href="juegosMobile.html">Móvil</a></p>
                     <p><a href="juegosNintendo.html">Nintendo</a></p>
                 </td>
 
                 <td>
                     <strong>Redes Sociales</strong>
+
                     <p><a href="https://www.facebook.com/">Facebook</a></p>
                     <p><a href="https://www.instagram.com/">Instagram</a></p>
                     <p><a href="https://twitter.com/">Twitter</a></p>
@@ -74,19 +108,25 @@
                 </td>
 
                 <td>
-                    <strong>Metodos de Pago</strong>
+                    <strong>Métodos de Pago</strong>
+
                     <p>Visa</p>
                     <p>Mastercard</p>
                     <p>Paypal</p>
                 </td>
+
             </tr>
+
         </table>
 
         <br clear="all">
 
         <hr>
+
         <p>Copyright &copy; 2026 UTP - Todos los derechos reservados</p>
+
     </footer>
+
 </body>
 
 </html>

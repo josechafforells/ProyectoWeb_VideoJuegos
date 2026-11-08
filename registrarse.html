@@ -1,48 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrarse</title>
+
+    <title>Registrarse - Nexus Games</title>
+
     <link rel="stylesheet" href="assets/css/registrarse.css">
 </head>
 
 <body>
+
     <header>
-        <img src="assets/img/logo.jpg" class="logo" alt="logo" width="350" height="150">
+        <img src="assets/img/logo.jpg" class="logo" alt="Logo de Nexus Games">
     </header>
 
     <hr>
 
     <main>
+
         <div class="register-box">
-        <h1>Registrarse</h1>
-        <form method="post">
-            <label>Nombre</label>
-            <input type="text" name="nombre" placeholder="Nombre">
-            <br><br>
-            <label>Apellidos</label>
-            <input type="text" name="apellido_paterno" placeholder="Apellido Paterno">
-            <br><br>
-            <input type="text" name="apellido_materno" placeholder="Apellido Materno">
-            <br><br>
-            <label>Correo Electronico</label>
-            <input type="email" name="correo" placeholder="Correo Electrónico">
-            <br><br>
-            <label>Contraseña</label>
-            <input type="password" name="contraseña" placeholder="Contraseña">
-            <br><br>
-            <label>Numero Telefonico</label>
-            <input type="number" name="telefono" placeholder="Número Telefónico">
-            <br><br>
-            <label>Fecha de Nacimiento</label>
-            <input type="date" name="fecha_nacimiento" placeholder="Fecha de Nacimiento">
-            <br><br>
-            <button type="submit">Registrarse</button>
-        </form>
-        <br>
-</div>
+
+            <h1>Registrarse</h1>
+
+            <form method="post">
+
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+
+                <br><br>
+
+                <label for="apellido_paterno">Apellidos</label>
+                <input type="text" id="apellido_paterno" name="apellido_paterno" placeholder="Apellido Paterno" required>
+
+                <br><br>
+
+                <input type="text" id="apellido_materno" name="apellido_materno" placeholder="Apellido Materno" required>
+
+                <br><br>
+
+                <label for="correo">Correo Electrónico</label>
+                <input type="email" id="correo" name="correo" placeholder="Correo Electrónico" required>
+
+                <br><br>
+
+                <label for="contraseña">Contraseña</label>
+                <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" required>
+
+                <br><br>
+
+                <label for="telefono">Número Telefónico</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Número Telefónico" required>
+
+                <br><br>
+
+                <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+
+                <br><br>
+
+                <button type="submit">Registrarse</button>
+
+            </form>
+
+        </div>
+
         <a href="index.html">Volver</a>
 
     </main>
@@ -50,26 +73,39 @@
     <hr>
 
     <footer class="Final">
+
         <table width="100%" align="left" cellpadding="15">
+
             <tr align="left" valign="top">
+
                 <td>
                     <strong>Contacto</strong>
-                    <p>Telefono: +51 987654321</p>
-                    <p>Correo: <a href="mailto:nexusgamestore@gmail.com">nexusgamestore@gmail.com</a></p>
-                    <p>Direccion: Av. Universitaria 1801, Lima</p>
+
+                    <p>Teléfono: +51 987654321</p>
+
+                    <p>
+                        Correo:
+                        <a href="mailto:nexusgamestore@gmail.com">
+                            nexusgamestore@gmail.com
+                        </a>
+                    </p>
+
+                    <p>Dirección: Av. Universitaria 1801, Lima</p>
                 </td>
 
                 <td>
                     <strong>Consolas</strong>
+
                     <p><a href="juegosPC.html">PC</a></p>
                     <p><a href="juegosXbox.html">Xbox One</a></p>
                     <p><a href="juegosPlayStation.html">PlayStation 5</a></p>
-                    <p><a href="juegosMobile.html">Movil</a></p>
+                    <p><a href="juegosMobile.html">Móvil</a></p>
                     <p><a href="juegosNintendo.html">Nintendo</a></p>
                 </td>
 
                 <td>
                     <strong>Redes Sociales</strong>
+
                     <p><a href="https://www.facebook.com/">Facebook</a></p>
                     <p><a href="https://www.instagram.com/">Instagram</a></p>
                     <p><a href="https://twitter.com/">Twitter</a></p>
@@ -77,19 +113,25 @@
                 </td>
 
                 <td>
-                    <strong>Metodos de Pago</strong>
+                    <strong>Métodos de Pago</strong>
+
                     <p>Visa</p>
                     <p>Mastercard</p>
                     <p>Paypal</p>
                 </td>
+
             </tr>
+
         </table>
 
         <br clear="all">
 
         <hr>
+
         <p>Copyright &copy; 2026 UTP - Todos los derechos reservados</p>
+
     </footer>
+
 </body>
 
 </html>
