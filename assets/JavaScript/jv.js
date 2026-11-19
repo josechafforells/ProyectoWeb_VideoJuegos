@@ -1,5 +1,12 @@
 const tarjetasMoba = document.querySelectorAll(".game-card");
 const campoBusqueda = document.querySelector("#buscador");
+const cuadrillaJuegos = document.querySelector(".games-grid");
+
+
+if (cuadrillaJuegos) {
+    cuadrillaJuegos.style.gridTemplateColumns =
+        "repeat(auto-fill, minmax(280px, 1fr))";
+}
 
 if (campoBusqueda) {
     campoBusqueda.addEventListener("input", () => {
