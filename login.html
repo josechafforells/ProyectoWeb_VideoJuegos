@@ -4,127 +4,156 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <!-- RESPONSIVE -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Iniciar Sesión - Nexus Games</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
 
-    <header>
-        <img src="assets/img/logo.jpg" class="logo" alt="Logo de Nexus Games">
+    <header class="main-header">
+        <div class="header-container">
+            <img src="assets/img/logo.svg" alt="Logo Nexus Games" class="logo">
+
+            <nav class="navbar">
+                <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa-solid fa-gamepad"></i> Juegos <i
+                            class="fa-solid fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="proximamente.html">Próximamente</a>
+                        <a href="novedades.html">Novedades</a>
+                        <a href="noticias.html">Noticias</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa-solid fa-layer-group"></i> Categorías <i
+                            class="fa-solid fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="shooter.html">Shooters</a>
+                        <a href="aventura.html">Aventura</a>
+                        <a href="deportes.html">Deportes</a>
+                        <a href="rgp.html">RPG</a>
+                        <a href="supervivencia.html">Supervivencia</a>
+                        <a href="moba.html">Moba</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa-solid fa-fire"></i> Ofertas <i
+                            class="fa-solid fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="50descuento.html">50% Descuento</a>
+                        <a href="30descuento.html">30% Descuento</a>
+                        <a href="20descuento.html">20% Descuento</a>
+                        <a href="gratis.html">Gratis</a>
+                    </div>
+                </div>
+
+                <a href="index.html#contacto"><i class="fa-solid fa-headset"></i> Soporte</a>
+            </nav>
+
+            <div class="user-actions">
+                <a href="login.html" class="btn btn-secondary is-active" aria-current="page"><i
+                        class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión</a>
+                <a href="registrarse.html" class="btn btn-primary"><i class="fa-solid fa-user-plus"></i> Registrarse</a>
+            </div>
+        </div>
     </header>
 
-    <hr>
+    <main class="main-content auth-main">
 
-    <main>
+        <section class="auth-card">
 
-        <div class="login-box">
+            <aside class="auth-side">
+                <h2>Bienvenido de vuelta, gamer</h2>
+                <p>Inicia sesión para continuar con tu aventura en Nexus Games.</p>
+                <ul class="auth-perks">
+                    <li><i class="fa-solid fa-fire"></i> Accede a ofertas exclusivas</li>
+                    <li><i class="fa-solid fa-gamepad"></i> Gestiona tu biblioteca de juegos</li>
+                    <li><i class="fa-solid fa-bell"></i> Entérate de los próximos lanzamientos</li>
+                </ul>
+            </aside>
 
-            <h1>Iniciar Sesión</h1>
+            <div class="auth-form-wrap">
+                <h1 class="auth-title">Iniciar Sesión</h1>
+                <p class="auth-subtitle">Ingresa tus datos para acceder a tu cuenta.</p>
 
-            <form method="post">
+                <form class="auth-form" method="post">
 
-                <label for="correo">Correo Electrónico</label>
+                    <div class="field">
+                        <label for="correo">Correo Electrónico</label>
+                        <div class="input-wrap">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com"
+                                autocomplete="email" required>
+                        </div>
+                    </div>
 
-                <input
-                    type="email"
-                    id="correo"
-                    name="correo"
-                    placeholder="Correo Electrónico"
-                    required
-                >
+                    <div class="field">
+                        <label for="contraseña">Contraseña</label>
+                        <div class="input-wrap">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="contraseña" name="contraseña" placeholder="Tu contraseña"
+                                autocomplete="current-password" required>
+                        </div>
+                    </div>
 
-                <br><br>
+                    <button type="submit" class="btn btn-block"><i class="fa-solid fa-right-to-bracket"></i> Iniciar
+                        Sesión</button>
 
-                <label for="contraseña">Contraseña</label>
+                </form>
 
-                <input
-                    type="password"
-                    id="contraseña"
-                    name="contraseña"
-                    placeholder="Contraseña"
-                    required
-                >
+                <p class="auth-switch">¿No tienes cuenta? <a href="registrarse.html">Regístrate</a></p>
+                <a href="index.html" class="auth-back"><i class="fa-solid fa-arrow-left"></i> Volver al inicio</a>
+            </div>
 
-                <br><br>
-
-                <button type="submit">Iniciar Sesión</button>
-
-            </form>
-
-            <br>
-
-            <a href="index.html">Volver</a>
-
-        </div>
+        </section>
 
     </main>
 
-    <hr>
+    <footer id="contacto" class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Soporte & Contacto</h4>
+                <p><i class="fa-solid fa-phone"></i> +51 987 654 321</p>
+                <p><i class="fa-solid fa-envelope"></i> soporte@nexusgames.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Av. Universitaria 1801, Lima</p>
+            </div>
+            <div class="footer-col">
+                <h4>Consolas</h4>
+                <p><i class="fa-solid fa-gamepad"></i> PC</p>
+                <p><i class="fa-brands fa-playstation"></i> PlayStation</p>
+                <p><i class="fa-brands fa-xbox"></i> Xbox</p>
+                <p><i class="fa-brands fa-nintendo-switch"></i> Nintendo</p>
+                <p><i class="fa-brands fa-apple"></i> Móvil</p>
+            </div>
 
-    <footer class="Final">
+            <div class="footer-col">
+                <h4>Redes Sociales</h4>
+                <p><i class="fa-brands fa-facebook"></i> <a href="https://facebook.com/nexusgames" target="_blank">Facebook</a></p>
+                <p><i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/nexusgames" target="_blank">Twitter</a></p>
+                <p><i class="fa-brands fa-instagram"></i> <a href="https://instagram.com/nexusgames" target="_blank">Instagram</a></p>
+                <p><i class="fa-brands fa-reddit"></i> <a href="https://reddit.com/r/nexusgames" target="_blank">Reddit</a></p>
+            </div>
 
-        <table width="100%" align="left" cellpadding="15">
-
-            <tr align="left" valign="top">
-
-                <td>
-                    <strong>Contacto</strong>
-
-                    <p>Teléfono: +51 987654321</p>
-
-                    <p>
-                        Correo:
-                        <a href="mailto:nexusgamestore@gmail.com">
-                            nexusgamestore@gmail.com
-                        </a>
-                    </p>
-
-                    <p>Dirección: Av. Universitaria 1801, Lima</p>
-                </td>
-
-                <td>
-                    <strong>Consolas</strong>
-
-                    <p><a href="juegosPC.html">PC</a></p>
-                    <p><a href="juegosXbox.html">Xbox One</a></p>
-                    <p><a href="juegosPlayStation.html">PlayStation 5</a></p>
-                    <p><a href="juegosMobile.html">Móvil</a></p>
-                    <p><a href="juegosNintendo.html">Nintendo</a></p>
-                </td>
-
-                <td>
-                    <strong>Redes Sociales</strong>
-
-                    <p><a href="https://www.facebook.com/">Facebook</a></p>
-                    <p><a href="https://www.instagram.com/">Instagram</a></p>
-                    <p><a href="https://twitter.com/">Twitter</a></p>
-                    <p><a href="https://www.reddit.com/">Reddit</a></p>
-                </td>
-
-                <td>
-                    <strong>Métodos de Pago</strong>
-
-                    <p>Visa</p>
-                    <p>Mastercard</p>
-                    <p>Paypal</p>
-                </td>
-
-            </tr>
-
-        </table>
-
-        <br clear="all">
-
-        <hr>
-
-        <p>Copyright &copy; 2026 UTP - Todos los derechos reservados</p>
-
+            <div class="footer-col">
+                <h4>Metodos de Pago</h4>
+                <p><i class="fa-solid fa-credit-card"></i> Tarjetas de Crédito/Débito</p>
+                <p><i class="fa-solid fa-wallet"></i> Efectivo en Sucursales</p>
+                <p><i class="fa-solid fa-qrcode"></i> Pagos Móviles</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2026 UTP - Todos los derechos reservados</p>
+        </div>
     </footer>
 
 </body>

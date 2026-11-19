@@ -16,7 +16,7 @@
 
     <header class="main-header">
         <div class="header-container">
-            <img src="assets/img/logo.jpg" alt="Logo Nexus Games" class="logo">
+            <img src="assets/img/logo.svg" alt="Logo Nexus Games" class="logo">
 
             <nav class="navbar">
                 <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
@@ -80,7 +80,7 @@
 
             <div class="games-grid">
                 <article class="game-card">
-                    <img src="assets/img/W3W.jpg" alt="The Witcher 3: Wild Hunt" class="game-img">
+                    <img src="assets/img/W3W.webp" alt="The Witcher 3: Wild Hunt" class="game-img">
                     <div class="game-info">
                         <div class="game-info">
                             <h3>The Witcher 3: Wild Hunt</h3>
@@ -103,7 +103,7 @@
                 </article>
 
                 <article class="game-card">
-                    <img src="assets/img/BG3.jpg" alt="Baldur's Gate 3" class="game-img">
+                    <img src="assets/img/BG3.webp" alt="Baldur's Gate 3" class="game-img">
                     <div class="game-info">
                         <div class="game-info">
                             <h3>Baldur's Gate 3</h3>
@@ -124,7 +124,7 @@
                 </article>
 
                 <article class="game-card">
-                    <img src="assets/img/TES.jpg" alt="The Elder Scrolls V: Skyrim" class="game-img">
+                    <img src="assets/img/TES.webp" alt="The Elder Scrolls V: Skyrim" class="game-img">
                     <div class="game-info">
                         <div class="game-info">
                             <h3>The Elder Scrolls V: Skyrim</h3>
@@ -144,7 +144,7 @@
                 </article>
 
                 <article class="game-card">
-                    <img src="assets/img/cyber.jpg" alt="Cyberpunk 2077" class="game-img">
+                    <img src="assets/img/cyber.webp" alt="Cyberpunk 2077" class="game-img">
                     <div class="game-info">
                         <div class="game-info">
                             <h3>Cyberpunk 2077</h3>
@@ -164,7 +164,7 @@
                 </article>
 
                 <article class="game-card">
-                    <img src="assets/img/FFVIIRemake.png" alt="Final Fantasy VII Remake" class="game-img">
+                    <img src="assets/img/FFVIIRemake.webp" alt="Final Fantasy VII Remake" class="game-img">
                     <div class="game-info">
                         <div class="game-info">
                             <h3>Final Fantasy VII Remake</h3>
@@ -182,7 +182,7 @@
                 </article>
 
                 <article class="game-card">
-                    <img src="assets/img/ER.jpg" alt="Elden Ring" class="game-img">
+                    <img src="assets/img/ER.webp" alt="Elden Ring" class="game-img">
                     <div class="game-info">
                         <div class="game-info">
                             <h3>Elden Ring</h3>
@@ -247,6 +247,38 @@
             <p>Copyright © 2026 UTP - Todos los derechos reservados</p>
         </div>
     </footer>
+    <!-- BOTÓN LATERAL DE FAVORITOS -->
+<button id="abrirFavoritos" class="boton-lateral-favoritos" type="button">
+    <span class="icono-corazon">♥</span>
+    <span>Favoritos</span>
+    <span id="contadorFavoritos" class="contador-favoritos">0</span>
+</button>
+
+<!-- FONDO OSCURO -->
+<div id="fondoFavoritos" class="fondo-favoritos"></div>
+
+<!-- PANEL DE FAVORITOS -->
+<aside id="panelFavoritos" class="panel-favoritos">
+
+    <div class="encabezado-favoritos">
+        <div>
+            <h2>♥ Mis favoritos</h2>
+            <p>Tus videojuegos guardados</p>
+        </div>
+
+        <button id="cerrarFavoritos" type="button">×</button>
+    </div>
+
+    <div id="listaFavoritos" class="favoritos-grid">
+        <p class="favoritos-vacio">
+            Todavía no tienes videojuegos favoritos.
+        </p>
+    </div>
+
+</aside>
+
+<!-- JAVASCRIPT -->
+<script src="assets/jscript/java.js"></script>
 </body>
 
 </html>

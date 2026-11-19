@@ -16,7 +16,7 @@
 
     <header class="main-header">
         <div class="header-container">
-            <img src="assets/img/logo.jpg" alt="Logo Nexus Games" class="logo">
+            <img src="assets/img/logo.svg" alt="Logo Nexus Games" class="logo">
 
             <nav class="navbar">
                 <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
@@ -80,7 +80,7 @@
 
             <div class="games-grid">
                 <article class="game-card">
-                    <img src="assets/img/g6.jpg" alt="GTA V" class="game-img">
+                    <img src="assets/img/g6.webp" alt="GTA V" class="game-img">
                     <div class="game-info">
                         <div class="game-info">
                             <h3>GTA V</h3>
@@ -93,7 +93,7 @@
                 </article>
 
                 <article class="game-card">
-                    <img src="assets/img/ER.jpg" alt="Elden Ring" class="game-img">
+                    <img src="assets/img/ER.webp" alt="Elden Ring" class="game-img">
                     <div class="game-info">
                         <div class="game-info">
                             <h3>Elden Ring</h3>
@@ -106,7 +106,7 @@
                 </article>
 
                 <article class="game-card">
-                    <img src="assets/img/cyber.jpg" alt="Cyberpunk 2077" class="game-img">
+                    <img src="assets/img/cyber.webp" alt="Cyberpunk 2077" class="game-img">
                     <div class="game-info">
                         <div class="game-info">
                             <h3>Cyberpunk 2077</h3>
@@ -119,7 +119,7 @@
                 </article>
 
                 <article class="game-card">
-                    <img src="assets/img/GOW.jpg" alt="God of War Ragnarök" class="game-img">
+                    <img src="assets/img/GOW.webp" alt="God of War Ragnarök" class="game-img">
                     <div class="game-info">
                         <div class="game-info">
                             <h3>God of War Ragnarök</h3>
@@ -132,7 +132,7 @@
                 </article>
 
                 <article class="game-card">
-                    <img src="assets/img/BG3.jpg" alt="Baldur's Gate 3" class="game-img">
+                    <img src="assets/img/BG3.webp" alt="Baldur's Gate 3" class="game-img">
                     <div class="game-info">
                         <div class="game-info">
                             <h3>Baldur's Gate 3</h3>
@@ -145,7 +145,7 @@
                 </article>
 
                 <article class="game-card">
-                    <img src="assets/img/g9.jpg" alt="Minecraft" class="game-img">
+                    <img src="assets/img/g9.webp" alt="Minecraft" class="game-img">
                     <div class="game-info">
                         <div class="game-info">
                             <h3>Minecraft</h3>
@@ -203,6 +203,38 @@
             <p>Copyright © 2026 UTP - Todos los derechos reservados</p>
         </div>
     </footer>
+    <!-- BOTÓN LATERAL DE FAVORITOS -->
+<button id="abrirFavoritos" class="boton-lateral-favoritos" type="button">
+    <span class="icono-corazon">♥</span>
+    <span>Favoritos</span>
+    <span id="contadorFavoritos" class="contador-favoritos">0</span>
+</button>
+
+<!-- FONDO OSCURO -->
+<div id="fondoFavoritos" class="fondo-favoritos"></div>
+
+<!-- PANEL DE FAVORITOS -->
+<aside id="panelFavoritos" class="panel-favoritos">
+
+    <div class="encabezado-favoritos">
+        <div>
+            <h2>♥ Mis favoritos</h2>
+            <p>Tus videojuegos guardados</p>
+        </div>
+
+        <button id="cerrarFavoritos" type="button">×</button>
+    </div>
+
+    <div id="listaFavoritos" class="favoritos-grid">
+        <p class="favoritos-vacio">
+            Todavía no tienes videojuegos favoritos.
+        </p>
+    </div>
+
+</aside>
+
+<!-- JAVASCRIPT -->
+<script src="assets/jscript/java.js"></script>
 </body>
 
 </html>

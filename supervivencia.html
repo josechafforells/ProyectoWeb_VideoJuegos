@@ -16,7 +16,7 @@
 
     <header class="main-header">
         <div class="header-container">
-            <img src="assets/img/logo.jpg" alt="Logo Nexus Games" class="logo">
+            <img src="assets/img/logo.svg" alt="Logo Nexus Games" class="logo">
 
             <nav class="navbar">
                 <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
@@ -80,7 +80,7 @@
 
             <div class="games-grid">
                 <article class="game-card">
-                    <img src="assets/img/g9.jpg" alt="Minecraft" class="game-img">
+                    <img src="assets/img/g9.webp" alt="Minecraft" class="game-img">
                     <div class="game-info">
                         <div class="game-info">
                             <h3>Minecraft</h3>
@@ -104,7 +104,7 @@
                 </article>
 
                 <article class="game-card">
-                    <img src="assets/img/g7.jpg" alt="Left 4 Dead 2" class="game-img">
+                    <img src="assets/img/g7.webp" alt="Left 4 Dead 2" class="game-img">
                     <div class="game-info">
                         <div class="game-info">
                             <h3>Left 4 Dead 2</h3>
@@ -140,7 +140,7 @@
                 </article>
 
                 <article class="game-card">
-                    <img src="assets/img/rust.jpg" alt="Rust" class="game-img">
+                    <img src="assets/img/rust.webp" alt="Rust" class="game-img">
                     <div class="game-info">
                         <div class="game-info">
                             <h3>Rust</h3>
@@ -160,7 +160,7 @@
                 </article>
 
                 <article class="game-card">
-                    <img src="assets/img/ark.jpg" alt="ARK: Survival Evolved" class="game-img">
+                    <img src="assets/img/ark.webp" alt="ARK: Survival Evolved" class="game-img">
                     <div class="game-info">
                         <div class="game-info">
                             <h3>ARK: Survival Evolved</h3>
@@ -182,7 +182,7 @@
                 </article>
 
                 <article class="game-card">
-                    <img src="assets/img/subnautica.jpg" alt="Subnautica" class="game-img">
+                    <img src="assets/img/subnautica.webp" alt="Subnautica" class="game-img">
                     <div class="game-info">
                         <div class="game-info">
                             <h3>Subnautica</h3>
@@ -249,6 +249,38 @@
             <p>Copyright © 2026 UTP - Todos los derechos reservados</p>
         </div>
     </footer>
+    <!-- BOTÓN LATERAL DE FAVORITOS -->
+<button id="abrirFavoritos" class="boton-lateral-favoritos" type="button">
+    <span class="icono-corazon">♥</span>
+    <span>Favoritos</span>
+    <span id="contadorFavoritos" class="contador-favoritos">0</span>
+</button>
+
+<!-- FONDO OSCURO -->
+<div id="fondoFavoritos" class="fondo-favoritos"></div>
+
+<!-- PANEL DE FAVORITOS -->
+<aside id="panelFavoritos" class="panel-favoritos">
+
+    <div class="encabezado-favoritos">
+        <div>
+            <h2>♥ Mis favoritos</h2>
+            <p>Tus videojuegos guardados</p>
+        </div>
+
+        <button id="cerrarFavoritos" type="button">×</button>
+    </div>
+
+    <div id="listaFavoritos" class="favoritos-grid">
+        <p class="favoritos-vacio">
+            Todavía no tienes videojuegos favoritos.
+        </p>
+    </div>
+
+</aside>
+
+<!-- JAVASCRIPT -->
+<script src="assets/jscript/java.js"></script>
 </body>
 
 </html>
