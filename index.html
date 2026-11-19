@@ -16,7 +16,7 @@
             <img src="assets/img/logo.svg" alt="Logo Nexus Games" class="logo">
             <nav class="navbar">
                 <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
-                <a href="#juegos"><i class="fa-solid fa-store"></i> Tienda</a>
+
                 <div class="dropdown">
                     <button class="dropbtn">
                         <i class="fa-solid fa-gamepad"></i> Juegos
@@ -56,7 +56,7 @@
                     </div>
                 </div>
                 <a href="#contacto"><i class="fa-solid fa-headset"></i> Soporte</a>
-                <button id="btnTema" class="btn-tema" type="button">Tema blanco</button>
+                <button id="btnTema" class="btn-tema" type="button" aria-label="Cambiar tema">🌙</button>
             </nav>
             <div class="user-actions">
                 <a href="login.html" class="btn btn-secondary">
@@ -67,7 +67,6 @@
                     <i class="fa-solid fa-user-plus"></i>
                     Registrarse
                 </a>
-
                 <button type="button" id="abrirCarritoLateral" class="btn-icon-header btn-carrito-header" title="Carrito" aria-label="Carrito">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span id="contadorCarrito" class="badge-carrito">0</span>
@@ -299,8 +298,27 @@
             <p class="favoritos-vacio">Todavía no tienes videojuegos favoritos.</p>
         </div>
     </aside>
+    /*boton lateral tienda*/
+    <!-- BOTONES FLOTANTES LATERALES DERECHOS -->
+   <button id="abrirFavoritos" class="menu-lateral-favoritos" type="button">
+        <i class="fa-solid fa-heart"></i>
+        <span>Favoritos</span>
+        <span id="contadorFavoritos" class="badge-favoritos">0</span>
+    </button>
+
+    <button id="abrirCarritoFlotante" class="menu-lateral-favoritos menu-lateral-carrito" type="button" aria-label="Abrir carrito">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>Carrito</span>
+        <span id="contadorCarritoFlotante" class="badge-favoritos">0</span>
+    </button>
+
+    <a href="#juegos" id="abrirTiendaLateral" class="menu-lateral-tienda" title="Ir a la tienda">
+        <i class="fa-solid fa-store"></i>
+        <span>Tienda</span>
+    </a>
 
     <script src="assets/jscript/java.js"></script>
     <script src="assets/jscript/carrito.js"></script>
+    
 </body>
 </html>

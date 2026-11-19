@@ -238,3 +238,46 @@ document.addEventListener("DOMContentLoaded", () => {
     renderizarCarritoLateral();
     renderizarCarrito();
 });
+/*boton lateral*/
+const btnCarritoFlotante = document.getElementById("abrirCarritoFlotante");
+    const badgeCarritoFlotante = document.getElementById("contadorCarritoFlotante");
+
+    function sincronizarContadorCarritoFlotante() {
+        if (!badgeCarritoFlotante) return;
+        const contadorHeader =
+            document.getElementById("contadorCarrito") ||
+            document.querySelector("#abrirCarritoLateral .badge-carrito, #abrirCarritoLateral span");
+        if (contadorHeader) {
+            badgeCarritoFlotante.textContent = contadorHeader.textContent.trim() || "0";
+        }
+    }
+
+    sincronizarContadorCarritoFlotante();
+    setInterval(sincronizarContadorCarritoFlotante, 400);
+
+    if (btnCarritoFlotante) {
+        btnCarritoFlotante.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            if (typeof cerrarPanel === "function") cerrarPanel();
+
+            const panelCarrito = document.getElementById("panelCarrito");
+            const fondoCarrito = document.getElementById("fondoCarrito");
+            const disparadorCarrito =
+                document.getElementById("abrirCarritoLateral") ||
+                document.querySelector(".btn-carrito-header, .btn-carrito-azul");
+
+            if (disparadorCarrito) {
+                disparadorCarrito.click();
+            }
+
+            if (panelCarrito) {
+                panelCarrito.classList.add("abierto");
+                panelCarrito.classList.add("activo");
+            }
+            if (fondoCarrito) {
+                fondoCarrito.classList.add("activo");
+            }
+        });
+    }
