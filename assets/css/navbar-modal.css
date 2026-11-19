@@ -479,3 +479,78 @@ html, body {
         padding: 22px 18px;
     }
 }
+
+/* =========================================================
+   AJUSTE COMPACTO PARA QUE QUEPA TODO EL HEADER EN PANTALLA
+   ========================================================= */
+header,
+.header-container,
+.main-header > div {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    padding: 10px 16px !important;
+    gap: 8px !important;
+    box-sizing: border-box !important;
+}
+
+/* Logo un poco más compacto para dar aire a los botones */
+header .logo,
+header img {
+    max-height: 44px !important;
+    width: auto !important;
+    flex-shrink: 0 !important;
+}
+
+/* Menú central con espaciado optimizado */
+.navbar,
+header nav {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    gap: 10px !important;
+}
+
+.navbar a,
+.navbar .dropbtn,
+.navbar summary,
+header nav a,
+header nav summary {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    white-space: nowrap !important;
+    font-size: 13px !important;
+    padding: 4px 6px !important;
+    line-height: 1 !important;
+}
+
+/* Botones de la derecha (Luna, Iniciar Sesión, Registrarse y Carrito) */
+.user-actions,
+header > div:last-child {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+    flex-shrink: 0 !important;
+}
+
+.user-actions a,
+.user-actions button {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    white-space: nowrap !important;
+    font-size: 13px !important;
+    padding: 7px 11px !important;
+}
+
+/* Botón redondo de la luna compacto */
+#theme-toggle,
+.btn-theme {
+    padding: 6px 9px !important;
+    min-width: auto !important;
+}
