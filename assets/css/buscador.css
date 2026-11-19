@@ -1,0 +1,20 @@
+#buscador {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 16px;
+    border: 2px solid #35445d;
+    border-radius: 8px;
+    background-color: #202a3b;
+    color: white;
+    font-size: 16px;
+}
+
+#buscador::placeholder {
+    color: #d0d7e2;
+}
+
+#buscador:focus {
+    outline: none;
+    border-color: #62e6a7;
+    box-shadow: 0 0 8px #62e6a766;
+}
