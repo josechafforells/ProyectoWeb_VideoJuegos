@@ -1,6 +1,14 @@
 const tarjetasMoba = document.querySelectorAll(".game-card");
 const campoBusqueda = document.querySelector("#buscador");
+const cuadrillaJuegos = document.querySelector(".games-grid");
 
+// Evita que la tarjeta visible se estire a todo el ancho.
+if (cuadrillaJuegos) {
+    cuadrillaJuegos.style.gridTemplateColumns =
+        "repeat(auto-fill, minmax(280px, 1fr))";
+}
+
+// Buscador
 if (campoBusqueda) {
     campoBusqueda.addEventListener("input", () => {
         const texto = campoBusqueda.value.toLowerCase().trim();
@@ -14,6 +22,7 @@ if (campoBusqueda) {
     });
 }
 
+// Animación de entrada de las tarjetas
 const movimientoReducido = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
 ).matches;
