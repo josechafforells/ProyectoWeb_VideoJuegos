@@ -1,0 +1,481 @@
+/* =========================================================
+   1. CORRECCIÓN RESPONSIVE GLOBAL
+   ========================================================= */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* =========================================================
+   2. BOTÓN HAMBURGUESA (DERECHA: OCULTO ARRIBA EN PC / VISIBLE AL SCROLL)
+   ========================================================= */
+.ng-scroll-hamburger {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    left: auto;
+    width: 46px;
+    height: 46px;
+    background-color: #6236a7;
+    color: #ffffff;
+    border: 2px solid #202a3b;
+    border-radius: 10px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 900;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    /* Oculto por defecto en PC */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-15px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.ng-scroll-hamburger.visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
+}
+
+.ng-scroll-hamburger:hover {
+    background-color: #7748c2;
+}
+
+/* =========================================================
+   3. BOTÓN DE USUARIO (JUNTO A LA HAMBURGUESA EN CELULAR)
+   ========================================================= */
+.ng-mobile-user-btn {
+    position: fixed;
+    top: 18px;
+    right: 74px; /* Ubicado justo a la izquierda del botón hamburguesa */
+    width: 46px;
+    height: 46px;
+    background-color: #202a3b;
+    color: bisque;
+    border: 2px solid #6236a7;
+    border-radius: 50%;
+    font-size: 19px;
+    display: none; /* Oculto en PC */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 900;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.ng-mobile-user-btn:hover {
+    background-color: #6236a7;
+}
+
+/* =========================================================
+   4. REGLAS EXCLUSIVAS PARA CELULAR (<= 768px)
+   ========================================================= */
+@media (max-width: 768px) {
+    header nav,
+    header .navbar,
+    header .user-actions,
+    header .btn-login,
+    header .btn-register,
+    header a[href*="login"],
+    header a[href*="registr"] {
+        display: none !important;
+    }
+
+    header {
+        padding: 15px 130px 15px 20px !important;
+        text-align: left !important;
+    }
+
+    header .logo,
+    header img {
+        max-width: 125px !important;
+        margin: 0 !important;
+    }
+
+    .ng-scroll-hamburger {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        transform: translateY(0) !important;
+    }
+
+    .ng-mobile-user-btn {
+        display: flex !important;
+    }
+}
+
+/* =========================================================
+   5. MENÚ LATERAL DESPLEGABLE DESDE LA DERECHA (BLINDADO)
+   ========================================================= */
+.ng-sidebar-overlay {
+    position: fixed !important;
+    inset: 0 !important;
+    background: rgba(10, 15, 28, 0.78) !important;
+    z-index: 9999 !important;
+    display: none;
+}
+
+.ng-sidebar-overlay.active {
+    display: block !important;
+}
+
+.ng-sidebar {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: auto !important;
+    width: 280px !important;
+    max-width: 82vw !important;
+    height: 100vh !important;
+    background: linear-gradient(180deg, #132652, #182030) !important;
+    color: #ffffff !important;
+    padding: 22px 20px !important;
+    z-index: 10000 !important;
+    box-shadow: -6px 0 25px rgba(0, 0, 0, 0.85) !important;
+    border-left: 2px solid #6236a7 !important;
+    overflow-y: auto !important;
+    transform: translateX(100%) !important;
+    transition: transform 0.3s ease !important;
+}
+
+.ng-sidebar.active {
+    transform: translateX(0) !important;
+}
+
+.ng-sidebar-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    border-bottom: 1px solid #35445d !important;
+    padding-bottom: 14px !important;
+    margin-bottom: 18px !important;
+}
+
+.ng-sidebar-header span {
+    font-weight: 800 !important;
+    letter-spacing: 1px !important;
+    color: bisque !important;
+    font-size: 1.15rem !important;
+}
+
+.ng-sidebar-close {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid #48536e !important;
+    border-radius: 8px !important;
+    color: bisque !important;
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 22px !important;
+    line-height: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    transition: background 0.2s, color 0.2s !important;
+}
+
+.ng-sidebar-close:hover {
+    background: #6236a7 !important;
+    color: #ffffff !important;
+}
+
+/* Quita puntos de lista y subrayados verdes heredados */
+.ng-sidebar-list,
+.ng-sidebar-list ul {
+    list-style: none !important;
+    list-style-type: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.ng-sidebar-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+}
+
+.ng-sidebar-list li {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.ng-sidebar-list a,
+.ng-sidebar-list summary {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 11px 14px !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    transition: background 0.2s, transform 0.15s !important;
+}
+
+.ng-sidebar-list a:hover,
+.ng-sidebar-list summary:hover {
+    background-color: #6236a7 !important;
+    color: #ffffff !important;
+    transform: translateX(-4px) !important;
+}
+
+/* Submenús desplegables internos */
+.ng-sidebar-list details ul {
+    padding-left: 14px !important;
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+    border-left: 2px solid #6236a7 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+}
+
+.ng-sidebar-list details ul a {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: bisque !important;
+    background: transparent !important;
+    padding: 8px 12px !important;
+}
+
+.ng-sidebar-list details ul a:hover {
+    background-color: rgba(98, 54, 167, 0.5) !important;
+    color: #ffffff !important;
+}
+
+/* =========================================================
+   6. MODAL DE INICIAR SESIÓN Y REGISTRO (ESTILO CAPTURAS)
+   ========================================================= */
+.ng-modal-oculto {
+    display: none !important;
+}
+
+.ng-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 15, 28, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10001;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.ng-modal-box {
+    background-color: #1c2433;
+    border: 1px solid #2e3b52;
+    color: #ffffff;
+    padding: 28px 26px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 480px;
+    max-height: 92vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.85);
+}
+
+.ng-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 26px;
+    color: #a0aec0;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.ng-modal-close:hover {
+    color: #ffffff;
+}
+
+/* Pestañas superiores */
+.ng-modal-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 6px;
+}
+
+.ng-modal-tabs button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #13213e;
+    color: #cbd5e1;
+    font-weight: bold;
+    font-size: 0.92rem;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.ng-modal-tabs button.active {
+    background-color: #6c35b5;
+    color: #ffffff;
+}
+
+/* Cabecera de título y subtítulo */
+.ng-form-header {
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+.ng-form-header h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin-bottom: 4px;
+}
+
+.ng-form-header p {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    padding: 0 !important;
+}
+
+/* Estructura del formulario */
+.ng-modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.ng-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.ng-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: left;
+}
+
+.ng-input-group label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #f1f5f9;
+}
+
+/* Contenedor de Input con Icono */
+.ng-input-icon-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.ng-input-icon-wrap i {
+    position: absolute;
+    left: 13px;
+    color: #7c8da6;
+    font-size: 0.92rem;
+    pointer-events: none;
+}
+
+.ng-input-icon-wrap input {
+    width: 100%;
+    padding: 11px 12px 11px 38px;
+    border-radius: 8px;
+    border: 1px solid #2b3f6b;
+    background-color: #152547;
+    color: #ffffff;
+    font-size: 0.92rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.ng-input-icon-wrap input::placeholder {
+    color: #7c8da6;
+}
+
+.ng-input-icon-wrap input:focus {
+    border-color: #6c35b5;
+    box-shadow: 0 0 0 2px rgba(108, 53, 181, 0.35);
+}
+
+/* Ajuste del icono nativo de calendario en input date */
+.ng-input-icon-wrap input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.8);
+    cursor: pointer;
+}
+
+/* Botón Morado Principal */
+.ng-submit-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: none;
+    border-radius: 8px;
+    background-color: #6c35b5;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.98rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.15s;
+}
+
+.ng-submit-btn:hover {
+    background-color: #7e44cc;
+    transform: translateY(-1px);
+}
+
+/* Enlaces inferiores en verde menta */
+.ng-modal-links {
+    text-align: center;
+    margin-top: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.ng-modal-links p {
+    color: #e2e8f0;
+    padding: 0 !important;
+}
+
+.ng-modal-links a {
+    color: #3ee689 !important;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.ng-modal-links a:hover {
+    text-decoration: underline;
+}
+
+.ng-back-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 0.88rem;
+}
+
+/* En pantallas muy pequeñas, las filas de 2 columnas pasan a 1 */
+@media (max-width: 480px) {
+    .ng-form-row {
+        grid-template-columns: 1fr;
+    }
+    .ng-modal-box {
+        padding: 22px 18px;
+    }
+}
