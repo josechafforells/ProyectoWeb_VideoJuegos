@@ -1,3 +1,7 @@
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,7 +9,7 @@
 }
 
 body {
-    background: #132652; 
+    background: #132652;
     color: white;
     font-family: Arial, sans-serif;
 }
@@ -18,38 +22,48 @@ hr {
     display: none;
 }
 
+/* =====================================
+   ENCABEZADO
+===================================== */
+
 .main-header {
-    padding: 30px 30px 50px 30px; 
+    padding: 30px 30px 50px 30px;
     background: linear-gradient(135deg, #48536e, #132652, #4d5872);
     color: azure;
 }
 
 .header-container {
     display: flex;
-    justify-content: space-between; 
-    align-items: center;            
-    width: 95%;                     
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
     max-width: 1400px;
     margin: 0 auto;
     padding: 0.8rem 0;
-    gap: 1rem;                      
+    gap: 1rem;
 }
 
 .logo {
     max-width: 150px;
     height: auto;
     display: block;
-    flex-shrink: 0;                 
+    flex-shrink: 0;
 }
+
+
+/* =====================================
+   MENÚ DE NAVEGACIÓN
+===================================== */
 
 .navbar {
     display: flex;
     align-items: center;
-    gap: 1.2rem;                    
-    flex-wrap: nowrap;              
+    gap: 1.2rem;
+    flex-wrap: nowrap;
 }
 
-.navbar a, .dropbtn {
+.navbar a,
+.dropbtn {
     color: #ffffff !important;
     font-weight: 700;
     font-size: 1.05em;
@@ -62,7 +76,8 @@ hr {
     transition: transform 0.2s ease-in-out;
 }
 
-.navbar a:hover, .dropbtn:hover {
+.navbar a:hover,
+.dropbtn:hover {
     transform: scale(1.15);
 }
 
@@ -77,18 +92,18 @@ hr {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #0b0f19;   
+    background-color: #0b0f19;
     border: 1px solid #1e272e;
     border-radius: 4px;
     padding: 8px 0;
     margin-top: 0;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.7);
-    z-index: 1000;                
+    z-index: 1000;
     min-width: 170px;
 }
 
 .dropdown-content a {
-    color: #ffffff !important; 
+    color: #ffffff !important;
     text-decoration: none;
     display: block;
     padding: 10px 15px;
@@ -108,18 +123,33 @@ hr {
     display: block;
 }
 
+
+/* =====================================
+   BOTONES DE USUARIO
+===================================== */
+
 .user-actions {
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    flex-shrink: 0;                
+    flex-shrink: 0;
 }
+
+
+/* =====================================
+   CONTENIDO PRINCIPAL
+===================================== */
 
 .main-content {
     padding: 20px;
     background: linear-gradient(135deg, #48536e, #132652, #4d5872);
     min-height: 100vh;
 }
+
+
+/* =====================================
+   PORTADA PRINCIPAL
+===================================== */
 
 .hero {
     text-align: center;
@@ -136,6 +166,11 @@ hr {
     color: bisque;
     font-size: 1.2rem;
 }
+
+
+/* =====================================
+   SECCIÓN DE JUEGOS
+===================================== */
 
 .section-container {
     max-width: 1200px;
@@ -155,6 +190,11 @@ hr {
     gap: 30px;
 }
 
+
+/* =====================================
+   TARJETAS DE VIDEOJUEGOS
+===================================== */
+
 .game-card {
     background-color: #202a3b;
     border: 1px solid #35445d;
@@ -162,15 +202,45 @@ hr {
     padding: 20px;
     border-radius: 15px;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+
     display: flex;
     flex-direction: column;
+
+    /* Efecto al pasar el mouse */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .game-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 25px #0008;
 }
+
+
+/* =====================================
+   ANIMACIÓN DE ENTRADA DE LAS TARJETAS
+===================================== */
+
+/* JavaScript agrega esta clase para iniciar la animación */
+.game-card.animacion {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+/* Cuando la tarjeta aparece en pantalla */
+.game-card.animacion.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Evita que el efecto de entrada elimine el efecto hover */
+.game-card.animacion.visible:hover {
+    transform: translateY(-8px);
+}
+
+
+/* =====================================
+   IMÁGENES DE LOS JUEGOS
+===================================== */
 
 .game-img {
     width: 100%;
@@ -179,6 +249,11 @@ hr {
     object-fit: cover;
     margin-bottom: 15px;
 }
+
+
+/* =====================================
+   INFORMACIÓN DE LOS JUEGOS
+===================================== */
 
 .game-info h3 {
     color: white;
@@ -190,6 +265,11 @@ hr {
     color: bisque;
     line-height: 1.6;
 }
+
+
+/* =====================================
+   PRECIO Y BOTÓN DE CADA JUEGO
+===================================== */
 
 .game-footer {
     margin-top: auto;
@@ -203,6 +283,11 @@ hr {
     color: #62e6a7;
     margin-bottom: 15px;
 }
+
+
+/* =====================================
+   BOTONES
+===================================== */
 
 .btn {
     display: inline-block;
@@ -227,6 +312,11 @@ hr {
     color: white;
 }
 
+
+/* =====================================
+   PIE DE PÁGINA
+===================================== */
+
 .main-footer {
     padding: 40px 25px;
     background: linear-gradient(135deg, #48536e, #132652, #4d5872);
@@ -249,18 +339,27 @@ hr {
     padding-top: 15px;
 }
 
+
+/* =====================================
+   DISEÑO RESPONSIVE
+===================================== */
+
 @media (max-width: 768px) {
+
     .header-container {
         flex-direction: column;
         text-align: center;
     }
+
     .navbar {
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .user-actions {
         margin-top: 10px;
     }
+
     .hero-title {
         font-size: 35px;
     }
@@ -273,7 +372,578 @@ hr {
     color: white;
 }
 
+/* =====================================
+   CINTA ANIMADA DE LOGOS GAMER
+===================================== */
 
+.cinta-logos {
+    width: 100%;
+    overflow: hidden;
+    background: #132652;
+    padding: 20px 0;
+    white-space: nowrap;
+}
+
+.cinta-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    gap: 60px;
+    animation: deslizarIzquierda 25s linear infinite;
+}
+
+.cinta-track span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.cinta-track span i {
+    color: #62e6a7;
+    font-size: 28px;
+}
+
+/* Movimiento infinito */
+@keyframes deslizarIzquierda {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pausar al pasar el mouse */
+.cinta-logos:hover .cinta-track {
+    animation-play-state: paused;
+}
+
+
+/* Cinta de marcas */
+.cinta-marcas {
+    width: 100%;
+    overflow: hidden;
+    background: #080d18;
+    padding: 25px 0;
+    border-top: 1px solid #35445d;
+    border-bottom: 1px solid #35445d;
+}
+
+/* Contenedor de las marcas */
+.cinta-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    gap: 75px;
+    animation: deslizarIzquierda 25s linear infinite;
+}
+
+/* Estilo de los nombres */
+.cinta-track span {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+/* Efecto al pasar el cursor */
+.cinta-track span:hover {
+    color: #62e6a7;
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+/* Animación horizontal */
+@keyframes deslizarIzquierda {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pausar cuando el cursor esté encima */
+.cinta-marcas:hover .cinta-track {
+    animation-play-state: paused;
+}
+
+
+/* =====================================
+   EFECTO ZOOM Y FONDO DE LOS LOGOS
+===================================== */
+
+.cinta-logos {
+    background: linear-gradient(135deg, #263957, #354b68, #263957);
+    padding: 25px 0;
+    border-top: 1px solid #62e6a7;
+    border-bottom: 1px solid #62e6a7;
+}
+
+.cinta-track img {
+    width: 110px;
+    height: 65px;
+    object-fit: contain;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 2px solid transparent;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+/* Zoom al pasar el cursor */
+.cinta-track img:hover {
+    transform: scale(1.25);
+    border-color: #62e6a7;
+    box-shadow: 0 0 18px rgba(98, 230, 167, 0.7);
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+/* FAVORITOS: CORAZONES */
+.game-card {
+    position: relative;
+}
+.btn-favorito {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    width: 43px;
+    height: 43px;
+    border: none;
+    border-radius: 50%;
+    background: #080d18;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+.btn-favorito:hover {
+    transform: scale(1.2);
+    background: #35445d;
+}
+.btn-favorito.activo {
+    color: #ff3b65;
+}
+.btn-favorito.activo:hover {
+    color: #ff6685;
+}
+
+/* SECCIÓN DE FAVORITOS */
+.favoritos-section {
+    padding: 60px 20px;
+    background: #132652;
+}
+.favoritos-section h2 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.favoritos-descripcion {
+    color: #b9c5d9;
+    margin-bottom: 30px;
+}
+.favoritos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 280px));
+    gap: 25px;
+}
+.favoritos-vacio {
+    color: #b9c5d9;
+}
+.favorito-item {
+    background: #202a3b;
+    border: 1px solid #35445d;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.favorito-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px;
+}
+.favorito-item h3 {
+    color: white;
+}
+.favorito-item p {
+    color: #62e6a7;
+    font-weight: bold;
+}
+.favorito-acciones {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
+.favorito-acciones a,
+.btn-eliminar-favorito {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.favorito-acciones a {
+    background: #6236a7;
+    color: white;
+}
+.btn-eliminar-favorito {
+    background: #a52e48;
+    color: white;
+}
+
+/* PANEL LATERAL DE FAVORITOS */
+.boton-lateral-favoritos {
+    position: fixed;
+    top: 45%;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 12px;
+    background: #202a3b;
+    color: white;
+    border: 1px solid #62e6a7;
+    border-right: none;
+    border-radius: 12px 0 0 12px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+.boton-lateral-favoritos:hover {
+    background: #62e6a7;
+    color: #080d18;
+}
+.icono-corazon {
+    font-size: 25px;
+}
+.contador-favoritos {
+    background: #62e6a7;
+    color: #080d18;
+    padding: 3px 7px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+.fondo-favoritos {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+.fondo-favoritos.activo {
+    opacity: 1;
+    visibility: visible;
+}
+.panel-favoritos {
+    position: fixed;
+    top: 0;
+    right: -450px;
+    width: 380px;
+    max-width: 90%;
+    height: 100vh;
+    padding: 25px;
+    box-sizing: border-box;
+    background: #101827;
+    color: white;
+    border-left: 2px solid #62e6a7;
+    z-index: 1002;
+    overflow-y: auto;
+    transition: right 0.4s ease;
+}
+.panel-favoritos.activo {
+    right: 0;
+}
+.encabezado-favoritos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.encabezado-favoritos h2 {
+    color: #62e6a7;
+}
+.encabezado-favoritos p {
+    color: #aab4c5;
+    font-size: 13px;
+}
+#cerrarFavoritos {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+.panel-favoritos .favorito-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+    margin-bottom: 18px;
+    background: #202a3b;
+    border: 1px solid #35445d;
+    border-radius: 12px;
+    animation: entradaFavorito 0.4s ease;
+}
+.panel-favoritos .favorito-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    object-position: center;
+    background: #101827;
+    border-radius: 10px;
+    display: block;
+}
+.panel-favoritos .favorito-item h3 {
+    color: white;
+}
+.panel-favoritos .favorito-item p {
+    color: #62e6a7;
+}
+.panel-favoritos .favorito-acciones {
+    display: flex;
+    gap: 10px;
+}
+.panel-favoritos .favorito-acciones a {
+    background: #6236a7;
+    color: white;
+    padding: 9px 15px;
+    border-radius: 7px;
+    text-decoration: none;
+}
+.panel-favoritos .btn-eliminar-favorito {
+    background: #a83245;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 9px 15px;
+    cursor: pointer;
+}
+@keyframes entradaFavorito {
+    from {
+        opacity: 0;
+        transform: translateX(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@media (max-width: 500px) {
+    .panel-favoritos {
+        width: 85%;
+    }
+}
+
+/* TEMA CLARO */
+body.tema-blanco {
+    background: #ffffff !important;
+    color: #202a3b !important;
+}
+body.tema-blanco header,
+body.tema-blanco .header,
+body.tema-blanco .navbar,
+body.tema-blanco nav {
+    background: #ffffff !important;
+    color: #202a3b !important;
+}
+body.tema-blanco header a,
+body.tema-blanco nav a,
+body.tema-blanco .navbar a,
+body.tema-blanco .nav-link,
+body.tema-blanco .navbar .dropbtn {
+    color: #172033 !important;
+    opacity: 1;
+    visibility: visible;
+}
+body.tema-blanco header a:hover,
+body.tema-blanco nav a:hover,
+body.tema-blanco .navbar a:hover,
+body.tema-blanco .nav-link:hover {
+    color: #28a745 !important;
+}
+body.tema-blanco header i,
+body.tema-blanco nav i {
+    color: #202a3b !important;
+}
+body.tema-blanco header .btn-login,
+body.tema-blanco header .btn-registro,
+body.tema-blanco header .btn-registrarse,
+body.tema-blanco header .btn-iniciar-sesion,
+body.tema-blanco header .btn-login a,
+body.tema-blanco header .btn-registro a,
+body.tema-blanco header a[href*="login"],
+body.tema-blanco header a[href*="registro"],
+body.tema-blanco header a[href*="registr"],
+body.tema-blanco header a[href*="sesion"] {
+    background: #28a745 !important;
+    color: #ffffff !important;
+    border: 1px solid #28a745 !important;
+    border-radius: 25px;
+    padding: 9px 16px;
+}
+body.tema-blanco header .btn-login:hover,
+body.tema-blanco header .btn-registro:hover,
+body.tema-blanco header .btn-registrarse:hover,
+body.tema-blanco header .btn-iniciar-sesion:hover,
+body.tema-blanco header a[href*="login"]:hover,
+body.tema-blanco header a[href*="registro"]:hover,
+body.tema-blanco header a[href*="registr"]:hover {
+    background: #218838 !important;
+    color: #ffffff !important;
+}
+.btn-tema {
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid #62e6a7;
+    background: #202a3b;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+    min-height: auto;
+    width: auto;
+}
+body.tema-blanco .btn-tema {
+    background: #e9ecef !important;
+    color: #202a3b !important;
+    border: 1px solid #cccccc;
+}
+.btn-tema:hover {
+    transform: scale(1.05);
+}
+body.tema-blanco .btn-tema:hover {
+    background: #dce1e7 !important;
+}
+body.tema-blanco .marcas,
+body.tema-blanco .barra-marcas,
+body.tema-blanco .ticker,
+body.tema-blanco .marquee {
+    background: #ffffff !important;
+    color: #202a3b !important;
+}
+body.tema-blanco .hero,
+body.tema-blanco .banner,
+body.tema-blanco .portada {
+    background: #ffffff !important;
+    color: #202a3b !important;
+}
+body.tema-blanco main,
+body.tema-blanco section,
+body.tema-blanco .contenedor,
+body.tema-blanco .seccion {
+    background: #ffffff !important;
+    color: #202a3b !important;
+}
+body.tema-blanco h1,
+body.tema-blanco h2,
+body.tema-blanco h3,
+body.tema-blanco p,
+body.tema-blanco label {
+    color: #202a3b;
+}
+body.tema-blanco .game-card {
+    background: #ffffff !important;
+    color: #202a3b !important;
+    border: 1px solid #dddddd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+body.tema-blanco .game-info h3,
+body.tema-blanco .game-price {
+    color: #202a3b !important;
+}
+body.tema-blanco .btn-card {
+    background: #28a745 !important;
+    color: #ffffff !important;
+    border: none;
+}
+body.tema-blanco .btn-card:hover {
+    background: #218838 !important;
+    color: #ffffff !important;
+}
+body.tema-blanco footer {
+    background: #ffffff !important;
+    color: #202a3b !important;
+    border-top: 1px solid #dddddd;
+}
+body.tema-blanco footer h2,
+body.tema-blanco footer h3,
+body.tema-blanco footer p,
+body.tema-blanco footer span,
+body.tema-blanco footer li {
+    color: #202a3b !important;
+}
+body.tema-blanco footer a {
+    color: #218838 !important;
+}
+body.tema-blanco .panel-favoritos {
+    background: #ffffff !important;
+    color: #202a3b !important;
+}
+body.tema-blanco .encabezado-favoritos h2,
+body.tema-blanco .favorito-item h3 {
+    color: #202a3b !important;
+}
+body.tema-blanco .encabezado-favoritos p {
+    color: #64748b !important;
+}
+body.tema-blanco .favorito-item {
+    background: #f4f4f4 !important;
+    border: 1px solid #dddddd;
+}
+body.tema-blanco #cerrarFavoritos {
+    color: #202a3b !important;
+}
+body.tema-blanco .boton-lateral-favoritos {
+    background: #ffffff !important;
+    color: #202a3b !important;
+    border: 1px solid #62e6a7;
+}
+body.tema-blanco .btn-favorito.activo {
+    color: #ff304f !important;
+}
+body.tema-blanco .dropdown-content {
+    background: #1b2940 !important;
+    border: 1px solid #40516b !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+    opacity: 1 !important;
+}
+body.tema-blanco .dropdown-content a {
+    color: #ffffff !important;
+    background: transparent !important;
+}
+body.tema-blanco .dropdown-content a:hover {
+    background: #62e6a7 !important;
+    color: #172033 !important;
+}
 /* =========================================================
    RESPONSIVE (PC, tablet y móvil)
    Va al FINAL de styles.css para sobrescribir lo anterior
@@ -422,7 +1092,6 @@ hr {
         padding: 24px 16px;
     }
 }
-/* Franja animada de empresas */
 .cinta-marcas {
     width: 100%;
     overflow: hidden;
@@ -833,4 +1502,17 @@ hr {
     height: auto !important;
     font-size: 0.9rem !important;
     font-weight: 700 !important;
+}
+
+/* ---------- Botón de tema (de main) ---------- */
+.btn-tema {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.btn-tema:focus,
+.btn-tema:focus-visible,
+.btn-tema:active {
+    outline: none !important;
+    box-shadow: none !important;
 }

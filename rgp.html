@@ -28,6 +28,7 @@
                         <a href="proximamente.html">Próximamente</a>
                         <a href="novedades.html">Novedades</a>
                         <a href="noticias.html">Noticias</a>
+                        <a href="todos-los-juegos.html">Todos lo Videojuegos</a>
                     </div>
                 </div>
 
@@ -246,6 +247,38 @@
             <p>Copyright © 2026 UTP - Todos los derechos reservados</p>
         </div>
     </footer>
+    <!-- BOTÓN LATERAL DE FAVORITOS -->
+<button id="abrirFavoritos" class="boton-lateral-favoritos" type="button">
+    <span class="icono-corazon">♥</span>
+    <span>Favoritos</span>
+    <span id="contadorFavoritos" class="contador-favoritos">0</span>
+</button>
+
+<!-- FONDO OSCURO -->
+<div id="fondoFavoritos" class="fondo-favoritos"></div>
+
+<!-- PANEL DE FAVORITOS -->
+<aside id="panelFavoritos" class="panel-favoritos">
+
+    <div class="encabezado-favoritos">
+        <div>
+            <h2>♥ Mis favoritos</h2>
+            <p>Tus videojuegos guardados</p>
+        </div>
+
+        <button id="cerrarFavoritos" type="button">×</button>
+    </div>
+
+    <div id="listaFavoritos" class="favoritos-grid">
+        <p class="favoritos-vacio">
+            Todavía no tienes videojuegos favoritos.
+        </p>
+    </div>
+
+</aside>
+
+<!-- JAVASCRIPT -->
+<script src="assets/jscript/java.js"></script>
 </body>
 
 </html>

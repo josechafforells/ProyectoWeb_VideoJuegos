@@ -205,3 +205,57 @@ body:has(.auth-main) {
     text-align: center;
     font-size: 0.9rem;
 }
+
+
+
+/* ---------- Compatibilidad con el tema claro (body.tema-blanco) ---------- */
+body.tema-blanco .auth-card {
+    border-color: #dddddd;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* El panel con imagen sigue siendo oscuro: su texto se queda claro */
+body.tema-blanco .auth-side h2 {
+    color: #e4e7de;
+}
+
+body.tema-blanco .auth-side p {
+    color: bisque;
+}
+
+body.tema-blanco .auth-perks li {
+    color: #d0d7e2;
+}
+
+/* Formulario en versión clara */
+body.tema-blanco .input-wrap > i {
+    color: #6b7690;
+}
+
+body.tema-blanco .input-wrap input {
+    background-color: #f4f7fc;
+    color: #202a3b;
+    border-color: #c3cde2;
+}
+
+body.tema-blanco .input-wrap input::placeholder {
+    color: #8a94a8;
+}
+
+body.tema-blanco .input-wrap input:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 3px #28a74533;
+}
+
+body.tema-blanco .input-wrap:focus-within > i {
+    color: #28a745;
+}
+
+body.tema-blanco .auth-switch a,
+body.tema-blanco .auth-back {
+    color: #218838;
+}
+
+body.tema-blanco .input-wrap input[type="date"] {
+    color-scheme: light;
+}
