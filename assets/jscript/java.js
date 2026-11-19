@@ -252,7 +252,9 @@ function aplicarTema(tema) {
     localStorage.setItem("nexusTema", tema);
 
     if (botonTema) {
-        botonTema.textContent = tema === "blanco" ? "☀️" : "🌙";
+if (botonTema) {
+    botonTema.textContent = tema === "blanco" ? "🌞" : "🌙";
+}
     }
 }
 
