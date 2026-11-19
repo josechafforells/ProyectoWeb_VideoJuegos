@@ -1,30 +1,6 @@
 
-document.addEventListener("DOMContentLoaded", () => {
-
-    // ANIMACIÓN DE LAS TARJETAS
-
-    const tarjetas = document.querySelectorAll(".game-card");
-
-    tarjetas.forEach((tarjeta) => {
-        tarjeta.classList.add("animacion");
-    });
-
-    const observador = new IntersectionObserver((entradas) => {
-        entradas.forEach((entrada) => {
-            if (entrada.isIntersecting) {
-                entrada.target.classList.add("visible");
-                observador.unobserve(entrada.target);
-            }
-        });
-    }, { threshold: 0.1 });
-
-    tarjetas.forEach((tarjeta) => {
-        observador.observe(tarjeta);
-    });
-
-
-    // SISTEMA DE FAVORITOS
-
+// TARJETA DE FAVORITOS
+    const tarjetasFavoritos = document.querySelectorAll(".game-card");
     let favoritos = [];
 
     try {
@@ -35,24 +11,29 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!Array.isArray(favoritos)) favoritos = [];
 
     } catch (error) {
-        favoritos = [];
+      favoritos = [];
     }
 
     const listaFavoritos = document.getElementById("listaFavoritos");
-    const contador = document.getElementById("contadorFavoritos");
 
-    function guardar() {
-        localStorage.setItem(
-            "nexusFavoritos",
-            JSON.stringify(favoritos)
-        );
+    function actualizarNumeroFavoritos() {
+        document
+            .querySelectorAll("#contadorFavoritos, .menu-lateral-favoritos .badge-favoritos")
+            .forEach((el) => {
+                el.textContent = favoritos.length;
+            });
     }
 
+    function guardar() {
+        try {
+            localStorage.setItem(
+                "nexusFavoritos",
+                JSON.stringify(favoritos)
+            );
+        } catch (error) {}
+    }
     function mostrarFavoritos() {
-
-        if (contador) {
-            contador.textContent = favoritos.length;
-        }
+        actualizarNumeroFavoritos();
 
         if (!listaFavoritos) return;
 
@@ -65,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         favoritos.forEach((juego) => {
-
             const tarjeta = document.createElement("article");
             tarjeta.className = "favorito-item";
 
@@ -96,9 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function actualizarCorazones() {
-
-        tarjetas.forEach((tarjeta) => {
-
+        tarjetasFavoritos.forEach((tarjeta) => {
             const boton = tarjeta.querySelector(".btn-favorito");
             const titulo = tarjeta.querySelector(".game-info h3");
 
@@ -123,7 +101,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function quitarFavorito(nombre) {
-
         favoritos = favoritos.filter(
             juego => juego.nombre !== nombre
         );
@@ -133,8 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
         mostrarFavoritos();
     }
 
-    tarjetas.forEach((tarjeta) => {
-
+    tarjetasFavoritos.forEach((tarjeta) => {
         const titulo = tarjeta.querySelector(".game-info h3");
         const imagen = tarjeta.querySelector(".game-img");
         const precio = tarjeta.querySelector(".game-price");
@@ -174,7 +150,6 @@ document.addEventListener("DOMContentLoaded", () => {
         tarjeta.appendChild(boton);
 
         boton.addEventListener("click", () => {
-
             const nombre = titulo.textContent.trim();
 
             const existe = favoritos.some(
@@ -182,11 +157,8 @@ document.addEventListener("DOMContentLoaded", () => {
             );
 
             if (existe) {
-
                 quitarFavorito(nombre);
-
             } else {
-
                 favoritos.push({
                     nombre: nombre,
                     imagen: imagen.getAttribute("src"),
@@ -201,9 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-
     // PANEL LATERAL DE FAVORITOS
-
     const abrir = document.getElementById("abrirFavoritos");
     const cerrar = document.getElementById("cerrarFavoritos");
     const panel = document.getElementById("panelFavoritos");
@@ -239,34 +209,187 @@ document.addEventListener("DOMContentLoaded", () => {
 
     actualizarCorazones();
     mostrarFavoritos();
+    /*favoritos*/
+    // =====================================
+    // PANEL LATERAL DE FAVORITOS (BLINDADO)
+    // =====================================
+    const abrirFav = document.getElementById("abrirFavoritos");
+    const cerrarFav = document.getElementById("cerrarFavoritos");
+    const panelFav = document.getElementById("panelFavoritos");
+    const fondoFav = document.getElementById("fondoFavoritos");
 
-});
+    function abrirPanelFavoritos() {
+        // Cierra el panel del carrito si estuviera abierto
+        const panelCarr = document.getElementById("panelCarrito");
+        const fondoCarr = document.getElementById("fondoCarrito");
+        if (panelCarr) {
+            panelCarr.classList.remove("abierto");
+            panelCarr.classList.remove("activo");
+        }
+        if (fondoCarr) {
+            fondoCarr.classList.remove("activo");
+        }
 
-
-// TEMA BLANCO Y OSCURO
-
-const botonTema = document.getElementById("btnTema");
-
-function aplicarTema(tema) {
-    document.body.classList.toggle("tema-blanco", tema === "blanco");
-    localStorage.setItem("nexusTema", tema);
-
-    if (botonTema) {
-if (botonTema) {
-    botonTema.textContent = tema === "blanco" ? "🌞" : "🌙";
-}
+        if (panelFav) {
+            panelFav.classList.add("activo");
+            panelFav.classList.add("abierto");
+        }
+        if (fondoFav) {
+            fondoFav.classList.add("activo");
+        }
     }
-}
 
-const temaGuardado = localStorage.getItem("nexusTema") || "oscuro";
-aplicarTema(temaGuardado);
+    function cerrarPanelFavoritos() {
+        if (panelFav) {
+            panelFav.classList.remove("activo");
+            panelFav.classList.remove("abierto");
+        }
+        if (fondoFav) {
+            fondoFav.classList.remove("activo");
+        }
+    }
 
-if (botonTema) {
-    botonTema.addEventListener("click", () => {
+    // Mantener compatibilidad si en otra parte llaman a cerrarPanel()
+    window.cerrarPanel = cerrarPanelFavoritos;
+
+    if (abrirFav) {
+        abrirFav.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            abrirPanelFavoritos();
+        });
+    }
+
+    if (cerrarFav) {
+        cerrarFav.addEventListener("click", (e) => {
+            e.preventDefault();
+            cerrarPanelFavoritos();
+        });
+    }
+
+    if (fondoFav) {
+        fondoFav.addEventListener("click", cerrarPanelFavoritos);
+    }
+
+    document.addEventListener("keydown", (evento) => {
+        if (evento.key === "Escape") {
+            cerrarPanelFavoritos();
+        }
+    });
+    // =========================================================
+// FAVORITOS (PANEL LATERAL BLINDADO) + TEMA SOL / LUNA
+// =========================================================
+(function () {
+    function obtenerElementosFavoritos() {
+        return {
+            panel: document.getElementById("panelFavoritos"),
+            fondo: document.getElementById("fondoFavoritos")
+        };
+    }
+
+    function cerrarCarritoSiExiste() {
+        const panelCarrito = document.getElementById("panelCarrito");
+        const fondoCarrito = document.getElementById("fondoCarrito");
+        if (panelCarrito) {
+            panelCarrito.classList.remove("abierto");
+            panelCarrito.classList.remove("activo");
+        }
+        if (fondoCarrito) {
+            fondoCarrito.classList.remove("activo");
+        }
+    }
+
+    function abrirPanelFavoritos() {
+        cerrarCarritoSiExiste();
+        const { panel, fondo } = obtenerElementosFavoritos();
+        if (panel) {
+            panel.classList.add("activo");
+            panel.classList.add("abierto");
+        }
+        if (fondo) {
+            fondo.classList.add("activo");
+        }
+    }
+
+    function cerrarPanelFavoritos() {
+        const { panel, fondo } = obtenerElementosFavoritos();
+        if (panel) {
+            panel.classList.remove("activo");
+            panel.classList.remove("abierto");
+        }
+        if (fondo) {
+            fondo.classList.remove("activo");
+        }
+    }
+
+    window.cerrarPanel = cerrarPanelFavoritos;
+
+    // Delegación en captura para que siempre abra/cierre favoritos
+    document.addEventListener("click", (e) => {
+        const btnAbrirFav = e.target.closest("#abrirFavoritos, .menu-lateral-favoritos:not(.menu-lateral-carrito)");
+        if (btnAbrirFav) {
+            e.preventDefault();
+            e.stopPropagation();
+            abrirPanelFavoritos();
+            return;
+        }
+
+        const btnCerrarFav = e.target.closest("#cerrarFavoritos");
+        if (btnCerrarFav) {
+            e.preventDefault();
+            e.stopPropagation();
+            cerrarPanelFavoritos();
+            return;
+        }
+
+        const fondoFav = e.target.closest("#fondoFavoritos, .fondo-favoritos");
+        if (fondoFav) {
+            cerrarPanelFavoritos();
+        }
+    }, true);
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            cerrarPanelFavoritos();
+        }
+    });
+
+    // =========================================================
+    // BOTÓN DE TEMA (SOLO SOL 🌞 Y LUNA 🌙, SIN TEXTO)
+    // =========================================================
+    function actualizarIconoTema() {
+        const botonTema = document.getElementById("btnTema");
+        if (!botonTema) return;
+        const esBlanco = document.body.classList.contains("tema-blanco");
+        botonTema.textContent = esBlanco ? "🌞" : "🌙";
+        botonTema.setAttribute("aria-label", esBlanco ? "Cambiar a tema oscuro" : "Cambiar a tema claro");
+    }
+
+    function aplicarTema(tema) {
+        const esBlanco = tema === "blanco";
+        document.body.classList.toggle("tema-blanco", esBlanco);
+        try {
+            localStorage.setItem("nexusTema", tema);
+        } catch (error) {}
+        actualizarIconoTema();
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        let temaGuardado = "oscuro";
+        try {
+            temaGuardado = localStorage.getItem("nexusTema") || "oscuro";
+        } catch (error) {}
+        aplicarTema(temaGuardado);
+    });
+
+    document.addEventListener("click", (e) => {
+        const botonTema = e.target.closest("#btnTema, .btn-tema");
+        if (!botonTema) return;
+        e.preventDefault();
+        e.stopPropagation();
         const nuevoTema = document.body.classList.contains("tema-blanco")
             ? "oscuro"
             : "blanco";
-
         aplicarTema(nuevoTema);
-    });
-}
+    }, true);
+})();
