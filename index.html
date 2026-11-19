@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/navbar-modal.css">
 </head>
+
 <body>
     <header class="main-header">
         <div class="header-container">
@@ -172,7 +175,8 @@
                     <img src="assets/img/g7.webp" alt="Left 4 Dead 2" class="game-img">
                     <div class="game-info">
                         <h3>Left 4 Dead 2</h3>
-                        <p>Left 4 Dead 2 es un videojuego de disparos cooperativo en primera persona centrado en la supervivencia contra hordas de zombis.</p>
+                        <p>Left 4 Dead 2 es un videojuego de disparos cooperativo en primera persona centrado en la
+                            supervivencia contra hordas de zombis.</p>
                         <div class="game-footer">
                             <span class="game-price">S/ 14.98</span>
                             <a href="detalleL4D2.html" class="btn btn-card">
@@ -203,10 +207,14 @@
             </div>
             <div class="footer-col">
                 <h4>Redes Sociales</h4>
-                <p><i class="fa-brands fa-facebook"></i> <a href="https://facebook.com/nexusgames" target="_blank">Facebook</a></p>
-                <p><i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/nexusgames" target="_blank">Twitter</a></p>
-                <p><i class="fa-brands fa-instagram"></i> <a href="https://instagram.com/nexusgames" target="_blank">Instagram</a></p>
-                <p><i class="fa-brands fa-reddit"></i> <a href="https://reddit.com/r/nexusgames" target="_blank">Reddit</a></p>
+                <p><i class="fa-brands fa-facebook"></i> <a href="https://facebook.com/nexusgames"
+                        target="_blank">Facebook</a></p>
+                <p><i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/nexusgames"
+                        target="_blank">Twitter</a></p>
+                <p><i class="fa-brands fa-instagram"></i> <a href="https://instagram.com/nexusgames"
+                        target="_blank">Instagram</a></p>
+                <p><i class="fa-brands fa-reddit"></i> <a href="https://reddit.com/r/nexusgames"
+                        target="_blank">Reddit</a></p>
             </div>
             <div class="footer-col">
                 <h4>Metodos de Pago</h4>
@@ -239,7 +247,192 @@
             <p class="favoritos-vacio">Todavía no tienes videojuegos favoritos.</p>
         </div>
     </aside>
+    <!-- =========================================================
+     MENÚ HAMBURGUESA (SCROLL) Y MODAL AUTH (TODO EN UNO)
+     ========================================================= -->
+    <button type="button" id="ngHamburgerBtn" class="ng-scroll-hamburger" aria-label="Abrir menú">☰</button>
+    <button type="button" id="ngMobileUserBtn" class="ng-mobile-user-btn" aria-label="Cuenta">👤</button>
+
+    <div id="ngSidebarOverlay" class="ng-sidebar-overlay"></div>
+
+    <aside id="ngSidebar" class="ng-sidebar">
+        <div class="ng-sidebar-header">
+            <span>NEXUS GAMES</span>
+            <button type="button" id="ngCloseSidebar" class="ng-sidebar-close">&times;</button>
+        </div>
+        <ul class="ng-sidebar-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li>
+                <details>
+                    <summary>Juegos</summary>
+                    <ul>
+                        <li><a href="proximamente.html">Proximamente</a></li>
+                        <li><a href="novedades.html">Novedades</a></li>
+                        <li><a href="noticias.html">Noticias</a></li>
+                        <li><a href="todos-los-juegos.html">Todos los juegos</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>Categorías</summary>
+                    <ul>
+                        <li><a href="shooter.html">Shooters</a></li>
+                        <li><a href="aventura.html">Aventura</a></li>
+                        <li><a href="deportes.html">Deportes</a></li>
+                        <li><a href="rgp.html">RPG</a></li>
+                        <li><a href="supervivencia.html">Supervivencia</a></li>
+                        <li><a href="moba.html">MOBA</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>Ofertas</summary>
+                    <ul>
+                        <li></li><a href="50descuento.html">50% Descuento</a></li>
+                        <li><a href="30descuento.html">30% Descuento</a></li>
+                        <li><a href="20descuento.html">20% Descuento</a></li>
+                        <li><a href="gratis.html">Gratis</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li><a href="carrito.html">Carrito</a></li>
+            <li><a href="#" id="ngSidebarAuthLink">Iniciar Sesión / Registrarse</a></li>
+        </ul>
+    </aside>
+
+    <!-- MODAL INICIAR SESIÓN / REGISTRO (DISEÑO DETALLADO) -->
+    <div id="ngAuthModal" class="ng-modal-overlay ng-modal-oculto">
+        <div class="ng-modal-box">
+            <span id="ngCloseModal" class="ng-modal-close">&times;</span>
+
+            <!-- Pestañas superiores -->
+            <div class="ng-modal-tabs">
+                <button type="button" id="ngTabLogin" class="active">Iniciar Sesión</button>
+                <button type="button" id="ngTabRegistro">Registrarse</button>
+            </div>
+
+            <!-- ================= FORMULARIO INICIAR SESIÓN ================= -->
+            <form id="ngFormLogin" class="ng-modal-form">
+                <div class="ng-form-header">
+                    <h2>Iniciar Sesión</h2>
+                    <p>Ingresa tus datos para acceder a tu cuenta.</p>
+                </div>
+
+                <div class="ng-input-group">
+                    <label for="ngLoginEmail">Correo Electrónico</label>
+                    <div class="ng-input-icon-wrap">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="ngLoginEmail" placeholder="tucorreo@ejemplo.com" required>
+                    </div>
+                </div>
+
+                <div class="ng-input-group">
+                    <label for="ngLoginPass">Contraseña</label>
+                    <div class="ng-input-icon-wrap">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="ngLoginPass" placeholder="Tu contraseña" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="ng-submit-btn">
+                    <i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión
+                </button>
+
+                <div class="ng-modal-links">
+                    <p>¿No tienes cuenta? <a href="#" id="ngSwitchToRegister">Regístrate</a></p>
+                    <a href="#" class="ng-back-link" id="ngCloseModalLink1">
+                        <i class="fa-solid fa-arrow-left"></i> Volver al inicio
+                    </a>
+                </div>
+            </form>
+
+            <!-- ================= FORMULARIO REGISTRARSE ================= -->
+            <form id="ngFormRegistro" class="ng-modal-form ng-modal-oculto">
+                <div class="ng-form-header">
+                    <h2>Registrarse</h2>
+                    <p>Completa tus datos para crear tu cuenta.</p>
+                </div>
+
+                <div class="ng-input-group">
+                    <label for="ngRegNombre">Nombre</label>
+                    <div class="ng-input-icon-wrap">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="ngRegNombre" placeholder="Nombre" required>
+                    </div>
+                </div>
+
+                <!-- Fila de 2 columnas: Apellidos -->
+                <div class="ng-form-row">
+                    <div class="ng-input-group">
+                        <label for="ngRegApPat">Apellido Paterno</label>
+                        <div class="ng-input-icon-wrap">
+                            <i class="fa-solid fa-id-card"></i>
+                            <input type="text" id="ngRegApPat" placeholder="Apellido Paterno" required>
+                        </div>
+                    </div>
+
+                    <div class="ng-input-group">
+                        <label for="ngRegApMat">Apellido Materno</label>
+                        <div class="ng-input-icon-wrap">
+                            <i class="fa-solid fa-id-card"></i>
+                            <input type="text" id="ngRegApMat" placeholder="Apellido Materno" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ng-input-group">
+                    <label for="ngRegEmail">Correo Electrónico</label>
+                    <div class="ng-input-icon-wrap">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="ngRegEmail" placeholder="tucorreo@ejemplo.com" required>
+                    </div>
+                </div>
+
+                <div class="ng-input-group">
+                    <label for="ngRegPass">Contraseña</label>
+                    <div class="ng-input-icon-wrap">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="ngRegPass" placeholder="Crea una contraseña" required>
+                    </div>
+                </div>
+
+                <!-- Fila de 2 columnas: Teléfono y Fecha -->
+                <div class="ng-form-row">
+                    <div class="ng-input-group">
+                        <label for="ngRegTel">Número Telefónico</label>
+                        <div class="ng-input-icon-wrap">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" id="ngRegTel" placeholder="987 654 321" required>
+                        </div>
+                    </div>
+
+                    <div class="ng-input-group">
+                        <label for="ngRegFecha">Fecha de Nacimiento</label>
+                        <div class="ng-input-icon-wrap">
+                            <i class="fa-solid fa-cake-candles"></i>
+                            <input type="date" id="ngRegFecha" required>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="ng-submit-btn">
+                    <i class="fa-solid fa-user-plus"></i> Registrarse
+                </button>
+
+                <div class="ng-modal-links">
+                    <p>¿Ya tienes cuenta? <a href="#" id="ngSwitchToLogin">Inicia sesión</a></p>
+                    <a href="#" class="ng-back-link" id="ngCloseModalLink2">
+                        <i class="fa-solid fa-arrow-left"></i> Volver al inicio
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <script src="assets/jscript/java.js"></script>
+    <script src="assets/jscript/navbar-modal.js"></script>
 </body>
+
 </html>
