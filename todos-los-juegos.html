@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos los videojuegos | Nexus Games</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/buscador.css">
+</head>
+
+<body>
+    <script src="assets/JavaScript/jv.js" defer></script>
+
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" aria-label="Ir al inicio">
+                <img src="./assets/img/logo.jpg" alt="Logo Nexus Games" class="logo">
+            </a>
+
+            <nav class="navbar" aria-label="Navegación principal">
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i> Inicio
+                </a>
+
+                <div class="dropdown">
+                    <button class="dropbtn" type="button">
+                        <i class="fa-solid fa-gamepad"></i> Juegos
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="proximamente.html">Próximamente</a>
+                        <a href="novedades.html">Novedades</a>
+                        <a href="noticias.html">Noticias</a>
+                        <a href="todos-los-juegos.html">Todos los videojuegos</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn" type="button">
+                        <i class="fa-solid fa-layer-group"></i> Categorías
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="shooter.html">Shooters</a>
+                        <a href="aventura.html">Aventura</a>
+                        <a href="deportes.html">Deportes</a>
+                        <a href="rgp.html">RPG</a>
+                        <a href="supervivencia.html">Supervivencia</a>
+                        <a href="moba.html">MOBA</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn" type="button">
+                        <i class="fa-solid fa-fire"></i> Ofertas
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="50descuento.html">50% de descuento</a>
+                        <a href="30descuento.html">30% de descuento</a>
+                        <a href="20descuento.html">20% de descuento</a>
+                        <a href="gratis.html">Gratis</a>
+                    </div>
+                </div>
+
+                <a href="#contacto">
+                    <i class="fa-solid fa-headset"></i> Soporte
+                </a>
+            </nav>
+
+            <div class="user-actions">
+                <a href="login.html" class="btn btn-secondary">
+                    <i class="fa-solid fa-right-to-bracket"></i> Iniciar sesión
+                </a>
+                <a href="registrarse.html" class="btn btn-primary">
+                    <i class="fa-solid fa-user-plus"></i> Registrarse
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="juegos" class="section-container">
+            <h1 class="section-title">Todos los videojuegos</h1>
+
+            <br>
+
+            <label for="buscador">Buscar videojuego:</label>
+            <input
+                type="search"
+                id="buscador"
+                placeholder="Escribe el nombre de un juego"
+                aria-label="Buscar videojuegos"
+            >
+            <br><br><br>
+
+            <div class="games-grid">
+
+                <article class="game-card">
+                    <img src="assets/img/g9.jpg" alt="Minecraft" class="game-img">
+                    <div class="game-info">
+                        <h3>Minecraft</h3>
+                        <p>Minecraft es un videojuego de construcción y mundo abierto del estilo sandbox (donde los jugadores tienen libertad total para crear y explorar).</p>
+                        <br>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>: 100.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>: 120.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-xbox"></i>: 110.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-nintendo"></i>: 130.00</p>
+                        <div class="game-footer">
+                            <a href="detalleMinecraft.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/g7.jpg" alt="Left 4 Dead 2" class="game-img">
+                    <div class="game-info">
+                        <h3>Left 4 Dead 2</h3>
+                        <p>Left 4 Dead 2 es un videojuego de disparos en primera persona con elementos de cooperación y supervivencia.</p>
+                        <br>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>: 14.98</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-xbox"></i>: 50.99</p>
+                        <div class="game-footer">
+                            <a href="detalleL4D2.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/TF.webp" alt="The Forest" class="game-img">
+                    <div class="game-info">
+                        <h3>The Forest</h3>
+                        <p>The Forest es un videojuego de supervivencia en mundo abierto donde los jugadores deben colectar recursos, construir refugios y sobrevivir a criaturas peligrosas.</p>
+                        <br>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>: 60.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>: 70.00</p>
+                        <div class="game-footer">
+                            <a href="detalleTheForest.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/rust.jpg" alt="Rust" class="game-img">
+                    <div class="game-info">
+                        <h3>Rust</h3>
+                        <p>Rust es un videojuego de supervivencia en mundo abierto donde los jugadores deben colectar recursos, construir refugios y sobrevivir a otros jugadores y criaturas peligrosas.</p>
+                        <br>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>: 130.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>: 130.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-xbox"></i>: 140.00</p>
+                        <div class="game-footer">
+                            <a href="detalleRust.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/ark.jpg" alt="ARK: Survival Evolved" class="game-img">
+                    <div class="game-info">
+                        <h3>ARK: Survival Evolved</h3>
+                        <p>ARK: Survival Evolved es un videojuego de supervivencia en mundo abierto donde los jugadores deben colectar recursos, construir refugios y sobrevivir a criaturas peligrosas.</p>
+                        <br>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>: 80.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>: 90.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-xbox"></i>: 100.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-nintendo"></i>: 105.00</p>
+                        <div class="game-footer">
+                            <a href="detalleARK.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/subnautica.jpg" alt="Subnautica" class="game-img">
+                    <div class="game-info">
+                        <h3>Subnautica</h3>
+                        <p>Subnautica es un videojuego de supervivencia en mundo abierto donde los jugadores deben explorar y sobrevivir en un entorno marino hostil.</p>
+                        <br>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>: 72.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>: 90.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-xbox"></i>: 90.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-nintendo"></i>: 95.00</p>
+                        <div class="game-footer">
+                            <a href="detalleSubnautica.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/CoD_Black_Ops_cover.webp" alt="Call of Duty: Black Ops 3" class="game-img">
+                    <div class="game-info">
+                        <h3>Call of Duty: Black Ops 3</h3>
+                        <p>Call of Duty: Black Ops es un videojuego de disparos en primera persona ambientado en la Guerra Fría.</p>
+                        <br>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>: 250.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>: 200.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-xbox"></i>: 220.00</p>
+                        <div class="game-footer">
+                            <a href="detalleCOD-Black-Ops.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/g2.jpg" alt="Battlefield" class="game-img">
+                    <div class="game-info">
+                        <h3>Battlefield</h3>
+                        <p>Battlefield trata de ponerte en las botas de un soldado en medio del caos, la destrucción y la estrategia del frente de batalla.</p>
+                        <br>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>: 100.90</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>: 120.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-xbox"></i>: 130.00</p>
+                        <div class="game-footer">
+                            <a href="detalleBattlefield.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/valo.jpg" alt="Valorant" class="game-img">
+                    <div class="game-info">
+                        <h3>Valorant</h3>
+                        <p>Valorant es un videojuego de disparos tácticos en primera persona desarrollado por Riot Games.</p>
+                        <br>
+                        <p>Gratis</p>
+                        <div class="game-footer">
+                            <a href="detalleValorant.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/cs.jpg" alt="Counter-Strike 2" class="game-img">
+                    <div class="game-info">
+                        <h3>Counter-Strike 2</h3>
+                        <p>Counter-Strike 2 es un videojuego de disparos en primera persona desarrollado por Valve.</p>
+                        <br>
+                        <p>Gratis</p>
+                        <div class="game-footer">
+                            <a href="detalleCounter-Strike-2.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/over.jpg" alt="Overwatch 2" class="game-img">
+                    <div class="game-info">
+                        <h3>Overwatch 2</h3>
+                        <p>Overwatch 2 es un videojuego de disparos en primera persona desarrollado por Blizzard Entertainment.</p>
+                        <br>
+                        <p>Gratis</p>
+                        <div class="game-footer">
+                            <a href="detalleOverwatch-2.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/doom.jpg" alt="Doom Eternal" class="game-img">
+                    <div class="game-info">
+                        <h3>Doom Eternal</h3>
+                        <p>Doom Eternal es un videojuego de disparos en primera persona desarrollado por id Software.</p>
+                        <br>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>: 85.99</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>: 90.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-xbox"></i>: 95.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-nintendo-switch"></i>: 100.00</p>
+                        <div class="game-footer">
+                            <a href="detalleDoom-Eternal.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/W3W.jpg" alt="The Witcher 3: Wild Hunt" class="game-img">
+                    <div class="game-info">
+                        <h3>The Witcher 3: Wild Hunt</h3>
+                        <p>The Witcher 3: Wild Hunt es un videojuego de rol de acción en mundo abierto desarrollado por CD Projekt Red.</p>
+                        <br>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>: 100.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>: 120.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-xbox"></i>: 140.00</p>
+                        <div class="game-footer">
+                            <a href="detalleWitcher.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/BG3.jpg" alt="Baldur's Gate 3" class="game-img">
+                    <div class="game-info">
+                        <h3>Baldur's Gate 3</h3>
+                        <p>Baldur's Gate 3 es un videojuego de rol de acción en mundo abierto desarrollado por Larian Studios.</p>
+                        <br>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>: 200.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>: 220.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-xbox"></i>: 210.00</p>
+                        <div class="game-footer">
+                            <a href="detalleBaldursGate.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/TES.jpg" alt="The Elder Scrolls V: Skyrim" class="game-img">
+                    <div class="game-info">
+                        <h3>The Elder Scrolls V: Skyrim</h3>
+                        <p>The Elder Scrolls V: Skyrim es un videojuego de rol de acción en mundo abierto desarrollado por Bethesda Game Studios.</p>
+                        <br>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>: 95.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>: 130.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-xbox"></i>: 170.00</p>
+                        <div class="game-footer">
+                            <a href="detalleSkyrim.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/cyber.jpg" alt="Cyberpunk 2077" class="game-img">
+                    <div class="game-info">
+                        <h3>Cyberpunk 2077</h3>
+                        <p>Cyberpunk 2077 es un videojuego de rol de acción en mundo abierto desarrollado por CD Projekt RED.</p>
+                        <br>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>: 145.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>: 150.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-xbox"></i>: 160.00</p>
+                        <div class="game-footer">
+                            <a href="detalleCyberpunk.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/FFVIIRemake.png" alt="Final Fantasy VII Remake" class="game-img">
+                    <div class="game-info">
+                        <h3>Final Fantasy VII Remake</h3>
+                        <p>Final Fantasy VII Remake es un videojuego de rol de acción desarrollado por Square Enix.</p>
+                        <br>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>: 150.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>: 125.00</p>
+                        <div class="game-footer">
+                            <a href="detalleFFVII.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/ER.jpg" alt="Elden Ring" class="game-img">
+                    <div class="game-info">
+                        <h3>Elden Ring</h3>
+                        <p>Elden Ring es un videojuego de rol de acción desarrollado por FromSoftware.</p>
+                        <br>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>: 180.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>: 190.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-xbox"></i>: 200.00</p>
+                        <div class="game-footer">
+                            <a href="detalleEldenRing.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/lol.jpg" alt="League of Legends" class="game-img">
+                    <div class="game-info">
+                        <h3>League of Legends</h3>
+                        <p>League of Legends es un videojuego de género MOBA desarrollado por Riot Games.</p>
+                        <br>
+                        <p>Gratis</p>
+                        <div class="game-footer">
+                            <a href="detalleLOL.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/dota.jpg" alt="Dota 2" class="game-img">
+                    <div class="game-info">
+                        <h3>Dota 2</h3>
+                        <p>Dota 2 es un videojuego de género MOBA desarrollado por Valve Corporation.</p>
+                        <br>
+                        <p>Gratis</p>
+                        <div class="game-footer">
+                            <a href="detalleDota2.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/smite.jpg" alt="Smite" class="game-img">
+                    <div class="game-info">
+                        <h3>Smite</h3>
+                        <p>Smite es un videojuego de género MOBA desarrollado por Hi-Rez Studios.</p>
+                        <br>
+                        <p>Gratis</p>
+                        <div class="game-footer">
+                            <a href="detalleSmite.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/pokemon.webp" alt="Pokemon" class="game-img">
+                    <div class="game-info">
+                        <h3>Pokemon</h3>
+                        <p>Pokemon es un videojuego de rol desarrollado por Nintendo.</p>
+                        <br>
+                        <p>Gratis</p>
+                        <div class="game-footer">
+                            <a href="detallePokemon.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/hero.webp" alt="Heroes of the Storm" class="game-img">
+                    <div class="game-info">
+                        <h3>Heroes of the Storm</h3>
+                        <p>Heroes of the Storm es un videojuego de género MOBA desarrollado por Blizzard Entertainment.</p>
+                        <br>
+                        <p>Gratis</p>
+                        <div class="game-footer">
+                            <a href="detalleHotS.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/mobil.jpg" alt="Mobile Legends: Bang Bang" class="game-img">
+                    <div class="game-info">
+                        <h3>Mobile Legends: Bang Bang</h3>
+                        <p>Mobile Legends: Bang Bang es un videojuego de género MOBA desarrollado por Moonton.</p>
+                        <br>
+                        <p>Gratis</p>
+                        <div class="game-footer">
+                            <a href="detalleMobileLegends.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/g6.jpg" alt="GTA V" class="game-img">
+                    <div class="game-info">
+                        <h3>GTA V</h3>
+                        <p>Grand Theft Auto V es un videojuego de acción y aventura en mundo abierto desarrollado por Rockstar North.</p>
+                        <br>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>: 110.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>: 95.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-xbox"></i>: 100.00</p>
+                        <div class="game-footer">
+                            <a href="detalleGTAV.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/Horizon_portada.webp" alt="Horizon Zero Dawn" class="game-img">
+                    <div class="game-info">
+                        <h3>Horizon Zero Dawn</h3>
+                        <p>Horizon Zero Dawn es un videojuego de acción y aventura en mundo abierto desarrollado por Guerrilla Games.</p>
+                        <br>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>: 150.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>: 189.00</p>
+                        <div class="game-footer">
+                            <a href="detalleHorizon.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/Zelda.jpg" alt="The Legend of Zelda: Breath of the Wild" class="game-img">
+                    <div class="game-info">
+                        <h3>The Legend of Zelda: Breath of the Wild</h3>
+                        <p>The Legend of Zelda: Breath of the Wild es un videojuego de acción y aventura en mundo abierto desarrollado por Nintendo.</p>
+                        <br>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-nintendo-switch"></i>: 180.00</p>
+                        <div class="game-footer">
+                            <a href="detalleZelda.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/red_Dead.jpg" alt="Red Dead Redemption 2" class="game-img">
+                    <div class="game-info">
+                        <h3>Red Dead Redemption 2</h3>
+                        <p>Red Dead Redemption 2 es un videojuego de acción y aventura en mundo abierto desarrollado por Rockstar Games.</p>
+                        <br>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>: 120.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>: 150.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-xbox"></i>: 140.00</p>
+                        <div class="game-footer">
+                            <a href="detalleRDR2.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/uncharted.jpg" alt="Uncharted 4: A Thief's End" class="game-img">
+                    <div class="game-info">
+                        <h3>Uncharted 4: A Thief's End</h3>
+                        <p>Uncharted 4: A Thief's End es un videojuego de acción y aventura desarrollado por Naughty Dog.</p>
+                        <br>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>: 150.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>: 80.00</p>
+                        <div class="game-footer">
+                            <a href="detalleUncharted.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/GOW.jpg" alt="God of War Ragnarok" class="game-img">
+                    <div class="game-info">
+                        <h3>God of War Ragnarok</h3>
+                        <p>God of War Ragnarok es un videojuego de acción y aventura desarrollado por SIE Santa Monica Studio.</p>
+                        <br>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>: 200.00</p>
+                        <p><i class="fa-solid fa-playstation"></i>: 189.00</p>
+                        <div class="game-footer">
+                            <a href="detalleGOW.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/g8.jpg" alt="FC27" class="game-img">
+                    <div class="game-info">
+                        <h3>FC27</h3>
+                        <p>FC 27 es un videojuego de fútbol desarrollado por EA Sports. Es la última entrega de la serie FIFA, que permite a los jugadores experimentar partidos de fútbol realistas con gráficos avanzados y mecánicas de juego mejoradas.</p>
+                        <br>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>: 250.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>: 220.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-xbox"></i>: 230.00</p>
+                        <div class="game-footer">
+                            <a href="detalleFC27.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/RL.jpg" alt="Rocket League" class="game-img">
+                    <div class="game-info">
+                        <h3>Rocket League</h3>
+                        <p>Rocket League es un videojuego de deporte en mundo abierto desarrollado por Psyonix.</p>
+                        <br>
+                        <p>Gratis</p>
+                        <div class="game-footer">
+                            <a href="detalleRocketLeague.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/NBA.jpg" alt="NBA 2K24" class="game-img">
+                    <div class="game-info">
+                        <h3>NBA 2K24</h3>
+                        <p>NBA 2K24 es un videojuego de simulación de baloncesto desarrollado por Visual Concepts.</p>
+                        <br>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>: 100.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>: 120.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-xbox"></i>: 110.00</p>
+                        <div class="game-footer">
+                            <a href="detalleNBA2K24.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/nfl.jpg" alt="Madden NFL 24" class="game-img">
+                    <div class="game-info">
+                        <h3>Madden NFL 24</h3>
+                        <p>Madden NFL 24 es un videojuego de simulación de fútbol americano desarrollado por EA Sports.</p>
+                        <br>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>: 100.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>: 110.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-xbox"></i>: 105.00</p>
+                        <div class="game-footer">
+                            <a href="detalleMaddenNFL24.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/efootball.jpg" alt="eFootball" class="game-img">
+                    <div class="game-info">
+                        <h3>eFootball</h3>
+                        <p>eFootball es un videojuego de simulación de fútbol desarrollado por EA Sports.</p>
+                        <br>
+                        <p>Gratis</p>
+                        <div class="game-footer">
+                            <a href="detalleeFootball.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/f1.webp" alt="F1 23" class="game-img">
+                    <div class="game-info">
+                        <h3>F1 23</h3>
+                        <p>F1 23 es un videojuego de simulación de fórmula 1 desarrollado por Codemasters.</p>
+                        <br>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-solid fa-gamepad"></i>: 70.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-playstation"></i>: 90.00</p>
+                        <p><i class="fa-solid fa-money-check-dollar"></i> <i class="fa-brands fa-xbox"></i>: 85.00</p>
+                        <div class="game-footer">
+                            <a href="detalleF123.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/g4.jpg" alt="Fortnite" class="game-img">
+                    <div class="game-info">
+                        <h3>Fortnite</h3>
+                        <p>Fortnite es un juego de batalla real donde los jugadores compiten para ser el último en pie en un mundo lleno de acción y construcción.</p>
+                        <p>Disponible en PC, PlayStation 5, Xbox One y Nintendo Switch.</p>
+                        <div class="game-footer">
+                            <a href="detalleFortnite.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/apex.jpg" alt="Apex Legends" class="game-img">
+                    <div class="game-info">
+                        <h3>Apex Legends</h3>
+                        <p>Apex Legends es un juego de disparos en primera persona que combina elementos de batalla real y habilidades únicas de personajes para ofrecer una experiencia competitiva y estratégica.</p>
+                        <p>Disponible en PC, PlayStation 5, Xbox One y Nintendo Switch 2.</p>
+                        <div class="game-footer">
+                            <a href="detalleApexLegends.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="assets/img/warframe.jpg" alt="Warframe" class="game-img">
+                    <div class="game-info">
+                        <h3>Warframe</h3>
+                        <p>Warframe es un juego de acción cooperativa en línea donde los jugadores controlan guerreros avanzados llamados Warframes para luchar contra enemigos en un universo futurista.</p>
+                        <p>Disponible en PC, PlayStation 5, Xbox One y Nintendo Switch 2.</p>
+                        <div class="game-footer">
+                            <a href="detalleWarframe.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacto" class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Soporte &amp; Contacto</h4>
+                <p><i class="fa-solid fa-phone"></i> +51 987 654 321</p>
+                <p><i class="fa-solid fa-envelope"></i> soporte@nexusgames.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Av. Universitaria 1801, Lima</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Consolas</h4>
+                <p><i class="fa-solid fa-gamepad"></i> PC</p>
+                <p><i class="fa-brands fa-playstation"></i> PlayStation</p>
+                <p><i class="fa-brands fa-xbox"></i> Xbox</p>
+                <p><i class="fa-brands fa-nintendo-switch"></i> Nintendo</p>
+                <p><i class="fa-brands fa-apple"></i> Móvil</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Redes Sociales</h4>
+                <p><i class="fa-brands fa-facebook"></i> <a href="https://facebook.com/nexusgames" target="_blank">Facebook</a></p>
+                <p><i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/nexusgames" target="_blank">Twitter</a></p>
+                <p><i class="fa-brands fa-instagram"></i> <a href="https://instagram.com/nexusgames" target="_blank">Instagram</a></p>
+                <p><i class="fa-brands fa-reddit"></i> <a href="https://reddit.com/r/nexusgames" target="_blank">Reddit</a></p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Métodos de Pago</h4>
+                <p><i class="fa-solid fa-credit-card"></i> Tarjetas de Crédito/Débito</p>
+                <p><i class="fa-solid fa-wallet"></i> Efectivo en Sucursales</p>
+                <p><i class="fa-solid fa-qrcode"></i> Pagos Móviles</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Copyright © 2026 UTP - Todos los derechos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>
