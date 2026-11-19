@@ -1092,4 +1092,427 @@ body.tema-blanco .dropdown-content a:hover {
         padding: 24px 16px;
     }
 }
+.cinta-marcas {
+    width: 100%;
+    overflow: hidden;
+    background-color: #0b0f19;
+    border-top: 1px solid #1e272e;
+    border-bottom: 1px solid #1e272e;
+    padding: 12px 0;
+}
 
+.cinta-track {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    width: max-content;
+    white-space: nowrap;
+    animation: moverMarcas 20s linear infinite;
+}
+
+.cinta-track span {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+@keyframes moverMarcas {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+/* ---------- tamaño carrrito + agregar ---------- */
+.game-buttons {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.game-buttons .btn,
+.game-buttons .btn-agregar-auto {
+    flex: 1 1 0;
+    min-height: 42px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.btn-agregar-auto {
+    background-color: transparent;
+    border: 2px solid #6236a7;
+    color: #ffffff;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.btn-agregar-auto:hover {
+    background-color: #6236a7;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+/* ---------- Panel lateral del carrito y favoritos ---------- */
+.fondo-carrito {
+    display: none !important;
+    position: fixed !important;
+    inset: 0 !important;
+    background: rgba(0, 0, 0, 0.55) !important;
+    z-index: 2900 !important;
+}
+
+.fondo-carrito.activo {
+    display: block !important;
+}
+
+.panel-carrito {
+    position: fixed !important;
+    top: 0 !important;
+    right: -400px !important;
+    bottom: 0 !important;
+    left: auto !important;
+    width: 360px !important;
+    max-width: 92vw !important;
+    height: 100vh !important;
+    background: #0b0f19 !important;
+    border-left: 1px solid #3b82f6 !important;
+    padding: 20px !important;
+    color: #ffffff !important;
+    z-index: 3000 !important;
+    transition: right 0.25s ease !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-shadow: -8px 0 28px rgba(0, 0, 0, 0.65) !important;
+    overflow-y: auto !important;
+}
+
+.panel-carrito.abierto {
+    right: 0 !important;
+}
+
+.fondo-favoritos {
+    display: none !important;
+    position: fixed !important;
+    inset: 0 !important;
+    background: rgba(0, 0, 0, 0.55) !important;
+    z-index: 2800 !important;
+}
+
+.fondo-favoritos.activo {
+    display: block !important;
+}
+
+.panel-favoritos {
+    position: fixed !important;
+    top: 0 !important;
+    right: -400px !important;
+    bottom: 0 !important;
+    left: auto !important;
+    width: 360px !important;
+    max-width: 92vw !important;
+    height: 100vh !important;
+    background: #0b0f19 !important;
+    border-left: 1px solid #62e6a7 !important;
+    padding: 20px !important;
+    color: #ffffff !important;
+    z-index: 2950 !important;
+    transition: right 0.25s ease !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-shadow: -8px 0 28px rgba(0, 0, 0, 0.65) !important;
+    overflow-y: auto !important;
+}
+
+.panel-favoritos.abierto {
+    right: 0 !important;
+}
+/* ---------- Panel lateral del carrito ---------- */
+.panel-carrito {
+    position: fixed !important;
+    top: 0 !important;
+    right: -420px !important;
+    width: 380px !important;
+    max-width: 94vw !important;
+    height: 100vh !important;
+    background: linear-gradient(180deg, #0d1322 0%, #090d16 100%) !important;
+    border-left: 1px solid rgba(59, 130, 246, 0.45) !important;
+    padding: 22px 20px !important;
+    color: #f8fafc !important;
+    z-index: 3000 !important;
+    transition: right 0.28s cubic-bezier(0.22, 1, 0.36, 1) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    box-shadow: -12px 0 36px rgba(0, 0, 0, 0.75) !important;
+    box-sizing: border-box !important;
+}
+
+.panel-carrito.abierto {
+    right: 0 !important;
+}
+
+.encabezado-carrito {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    padding-bottom: 14px !important;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.18) !important;
+}
+
+.encabezado-carrito h2 {
+    margin: 0 0 4px 0 !important;
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.encabezado-carrito p {
+    margin: 0 !important;
+    font-size: 0.85rem !important;
+    color: #62e6a7 !important;
+    font-weight: 500 !important;
+}
+
+#cerrarCarritoLateral {
+    flex-shrink: 0 !important;
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 10px !important;
+    border: 1px solid rgba(148, 163, 184, 0.3) !important;
+    background: rgba(30, 41, 59, 0.85) !important;
+    color: #f1f5f9 !important;
+    font-size: 1.35rem !important;
+    line-height: 1 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    transition: background 0.2s ease, transform 0.2s ease !important;
+}
+
+#cerrarCarritoLateral:hover {
+    background: #ef4444 !important;
+    border-color: #ef4444 !important;
+    color: #ffffff !important;
+    transform: scale(1.05) !important;
+}
+
+.carrito-lateral-lista {
+    flex: 1 1 auto !important;
+    overflow-y: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    padding-right: 4px !important;
+    min-width: 0 !important;
+}
+
+.carrito-vacio-msg {
+    margin: 24px 0 !important;
+    padding: 20px 16px !important;
+    text-align: center !important;
+    background: rgba(30, 41, 59, 0.45) !important;
+    border: 1px dashed rgba(148, 163, 184, 0.28) !important;
+    border-radius: 12px !important;
+    color: #cbd5e1 !important;
+    font-size: 0.92rem !important;
+    line-height: 1.45 !important;
+    overflow-wrap: break-word !important;
+}
+
+.carrito-lateral-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 12px !important;
+    background: rgba(22, 32, 51, 0.92) !important;
+    border: 1px solid rgba(99, 102, 241, 0.25) !important;
+    border-radius: 12px !important;
+    min-width: 0 !important;
+}
+
+.carrito-lateral-item img {
+    width: 58px !important;
+    height: 58px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    flex-shrink: 0 !important;
+}
+
+.carrito-lateral-info {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+}
+
+.carrito-lateral-info strong {
+    font-size: 0.94rem !important;
+    color: #ffffff !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.carrito-lateral-meta {
+    font-size: 0.8rem !important;
+    color: #94a3b8 !important;
+}
+
+.carrito-lateral-subtotal {
+    font-size: 0.9rem !important;
+    font-weight: 700 !important;
+    color: #62e6a7 !important;
+}
+
+.carrito-lateral-controles {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 6px !important;
+    flex-shrink: 0 !important;
+}
+
+.carrito-cant-grupo {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    background: rgba(15, 23, 42, 0.9) !important;
+    border: 1px solid rgba(148, 163, 184, 0.25) !important;
+    border-radius: 8px !important;
+    padding: 2px 6px !important;
+    font-size: 0.82rem !important;
+}
+
+.btn-cant-lateral,
+.btn-quitar-lateral {
+    border: none !important;
+    background: transparent !important;
+    color: #e2e8f0 !important;
+    cursor: pointer !important;
+    font-size: 0.85rem !important;
+    padding: 2px 5px !important;
+    border-radius: 6px !important;
+}
+
+.btn-cant-lateral:hover {
+    background: rgba(59, 130, 246, 0.3) !important;
+    color: #ffffff !important;
+}
+
+.btn-quitar-lateral {
+    color: #f87171 !important;
+    font-size: 0.9rem !important;
+}
+
+.btn-quitar-lateral:hover {
+    background: rgba(239, 68, 68, 0.2) !important;
+    color: #fca5a5 !important;
+}
+
+.carrito-lateral-footer {
+    padding-top: 14px !important;
+    border-top: 1px solid rgba(148, 163, 184, 0.18) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+}
+
+.carrito-lateral-total {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 10px 14px !important;
+    background: rgba(30, 41, 59, 0.65) !important;
+    border-radius: 10px !important;
+    font-size: 1rem !important;
+}
+
+.carrito-lateral-total strong {
+    font-size: 1.15rem !important;
+    color: #ffffff !important;
+}
+
+.carrito-lateral-acciones {
+    display: flex !important;
+    gap: 10px !important;
+}
+
+.carrito-lateral-acciones .btn {
+    flex: 1 1 0 !important;
+    min-height: 40px !important;
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+}
+/* ---------- Panel lateral de favoritos ---------- */
+.btn-icon-header.btn-carrito-header,
+.btn-icon-header.btn-carrito-azul,
+#abrirCarritoLateral,
+.btn-icon-header.btn-carrito-header:hover,
+.btn-icon-header.btn-carrito-azul:hover,
+#abrirCarritoLateral:hover {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #ffffff !important;
+    padding: 6px 10px !important;
+    width: auto !important;
+    height: auto !important;
+    border-radius: 6px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transform: none !important;
+    opacity: 1 !important;
+    transition: none !important;
+}
+
+#abrirCarritoLateral .badge-carrito,
+#contadorCarrito {
+    background: transparent !important;
+    color: #ffffff !important;
+    padding: 0 !important;
+    min-width: 0 !important;
+    height: auto !important;
+    font-size: 0.9rem !important;
+    font-weight: 700 !important;
+}
+
+/* ---------- Botón de tema (de main) ---------- */
+.btn-tema {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.btn-tema:focus,
+.btn-tema:focus-visible,
+.btn-tema:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
