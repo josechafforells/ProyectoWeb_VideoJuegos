@@ -1092,4 +1092,14 @@ body.tema-blanco .dropdown-content a:hover {
         padding: 24px 16px;
     }
 }
-
+.btn-tema {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.btn-tema:focus,
+.btn-tema:focus-visible,
+.btn-tema:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
