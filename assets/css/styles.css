@@ -1516,3 +1516,10 @@ body.tema-blanco .dropdown-content a:hover {
     outline: none !important;
     box-shadow: none !important;
 }
+/* Ocultar botones con imágenes en el header, navbar y acciones de usuario */
+header button:has(img),
+.navbar button:has(img),
+.nav-actions button:has(img),
+.header-actions button:has(img) {
+    display: none !important;
+}
