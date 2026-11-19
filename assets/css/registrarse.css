@@ -1,373 +1,207 @@
+/* =========================================================
+   REGISTRO - estilos propios de registrarse.html
+   (header, footer y botones vienen de styles.css)
+   ========================================================= */
 
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background: linear-gradient(135deg, #48536e, #132652, #4d5872);
-    color: white;
-    font-family: Arial, sans-serif;
+/* ---------- Disposición de la página ---------- */
+body:has(.auth-main) {
     min-height: 100vh;
-}
-
-
-
-
-header {
-    text-align: center;
-    padding: 30px 20px;
-}
-
-.logo {
-    mix-blend-mode: multiply;
-    width: 220px;
-    max-width: 100%;
-    height: auto;
-}
-
-
-
-main {
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-
-h1 {
-    font-size: 40px;
-    margin-bottom: 25px;
-}
-
-
-
-.register-box {
-    background-color: #132652;
-
-    width: 90%;
-    max-width: 450px;
-
-    padding: 60px 40px;
-    margin: 40px auto;
-
-    border-radius: 20px;
-
-    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3);
-
     display: flex;
     flex-direction: column;
-    gap: 20px;
-
-    transition: transform 0.3s ease;
 }
 
-.register-box:hover {
-    transform: translateY(-3px);
+.main-content.auth-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+    padding: 40px 20px 60px;
 }
 
-
-
-.register-box form {
+/* ---------- Tarjeta ---------- */
+.auth-card {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
     width: 100%;
+    max-width: 1080px;
+    background-color: #202a3b;
+    border: 1px solid #35445d;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 25px #0008;
 }
 
-label {
-    display: block;
-    margin-bottom: 6px;
-    text-align: left;
+/* ---------- Panel lateral con imagen ---------- */
+.auth-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 14px;
+    padding: 40px 35px;
+    min-height: 420px;
+    background:
+        linear-gradient(180deg, #13265255 0%, #132652ee 85%),
+        url("../img/hero.webp") center / cover no-repeat;
 }
 
-input {
-    display: block;
-
-    width: 100%;
-    min-width: 0;
-
-    padding: 12px;
-
-    border: 1px solid #526078;
-    border-radius: 5px;
-
-    font-size: 16px;
-    font-family: Arial, sans-serif;
+.auth-side h2 {
+    font-size: 30px;
+    color: #e4e7de;
+    line-height: 1.2;
 }
 
-
-
-
-button {
-    width: 100%;
-    max-width: 150px;
-
-    padding: 12px;
-
-    background-color: #47c487;
-
-    border: none;
-    border-radius: 6px;
-
-    font-weight: bold;
-    font-size: 16px;
-
-    cursor: pointer;
-
-    transition: background-color 0.3s ease;
+.auth-side p {
+    color: bisque;
+    line-height: 1.6;
 }
 
-button:hover {
-    background-color: rgb(143, 207, 118);
+.auth-perks {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 6px;
 }
 
+.auth-perks li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #d0d7e2;
+    font-size: 0.95rem;
+}
 
-
-main a {
+.auth-perks i {
     color: #62e6a7;
-    text-decoration: none;
+    width: 18px;
+    text-align: center;
 }
 
-main a:hover {
-    text-decoration: underline;
+/* ---------- Formulario ---------- */
+.auth-form-wrap {
+    padding: 45px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+.auth-title {
+    font-size: 32px;
+    color: #e4e7de;
+    margin-bottom: 8px;
+}
 
+.auth-subtitle {
+    color: bisque;
+    margin-bottom: 28px;
+    line-height: 1.5;
+}
 
+.auth-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
 
-footer {
-    width: 100%;
-    padding: 30px;
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    grid-column: 1 / -1;
+    min-width: 0;
+}
+
+.field.half {
+    grid-column: auto;
+}
+
+.field label {
+    font-size: 0.9rem;
+    font-weight: 700;
     color: #d0d7e2;
 }
 
-footer a {
+.input-wrap {
+    position: relative;
+}
+
+.input-wrap > i {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    color: #8b97ad;
+    pointer-events: none;
+    transition: color 0.2s;
+}
+
+.input-wrap input {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 14px 12px 42px;
+    background-color: #132652;
+    color: white;
+    border: 1px solid #35445d;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-wrap input::placeholder {
+    color: #7d8aa3;
+}
+
+.input-wrap input:focus {
+    outline: none;
+    border-color: #62e6a7;
+    box-shadow: 0 0 0 3px #62e6a733;
+}
+
+.input-wrap:focus-within > i {
     color: #62e6a7;
+}
+
+.input-wrap input:user-invalid {
+    border-color: #ff6b81;
+}
+
+.input-wrap input[type="date"] {
+    color-scheme: dark;
+}
+
+.auth-form .btn-block {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-top: 6px;
+    padding: 13px 15px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: white;
+    cursor: pointer;
+}
+
+.auth-switch {
+    margin-top: 22px;
+    text-align: center;
+    color: #d0d7e2;
+}
+
+.auth-switch a,
+.auth-back {
+    font-weight: 700;
     text-decoration: none;
 }
 
-footer a:hover {
+.auth-switch a:hover,
+.auth-back:hover {
     text-decoration: underline;
 }
 
-footer table {
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-}
-
-footer td {
-    vertical-align: top;
-    padding: 15px;
-    overflow-wrap: anywhere;
-}
-
-footer strong {
+.auth-back {
     display: block;
-    margin-bottom: 10px;
-}
-
-footer p {
-    margin-bottom: 6px;
-    line-height: 1.4;
-}
-
-footer > p {
+    margin-top: 12px;
     text-align: center;
-    margin-top: 15px;
-}
-
-
-
-@media screen and (max-width: 768px) {
-
-    header {
-        padding: 20px;
-    }
-
-    .logo {
-        width: 180px;
-    }
-
-    main {
-        padding: 15px;
-    }
-
-    h1 {
-        font-size: 32px;
-    }
-
-    .register-box {
-        padding: 40px 30px;
-        margin: 25px auto;
-    }
-
-    footer {
-        padding: 20px;
-    }
-
-    footer td {
-        padding: 10px;
-    }
-
-}
-
-
-
-@media screen and (max-width: 480px) {
-
-    body {
-        width: 100%;
-        overflow-x: hidden;
-    }
-
-
-
-    header {
-        padding: 15px;
-    }
-
-    .logo {
-        width: 150px;
-        max-width: 100%;
-        height: auto;
-    }
-
-
-
-    main {
-        width: 100%;
-        padding: 10px;
-        margin: 0;
-    }
-
-    h1 {
-        font-size: 26px;
-        margin-bottom: 20px;
-    }
-
-
-
-    .register-box {
-        width: 100%;
-        max-width: 100%;
-
-        padding: 30px 15px;
-        margin: 15px auto;
-
-        border-radius: 15px;
-
-        gap: 15px;
-    }
-
-    .register-box:hover {
-        transform: none;
-    }
-
-
-  
-
-    .register-box form {
-        width: 100%;
-    }
-
-    label {
-        font-size: 14px;
-        margin-bottom: 6px;
-    }
-
-    input {
-        width: 100%;
-        min-width: 0;
-
-        padding: 12px;
-
-        font-size: 16px;
-    }
-
-
-    /* BOTON */
-
-    button {
-        width: 100%;
-        max-width: 100%;
-
-        padding: 12px;
-
-        font-size: 15px;
-    }
-
-
-
-    main a {
-        font-size: 14px;
-    }
-
-
-
-    footer {
-        width: 100%;
-        padding: 20px 15px;
-        text-align: center;
-    }
-
-    footer table {
-        width: 100%;
-        display: block;
-        table-layout: auto;
-        text-align: center;
-    }
-
-    footer tbody {
-        display: block;
-        width: 100%;
-    }
-
-    footer tr {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    footer td {
-        display: block;
-        width: 100%;
-
-        padding: 15px 0;
-
-        text-align: center;
-
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    footer strong {
-        font-size: 16px;
-        margin-bottom: 10px;
-        text-align: center;
-    }
-
-    footer p {
-        font-size: 14px;
-        line-height: 1.5;
-        margin: 8px 0;
-        text-align: center;
-
-        overflow-wrap: anywhere;
-    }
-
-    footer a {
-        overflow-wrap: anywhere;
-        text-align: center;
-    }
-
-    footer hr {
-        margin: 15px 0;
-    }
-
-    footer > p {
-        text-align: center;
-        font-size: 12px;
-        line-height: 1.5;
-    }
-
+    font-size: 0.9rem;
 }
